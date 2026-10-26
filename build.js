@@ -18,7 +18,8 @@ const COUNTRIES = { IE: 'Ireland', AU: 'Australia', PT: 'Portugal', US: 'USA', G
   VN: 'Vietnam', ID: 'Indonesia', PH: 'Philippines', MY: 'Malaysia', GR: 'Greece', TR: 'Turkey', RU: 'Russia',
   CZ: 'Czechia', HU: 'Hungary', PL: 'Poland', DK: 'Denmark', BE: 'Belgium', IL: 'Israel', MX: 'Mexico',
   BR: 'Brazil', AR: 'Argentina', PE: 'Peru', CO: 'Colombia', ZA: 'South Africa', KE: 'Kenya', EG: 'Egypt', MA: 'Morocco',
-  SI: 'Slovenia', GT: 'Guatemala', NA: 'Namibia', NI: 'Nicaragua', CR: 'Costa Rica', BG: 'Bulgaria', XX: '' };
+  SI: 'Slovenia', GT: 'Guatemala', NA: 'Namibia', NI: 'Nicaragua', CR: 'Costa Rica', BG: 'Bulgaria',
+  LI: 'Liechtenstein', AZ: 'Azerbaijan', LU: 'Luxembourg', BA: 'Bosnia & Herzegovina', XX: '' };
 const FLAGS = { IE: '🇮🇪', AU: '🇦🇺', PT: '🇵🇹', US: '🇺🇸', GB: '🇬🇧', JP: '🇯🇵', IT: '🇮🇹', NL: '🇳🇱',
   ES: '🇪🇸', CH: '🇨🇭', TH: '🇹🇭', CB: '🏝️', NZ: '🇳🇿', CA: '🇨🇦', FI: '🇫🇮', NO: '🇳🇴', SE: '🇸🇪',
   IS: '🇮🇸', AT: '🇦🇹', DE: '🇩🇪', FR: '🇫🇷', AQ: '🇦🇶', XX: '🌐' };
@@ -46,6 +47,7 @@ const GEO = {
   EG: { off: 2, lat: 27, lng: 30 }, MA: { off: 1, lat: 32, lng: -6 }, DE: { off: 1, lat: 51, lng: 10 },
   SI: { off: 1, lat: 46, lng: 14.8 }, GT: { off: -6, lat: 15.5, lng: -90 }, NA: { off: 2, lat: -22, lng: 17 },
   NI: { off: -6, lat: 12.9, lng: -85 }, CR: { off: -6, lat: 10, lng: -84 }, BG: { off: 2, lat: 42.7, lng: 25.5 },
+  LI: { off: 1, lat: 47.15, lng: 9.55 }, AZ: { off: 4, lat: 40.3, lng: 47.7 }, LU: { off: 1, lat: 49.8, lng: 6.1 }, BA: { off: 1, lat: 44, lng: 18 },
 };
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const thumb = c => c.type === 'image' ? c.imageUrl : `https://i.ytimg.com/vi/${c.videoId}/mqdefault.jpg`;

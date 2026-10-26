@@ -10,7 +10,7 @@ const yt = read('curated.json').map(c => ({ ...c, type: 'youtube' }));
 
 // Prefer the re-verified file when present (dead URLs already dropped).
 const pick = base => fs.existsSync(path.join(R, base + '.verified.json')) ? base + '.verified.json' : base + '.json';
-const rawFiles = [pick('raw-gov'), pick('raw-tourism'), pick('more-raw'), pick('more-raw2'), pick('more-raw3'), pick('more-raw4'), pick('more-raw5'), pick('more-raw6'), pick('more-raw7'), pick('more-raw8'), pick('more-raw9'), pick('more-raw10')];
+const rawFiles = [pick('raw-gov'), pick('raw-tourism'), pick('more-raw'), pick('more-raw2'), pick('more-raw3'), pick('more-raw4'), pick('more-raw5'), pick('more-raw6'), pick('more-raw7'), pick('more-raw8'), pick('more-raw9'), pick('more-raw10'), pick('more-raw11')];
 const slug = s => (String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'cam').slice(0, 40);
 const used = {};
 yt.forEach(c => used[c.id] = 1);
