@@ -1,0 +1,5 @@
+{
+ "note": "Permanently excluded cams (dead/ended streams found by sweep.js, or manually removed). videoIds for YouTube, imageUrls for raw.",
+ "videoIds": ["MD6hfzL8zQI"],
+ "imageUrls": []
+}

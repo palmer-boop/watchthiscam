@@ -1,0 +1,5 @@
+dist/
+node_modules/
+research/net/
+research/*.backup*.json
+research/*-log.txt

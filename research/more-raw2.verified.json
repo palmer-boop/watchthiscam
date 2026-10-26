@@ -1,0 +1,47 @@
+[
+ {
+  "name": "Covilhã, Serra da Estrela",
+  "location": "Covilhã, Portugal",
+  "country": "PT",
+  "category": "mountain",
+  "imageUrl": "https://www.meteoestrela.pt/assets/webcam/cam_10.jpg",
+  "isMjpeg": false,
+  "https": true,
+  "refreshSeconds": 60,
+  "operator": "MeteoEstrela",
+  "sourcePage": "https://www.meteoestrela.pt/web-tv-nowcasting/",
+  "terms": "",
+  "verified": "image/jpeg 200",
+  "_bytes": 126252
+ },
+ {
+  "name": "Oslo City Hall harbour",
+  "location": "Oslo, Norway",
+  "country": "NO",
+  "category": "harbour",
+  "imageUrl": "https://www.oslohavn.no/webcam/raadhusintranett.jpg",
+  "isMjpeg": false,
+  "https": true,
+  "refreshSeconds": 60,
+  "operator": "Port of Oslo",
+  "sourcePage": "https://www.oslohavn.no/no/meny/webkamera/",
+  "terms": "",
+  "verified": "image/jpeg 200",
+  "_bytes": 494479
+ },
+ {
+  "name": "Cerro Catedral — Diente de Caballo",
+  "location": "San Carlos de Bariloche, Argentina",
+  "country": "AR",
+  "category": "ski",
+  "imageUrl": "https://varitech.ar/cameras/cam008/latest.jpg",
+  "isMjpeg": false,
+  "https": true,
+  "refreshSeconds": 300,
+  "operator": "Catedral Alta Patagonia",
+  "sourcePage": "https://catedralaltapatagonia.com/webcams/",
+  "terms": "",
+  "verified": "image/jpeg 200",
+  "_bytes": 65728
+ }
+]
