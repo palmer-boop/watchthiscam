@@ -57,9 +57,9 @@ function playerInner(c) {
   if (c.type !== 'image') return `<span class="pill"><span class="dot"></span>LIVE</span>
 <iframe id="ytframe" src="${embed(c)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="${esc(c.name)}"></iframe>`;
   const live = c.isMjpeg;
-  return `<span class="pill${live ? '' : ' snap'}"><span class="dot"></span>${live ? 'LIVE' : 'REFRESHING'}</span>
+  return `<span class="pill${live ? '' : ' snap'}"><span class="dot"></span><span id="campilltxt">${live ? 'LIVE' : 'PHOTO'}</span></span>
 <img class="contain" id="camimg" onerror="this.onerror=null;this.src='/ph.svg'" src="${esc(c.imageUrl)}" alt="${esc(c.name)}"${live ? '' : ` data-refresh="${c.refreshSeconds || 10}"`}>
-${live ? '' : `<script>(function(){var i=document.getElementById('camimg'),u=${JSON.stringify(c.imageUrl)},s=(+i.dataset.refresh||10)*1000;setInterval(function(){i.src=u+(u.indexOf('?')<0?'?':'&')+'_t='+Date.now();},s);})();</script>`}`;
+${live ? '' : `<script>(function(){var i=document.getElementById('camimg'),t=document.getElementById('campilltxt'),u=${JSON.stringify(c.imageUrl)},s=(+i.dataset.refresh||10)*1000;i.addEventListener('load',function(){if((''+i.src).indexOf('/ph.svg')<0&&t)t.textContent='PHOTO';});setInterval(function(){if(t)t.textContent='REFRESHING';i.src=u+(u.indexOf('?')<0?'?':'&')+'_t='+Date.now();},s);})();</script>`}`;
 }
 
 function blurb(c) {
