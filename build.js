@@ -88,15 +88,17 @@ for (const c of cams) { c.blurb = blurb(c); c.catLabel = CATS[c.category] || 'Ot
 const SITE_URL = 'https://watchthiscam.com';
 const ogYt = cams.find(c => c.type !== 'image');
 const DEFAULT_OG = ogYt ? `https://i.ytimg.com/vi/${ogYt.videoId}/hqdefault.jpg` : '/icon.svg';
+// Cloudflare Pages 308-redirects /x.html to /x, so canonicals and the sitemap use the clean form.
+const cleanPath = p => (p || '/').replace(/.html$/, '');
 const head = (title, desc, image, pagePath) => `<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title><meta name="description" content="${esc(desc)}">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="${SITE_URL}${pagePath || '/'}">
+<link rel="canonical" href="${SITE_URL}${cleanPath(pagePath)}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Watch This Cam">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${esc(image || DEFAULT_OG)}">${pagePath ? `
-<meta property="og:url" content="${SITE_URL}${pagePath}">` : ''}
+<meta property="og:url" content="${SITE_URL}${cleanPath(pagePath)}">` : ''}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(desc)}">
 <meta name="twitter:image" content="${esc(image || DEFAULT_OG)}">
@@ -304,7 +306,7 @@ const chips = ['all', ...Object.keys(CATS).filter(k => cams.some(c => c.category
   .map(k => `<button class="chip${k==='all'?' on':''}" data-cat="${k}">${k==='all'?'All':CATS[k]}</button>`).join('');
 const countryOpts = [...new Set(cams.map(c => c.countryLabel).filter(Boolean))].sort()
   .map(co => `<option value="${esc(co)}">${esc(co)}</option>`).join('');
-fs.writeFileSync(path.join(DIST, 'browse.html'), head('Browse all cams — Watch This Cam', 'Browse every live camera by place and type.') + header + `
+fs.writeFileSync(path.join(DIST, 'browse.html'), head('Browse all cams — Watch This Cam', 'Browse every live camera by place and type.', null, '/browse.html') + header + `
 <main class="wrap">
 <div class="section-head"><h2>All cameras</h2>
 <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -493,7 +495,7 @@ L.circleMarker([m.la,m.ln],{radius:7,weight:2,color:'#2f80ed',fillColor:'#5aa2ff
 });
 
 // ---- About ----
-fs.writeFileSync(path.join(DIST, 'about.html'), head('About — Watch This Cam', 'What Watch This Cam is.') + header + `
+fs.writeFileSync(path.join(DIST, 'about.html'), head('About — Watch This Cam', 'What Watch This Cam is.', null, '/about.html') + header + `
 <main class="wrap"><div class="page">
 <h1>About Watch This Cam</h1>
 <p>Watch This Cam started back in 2011 as a bit of fun: hit a button and get dropped onto a random live webcam from somewhere in the world. You never knew what you'd get.</p>
@@ -511,7 +513,7 @@ fs.writeFileSync(path.join(DIST, '404.html'), head('Page not found — Watch Thi
 </div></main>` + footer);
 
 // ---- Favourites (client-side, from localStorage) ----
-fs.writeFileSync(path.join(DIST, 'favourites.html'), head('Favourites — Watch This Cam', 'The cams you saved.') + header + `
+fs.writeFileSync(path.join(DIST, 'favourites.html'), head('Favourites — Watch This Cam', 'The cams you saved.', null, '/favourites.html') + header + `
 <main class="wrap">
 <div class="section-head"><h2>Your favourites</h2><a href="/browse.html">Browse all →</a></div>
 <div class="grid" id="grid"></div>
@@ -528,7 +530,7 @@ document.getElementById('empty').hidden=list.length>0;
 </script>` + footer);
 
 // ---- Thrills ----
-fs.writeFileSync(path.join(DIST, 'thrills.html'), head('Thrills — Watch This Cam', 'The most dramatic live cams: volcanoes, big surf, nightlife, safari and more.') + header + `
+fs.writeFileSync(path.join(DIST, 'thrills.html'), head('Thrills — Watch This Cam', 'The most dramatic live cams: volcanoes, big surf, nightlife, safari and more.', null, '/thrills.html') + header + `
 <main class="wrap">
 <div class="section-head"><h2>⚡ Thrills</h2><a href="/browse.html">Browse all →</a></div>
 <p style="color:var(--muted);margin:-6px 0 16px">Volcanoes, big surf, buzzing nightlife, safari waterholes — the cams with a bit of drama. ${thrills.length} of them.</p>
@@ -536,7 +538,7 @@ fs.writeFileSync(path.join(DIST, 'thrills.html'), head('Thrills — Watch This C
 </main>` + footer);
 
 // ---- World map (Leaflet) ----
-fs.writeFileSync(path.join(DIST, 'map.html'), head('Map — Watch This Cam', 'Every cam on a world map.') + header + `
+fs.writeFileSync(path.join(DIST, 'map.html'), head('Map — Watch This Cam', 'Every cam on a world map.', null, '/map.html') + header + `
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
 <main class="wrap">
 <div class="section-head"><h2>Cams around the world</h2><a class="btn" href="/random.html"><span class="dice">🎲</span> Surprise me</a></div>
@@ -569,7 +571,7 @@ drawNight();setInterval(drawNight,120000);
 </script>` + footer);
 
 // ---- The Wall ----
-fs.writeFileSync(path.join(DIST, 'wall.html'), head('The Wall — Watch This Cam', 'A grid of live cams, all playing at once.') + header + `
+fs.writeFileSync(path.join(DIST, 'wall.html'), head('The Wall — Watch This Cam', 'A grid of live cams, all playing at once.', null, '/wall.html') + header + `
 <main class="wrap">
 <div class="section-head"><h2>📺 The Wall <span class="muted-h">the planet, live, all at once</span></h2>
 <div class="chips">
@@ -610,6 +612,6 @@ const sitemapUrls = ['/', '/browse.html', '/thrills.html', '/map.html', '/wall.h
   ...cams.map(c => `/cam/${c.id}.html`)];
 fs.writeFileSync(path.join(DIST, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  sitemapUrls.map(u => `<url><loc>${SITE_URL}${u}</loc></url>`).join('\n') + `\n</urlset>\n`);
+  sitemapUrls.map(u => `<url><loc>${SITE_URL}${cleanPath(u)}</loc></url>`).join('\n') + `\n</urlset>\n`);
 
 console.log('built', cams.length, 'cam pages + home, browse, random, about, favourites, thrills, map, wall, sitemap');
