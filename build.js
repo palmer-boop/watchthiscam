@@ -89,7 +89,7 @@ const SITE_URL = 'https://watchthiscam.com';
 const ogYt = cams.find(c => c.type !== 'image');
 const DEFAULT_OG = ogYt ? `https://i.ytimg.com/vi/${ogYt.videoId}/hqdefault.jpg` : '/icon.svg';
 // Cloudflare Pages 308-redirects /x.html to /x, so canonicals and the sitemap use the clean form.
-const cleanPath = p => (p || '/').replace(/.html$/, '');
+const cleanPath = p => (p || '/').replace(/\.html$/, '');
 const head = (title, desc, image, pagePath) => `<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title><meta name="description" content="${esc(desc)}">
