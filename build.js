@@ -100,10 +100,12 @@ const head = (title, desc, image, pagePath) => `<!doctype html><html lang="en"><
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(desc)}">
 <meta name="twitter:image" content="${esc(image || DEFAULT_OG)}">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f80ed'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='white' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='2.5' fill='white'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0b0f17">
-<link rel="apple-touch-icon" href="/icon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css"></head><body>`;
@@ -131,6 +133,8 @@ if('serviceWorker' in navigator){addEventListener('load',function(){navigator.se
 fs.rmSync(DIST, { recursive: true, force: true });
 fs.mkdirSync(path.join(DIST, 'cam'), { recursive: true });
 fs.copyFileSync(path.join(ROOT, 'src', 'styles.css'), path.join(DIST, 'styles.css'));
+// Favicons as real files (Google ignores data: URIs and wants 48px multiples); rendered from the SVGs and committed in src/static.
+for (const f of fs.readdirSync(path.join(ROOT, 'src', 'static'))) fs.copyFileSync(path.join(ROOT, 'src', 'static', f), path.join(DIST, f));
 // Shown when an external feed is down (these are 180+ live cams; some drop out).
 fs.writeFileSync(path.join(DIST, 'ph.svg'), `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360"><rect width="640" height="360" fill="#121826"/><circle cx="320" cy="150" r="30" fill="none" stroke="#3a4straight66" stroke-width="5"/><circle cx="320" cy="150" r="10" fill="#34446a"/><text x="320" y="225" font-family="Arial" font-size="20" fill="#8d9ab3" text-anchor="middle">Feed offline right now</text></svg>`.replace('3a4straight66','3a4466'));
 const ONERR = `onerror="this.onerror=null;this.src='/ph.svg'"`;
@@ -142,7 +146,9 @@ fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({
   description: 'Hit the button and get a random live camera from somewhere in the world.',
   start_url: '/', scope: '/', display: 'standalone', orientation: 'any',
   background_color: '#0b0f17', theme_color: '#0b0f17',
-  icons: [{ src: '/icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any maskable' }],
+  icons: [{ src: '/icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any maskable' },
+    { src: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
+    { src: '/icon-512.png', sizes: '512x512', type: 'image/png' }],
 }, null, 1));
 fs.writeFileSync(path.join(DIST, 'sw.js'), `// Watch This Cam service worker: network-first for the app, so rebuilds show at once; cache is the offline fallback.
 var V='wtc-v3';
@@ -494,6 +500,14 @@ fs.writeFileSync(path.join(DIST, 'about.html'), head('About — Watch This Cam',
 <p>This is the 2026 revival. Every camera here is a public, live stream that its own operator — a town, a surf club, a harbour, a university, a wildlife charity — chose to put online. We don't host any video; we just point you at it and link back to the source.</p>
 <p>So go on. <a href="/random.html">Hit the button</a> and see where you end up.</p>
 <p class="credit">Not affiliated with any of the camera operators. If you run one of these cams and would like it removed, get in touch.</p>
+</div></main>` + footer);
+
+// ---- 404 (its presence also stops Cloudflare Pages serving the homepage as a 200 for unknown URLs) ----
+fs.writeFileSync(path.join(DIST, '404.html'), head('Page not found — Watch This Cam', 'That page does not exist.') + header + `
+<main class="wrap"><div class="page">
+<h1>That cam has gone dark</h1>
+<p>We couldn't find that page. It may have moved, or the camera was taken offline.</p>
+<p><a href="/random.html">Hit the button for a random cam →</a> or <a href="/browse.html">browse them all</a>.</p>
 </div></main>` + footer);
 
 // ---- Favourites (client-side, from localStorage) ----
