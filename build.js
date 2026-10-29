@@ -90,7 +90,42 @@ const ogYt = cams.find(c => c.type !== 'image');
 const DEFAULT_OG = ogYt ? `https://i.ytimg.com/vi/${ogYt.videoId}/hqdefault.jpg` : '/icon.svg';
 // Cloudflare Pages 308-redirects /x.html to /x, so canonicals and the sitemap use the clean form.
 const cleanPath = p => (p || '/').replace(/\.html$/, '');
-const head = (title, desc, image, pagePath) => `<!doctype html><html lang="en"><head>
+// Structured data (JSON-LD). VideoObject only for real embedded video (YouTube);
+// photo cams are refreshing stills, so ImageObject — claiming VideoObject there
+// with no <video> would be structured-data spam Google can penalise.
+const BUILD_DATE = new Date().toISOString().slice(0, 10);
+function camJsonLd(c) {
+  const url = `${SITE_URL}/cam/${c.id}`;
+  const main = c.type !== 'image'
+    ? {
+        '@context': 'https://schema.org', '@type': 'VideoObject',
+        name: `${c.name} — live cam`, description: c.blurb,
+        thumbnailUrl: [`https://i.ytimg.com/vi/${c.videoId}/hqdefault.jpg`],
+        uploadDate: BUILD_DATE,
+        embedUrl: `https://www.youtube-nocookie.com/embed/${c.videoId}`,
+        contentUrl: `https://www.youtube.com/watch?v=${c.videoId}`, url,
+        publication: { '@type': 'BroadcastEvent', isLiveBroadcast: true, startDate: BUILD_DATE },
+      }
+    : {
+        '@context': 'https://schema.org', '@type': 'ImageObject',
+        name: `${c.name} — live cam`, description: c.blurb,
+        contentUrl: c.imageUrl, thumbnailUrl: c.imageUrl, url,
+      };
+  const crumbs = {
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Browse', item: SITE_URL + '/browse' },
+      { '@type': 'ListItem', position: 3, name: c.name },
+    ],
+  };
+  return [main, crumbs];
+}
+const SITE_JSONLD = [
+  { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Watch This Cam', url: SITE_URL + '/' },
+  { '@context': 'https://schema.org', '@type': 'Organization', name: 'Watch This Cam', url: SITE_URL + '/', logo: SITE_URL + '/icon-512.png' },
+];
+const head = (title, desc, image, pagePath, jsonld) => `<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title><meta name="description" content="${esc(desc)}">
 <meta name="robots" content="index,follow">
@@ -110,7 +145,8 @@ const head = (title, desc, image, pagePath) => `<!doctype html><html lang="en"><
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css"></head><body>`;
+<link rel="stylesheet" href="/styles.css">${jsonld ? `
+<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026')}</script>` : ''}</head><body>`;
 const header = `<header class="top"><div class="wrap">
 <a class="logo" href="/">Watch<span class="bubble">This</span>Cam</a>
 <nav class="nav">
@@ -220,7 +256,7 @@ const thrills = cams.filter(c => ['volcano', 'surf', 'bar'].includes(c.category)
 const watchers = c => { const m = (c.watching || '').match(/([\d,]+)\s*watching/i); return m ? parseInt(m[1].replace(/,/g, ''), 10) || 0 : 0; };
 const busiest = cams.filter(c => watchers(c) > 0).sort((a, b) => watchers(b) - watchers(a)).slice(0, 8);
 fs.writeFileSync(path.join(DIST, 'index.html'), head('Watch This Cam — live cameras from around the world',
-  'Hit the button and get a random live camera from somewhere in the world. Beaches, cities, harbours, wildlife and the downright odd.') + header + `
+  'Hit the button and get a random live camera from somewhere in the world. Beaches, cities, harbours, wildlife and the downright odd.', null, '/', SITE_JSONLD) + header + `
 <main class="wrap">
 <section class="hero">
 <div>
@@ -361,7 +397,7 @@ else{try{var ctx=sc.getContext('2d'),w=sc.width=Math.min(innerWidth,520),h=sc.he
 cams.forEach((c, i) => {
   const related = cams.filter(r => r.category === c.category && r.id !== c.id).slice(0, 4);
   const next = cams[(i + 1) % cams.length].id, prev = cams[(i - 1 + cams.length) % cams.length].id;
-  fs.writeFileSync(path.join(DIST, 'cam', c.id + '.html'), head(`${c.name} — live cam — Watch This Cam`, c.blurb, c.type === 'image' ? c.imageUrl : `https://i.ytimg.com/vi/${c.videoId}/hqdefault.jpg`, `/cam/${c.id}.html`) + header + `
+  fs.writeFileSync(path.join(DIST, 'cam', c.id + '.html'), head(`${c.name} — live cam — Watch This Cam`, c.blurb, c.type === 'image' ? c.imageUrl : `https://i.ytimg.com/vi/${c.videoId}/hqdefault.jpg`, `/cam/${c.id}.html`, camJsonLd(c)) + header + `
 <main class="wrap">
 <div class="cam">
 <div>
