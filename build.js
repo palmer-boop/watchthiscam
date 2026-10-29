@@ -93,7 +93,7 @@ const cleanPath = p => (p || '/').replace(/\.html$/, '');
 // Structured data (JSON-LD). VideoObject only for real embedded video (YouTube);
 // photo cams are refreshing stills, so ImageObject — claiming VideoObject there
 // with no <video> would be structured-data spam Google can penalise.
-const BUILD_DATE = new Date().toISOString().slice(0, 10);
+const BUILD_DATE = new Date().toISOString().slice(0, 10) + 'T00:00:00+00:00';
 function camJsonLd(c) {
   const url = `${SITE_URL}/cam/${c.id}`;
   const main = c.type !== 'image'
