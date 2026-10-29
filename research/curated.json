@@ -110,17 +110,6 @@
   "source": "https://www.youtube.com/watch?v=ShuBcJKNbl4"
  },
  {
-  "id": "webcams-around-the-world-2",
-  "name": "WEBCAMS around the world",
-  "country": "XX",
-  "category": "city",
-  "type": "youtube",
-  "videoId": "c1g-xaAOWnA",
-  "channel": "FOX 10 Phoenix",
-  "watching": "107 watching",
-  "source": "https://www.youtube.com/watch?v=c1g-xaAOWnA"
- },
- {
   "id": "tropical-reef-camera",
   "name": "Tropical Reef Camera",
   "country": "XX",
@@ -473,15 +462,15 @@
   "source": "https://www.youtube.com/watch?v=UemFRPrl1hk"
  },
  {
-  "id": "camera",
-  "name": "Camera",
-  "country": "AU",
+  "id": "crystal-bay-beach-resort",
+  "name": "Crystal Bay Beach Resort",
+  "country": "TH",
   "category": "beach",
   "type": "youtube",
-  "videoId": "wP4gD-5g-90",
+  "videoId": "Fw9hgttWzIg",
   "channel": "The Real Samui Webcam",
-  "watching": "5 watching",
-  "source": "https://www.youtube.com/watch?v=wP4gD-5g-90"
+  "watching": "12 watching",
+  "source": "https://www.youtube.com/watch?v=Fw9hgttWzIg"
  },
  {
   "id": "key-west-harbor-from-ptztv",
@@ -1131,17 +1120,6 @@
   "channel": "Bryant Park NYC",
   "watching": "82 watching",
   "source": "https://www.youtube.com/watch?v=hMWSUCXkj6w"
- },
- {
-  "id": "bryant-park-2",
-  "name": "Bryant Park",
-  "country": "US",
-  "category": "nature",
-  "type": "youtube",
-  "videoId": "QIIVxUJzJQw",
-  "channel": "Bryant Park NYC",
-  "watching": "72 watching",
-  "source": "https://www.youtube.com/watch?v=QIIVxUJzJQw"
  },
  {
   "id": "beach-bar-st-john",
@@ -2090,17 +2068,6 @@
   "source": "https://www.youtube.com/watch?v=rxyNjFKwzJA"
  },
  {
-  "id": "smokies-fall-webcams-10-25-26",
-  "name": "SMOKIES FALL WEBCAMS 10.25.26",
-  "country": "US",
-  "category": "nature",
-  "type": "youtube",
-  "videoId": "pJ-KmokJMj8",
-  "channel": "Explore Tennessee with Paul & Sherry",
-  "watching": "7 watching",
-  "source": "https://www.youtube.com/watch?v=pJ-KmokJMj8"
- },
- {
   "id": "alfagar-aparthotels-algarve-portugal",
   "name": "Alfagar Aparthotels - Algarve, Portugal",
   "country": "PT",
@@ -2222,17 +2189,6 @@
   "source": "https://www.youtube.com/watch?v=SNvppiU1-IM"
  },
  {
-  "id": "new-york-city",
-  "name": "New York City",
-  "country": "US",
-  "category": "harbour",
-  "type": "youtube",
-  "videoId": "1TS_xy9Ocrc",
-  "channel": "NYC Ferry",
-  "watching": "5 watching",
-  "source": "https://www.youtube.com/watch?v=1TS_xy9Ocrc"
- },
- {
   "id": "tossa-de-mar",
   "name": "Tossa de Mar",
   "country": "ES",
@@ -2264,6 +2220,17 @@
   "channel": "Miami River Camera ",
   "watching": "10 watching",
   "source": "https://www.youtube.com/watch?v=FHzIIYECzmM"
+ },
+ {
+  "id": "campus",
+  "name": "Campus",
+  "country": "XX",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "3Yaho-uceGw",
+  "channel": "Colorado College",
+  "watching": "1 watching",
+  "source": "https://www.youtube.com/watch?v=3Yaho-uceGw"
  },
  {
   "id": "sandy-hook-bay",
@@ -2321,28 +2288,6 @@
   "source": "https://www.youtube.com/watch?v=iCxfe27HpaY"
  },
  {
-  "id": "notting-hill-gate-station-london",
-  "name": "Notting Hill Gate Station - London",
-  "country": "GB",
-  "category": "transport",
-  "type": "youtube",
-  "videoId": "Y6gzQmbSpEg",
-  "channel": "Notting Hill Gate Cam",
-  "watching": "38 watching",
-  "source": "https://www.youtube.com/watch?v=Y6gzQmbSpEg"
- },
- {
-  "id": "hong-kong-airport-25-october-2026",
-  "name": "Hong Kong Airport - 25 October 2026",
-  "country": "HK",
-  "category": "harbour",
-  "type": "youtube",
-  "videoId": "Md2B3FQB918",
-  "channel": "Hong Kong Airport Live Cam",
-  "watching": "34 watching",
-  "source": "https://www.youtube.com/watch?v=Md2B3FQB918"
- },
- {
   "id": "niagara-falls-2",
   "name": "Niagara Falls 2",
   "country": "CA",
@@ -2374,17 +2319,6 @@
   "channel": "St Clare's Church Graiguecullen",
   "watching": "1 watching",
   "source": "https://www.youtube.com/watch?v=XzidH6z84nk"
- },
- {
-  "id": "campus-point-surf",
-  "name": "Campus Point Surf",
-  "country": "XX",
-  "category": "surf",
-  "type": "youtube",
-  "videoId": "V4h2soMLLPU",
-  "channel": "GRIT",
-  "watching": "10 watching",
-  "source": "https://www.youtube.com/watch?v=V4h2soMLLPU"
  },
  {
   "id": "port-isaac",
@@ -2539,17 +2473,6 @@
   "channel": "香港人の日常生活",
   "watching": "",
   "source": "https://www.youtube.com/watch?v=PznqRZYdiHs"
- },
- {
-  "id": "ijmuiden-port-the-gateway-to-amsterdam",
-  "name": "IJmuiden Port - the gateway to Amsterdam",
-  "country": "NL",
-  "category": "harbour",
-  "type": "youtube",
-  "videoId": "jIHg8W90pfc",
-  "channel": "SHIPM8",
-  "watching": "4 watching",
-  "source": "https://www.youtube.com/watch?v=jIHg8W90pfc"
  },
  {
   "id": "south-yarra-station",
@@ -2924,17 +2847,6 @@
   "channel": "afarTV",
   "watching": "59 watching",
   "source": "https://www.youtube.com/watch?v=UDAZWxehMAI"
- },
- {
-  "id": "merapi-volcano-erupting-ultra",
-  "name": "Merapi Volcano Erupting Ultra",
-  "country": "ID",
-  "category": "volcano",
-  "type": "youtube",
-  "videoId": "SeyldmYkfDI",
-  "channel": "afarTV",
-  "watching": "2 watching",
-  "source": "https://www.youtube.com/watch?v=SeyldmYkfDI"
  },
  {
   "id": "erupting-semeru-volcano-in-java-indonesi",

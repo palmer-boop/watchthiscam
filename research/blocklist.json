@@ -1,5 +1,5 @@
 {
- "note": "Permanently excluded cams (dead/ended streams found by sweep.js, or manually removed). videoIds for YouTube, imageUrls for raw.",
- "videoIds": ["MD6hfzL8zQI"],
- "imageUrls": []
+ "note": "Permanently excluded cams (dead/ended streams found by sweep.js + re-confirmed, or manually removed). videoIds for YouTube, imageUrls for raw. NZTA/roundshot/ipcamlive-redirect/observatory feeds flagged by sweep on 29 Oct were re-checked and found ALIVE (transient 0-byte or redirect) - do NOT blocklist those.",
+ "videoIds": ["MD6hfzL8zQI", "c1g-xaAOWnA", "wP4gD-5g-90", "QIIVxUJzJQw", "pJ-KmokJMj8", "1TS_xy9Ocrc", "Y6gzQmbSpEg", "Md2B3FQB918", "V4h2soMLLPU", "jIHg8W90pfc", "SeyldmYkfDI"],
+ "imageUrls": ["https://ipcamlive.com/player/snapshot.php?alias=67619ece93982"]
 }
