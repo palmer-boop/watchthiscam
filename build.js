@@ -168,7 +168,8 @@ fs.writeFileSync(path.join(DIST, 'cams.js'), 'window.CAMS=' + JSON.stringify(cam
   id: c.id, n: c.name, cat: c.category, catL: c.catLabel, co: c.countryLabel, fl: flag(c.country),
   t: thumb(c), snap: c.type === 'image' && !c.isMjpeg ? 1 : 0,
 }))) + ';');
-fs.writeFileSync(path.join(DIST, 'ids.js'), 'window.IDS=' + JSON.stringify(cams.map(c => c.id)) + ';');
+fs.writeFileSync(path.join(DIST, 'ids.js'), 'window.IDS=' + JSON.stringify(cams.map(c => c.id)) + ';'
+  + 'window.VIDS=' + JSON.stringify(cams.filter(c => !(c.type === 'image' && !c.isMjpeg)).map(c => c.id)) + ';');
 // Geo + time metadata for Smart surf (day/night) and the world map. Deterministic jitter spreads same-country pins.
 function hash(s) { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0; return h; }
 fs.writeFileSync(path.join(DIST, 'meta.js'), 'window.CAMMETA=' + JSON.stringify(
@@ -311,6 +312,7 @@ fs.writeFileSync(path.join(DIST, 'browse.html'), head('Browse all cams — Watch
 <div class="section-head"><h2>All cameras</h2>
 <div style="display:flex;gap:8px;flex-wrap:wrap">
 <select class="search" id="country" style="max-width:180px;flex:0 1 auto"><option value="">All countries</option>${countryOpts}</select>
+<select class="search" id="type" style="max-width:150px;flex:0 1 auto"><option value="">Video + photo</option><option value="v">📹 Live video</option><option value="p">📷 Photo</option></select>
 <input class="search" id="q" type="search" placeholder="Search a place or type…"></div></div>
 <div class="chips" id="chips">${chips}</div>
 <div class="grid" id="grid" style="margin-top:16px"></div>
@@ -318,12 +320,12 @@ fs.writeFileSync(path.join(DIST, 'browse.html'), head('Browse all cams — Watch
 </main>
 <script src="/cams.js"></script>
 <script>
-const grid=document.getElementById('grid'),q=document.getElementById('q'),empty=document.getElementById('empty'),country=document.getElementById('country');
+const grid=document.getElementById('grid'),q=document.getElementById('q'),empty=document.getElementById('empty'),country=document.getElementById('country'),type=document.getElementById('type');
 let cat='all';
 const card=c=>\`<a class="card" href="/cam/\${c.id}.html"><div class="thumb"><span class="pill\${c.snap?' snap':''}"><span class="dot"></span>\${c.snap?'PHOTO':'LIVE'}</span><img loading="lazy" onerror="var k=this.closest('.card');if(k)k.style.display='none'" src="\${c.t}" alt=""></div><div class="meta"><b>\${c.fl?c.fl+' ':''}\${c.n}</b><span>\${[c.co,c.catL].filter(Boolean).join(' · ')}</span></div></a>\`;
-function render(){const term=q.value.trim().toLowerCase(),co=country.value;const list=CAMS.filter(c=>(cat==='all'||c.cat===cat)&&(!co||c.co===co)&&(!term||(c.n+' '+c.co+' '+c.catL).toLowerCase().includes(term)));grid.innerHTML=list.map(card).join('');empty.hidden=list.length>0;}
+function render(){const term=q.value.trim().toLowerCase(),co=country.value,ty=type.value;const list=CAMS.filter(c=>(cat==='all'||c.cat===cat)&&(!co||c.co===co)&&(!ty||(ty==='v'?!c.snap:c.snap))&&(!term||(c.n+' '+c.co+' '+c.catL).toLowerCase().includes(term)));grid.innerHTML=list.map(card).join('');empty.hidden=list.length>0;}
 document.getElementById('chips').onclick=e=>{if(!e.target.dataset.cat)return;cat=e.target.dataset.cat;[...chips.children].forEach(b=>b.classList.toggle('on',b.dataset.cat===cat));render();};
-q.oninput=render;country.onchange=render;
+q.oninput=render;country.onchange=render;type.onchange=render;
 function applyHash(){var h=decodeURIComponent(location.hash.slice(1));if(h&&[...chips.children].some(b=>b.dataset.cat===h)){cat=h;[...chips.children].forEach(b=>b.classList.toggle('on',b.dataset.cat===cat));render();}}
 window.addEventListener('hashchange',applyHash);
 applyHash();render();
@@ -336,11 +338,14 @@ fs.writeFileSync(path.join(DIST, 'random.html'), head('Random cam — Watch This
 <script src="/meta.js"></script>
 <script>
 var ids=${JSON.stringify(cams.map(c => c.id))};
+var vids=${JSON.stringify(cams.filter(c => !(c.type === 'image' && !c.isMjpeg)).map(c => c.id))};
 function smart(){try{return localStorage.getItem('wtc_smart')!=='0'}catch(e){return true}}
+function vidOnly(){try{return localStorage.getItem('wtc_vid')==='1'}catch(e){return false}}
 var META={};(window.CAMMETA||[]).forEach(function(m){META[m.i]=m;});
 function isDay(id){var m=META[id];if(!m)return true;var h=(new Date().getUTCHours()+m.off+24)%24;return h>=6&&h<20;}
 function seen(){try{return JSON.parse(sessionStorage.getItem('wtc_seen')||'[]')}catch(e){return[]}}
-var pool=ids;if(smart()){var d=ids.filter(isDay);if(d.length>5)pool=d;}
+var base=ids;if(vids.length>5&&(vidOnly()||Math.random()<0.6))base=vids;
+var pool=base;if(smart()){var d=base.filter(isDay);if(d.length>5)pool=d;}
 var sn=seen(),fresh=pool.filter(function(id){return sn.indexOf(id)<0;});if(fresh.length>3)pool=fresh;
 var target='/cam/'+pool[Math.floor(Math.random()*pool.length)]+'.html';
 document.getElementById('ch').textContent='CH '+(Math.floor(Math.random()*98)+2);
@@ -369,6 +374,7 @@ cams.forEach((c, i) => {
 <span class="surf-speed" id="surfspeed" hidden><em>every</em>
 <button data-ms="5000">5s</button><button data-ms="10000">10s</button><button data-ms="20000">20s</button><button data-ms="30000">30s</button><button data-ms="60000">60s</button></span>
 <button class="iconbtn sm" id="skipnight" title="Skip cams where it's the middle of the night">☀ skip night</button>
+<button class="iconbtn sm" id="vidonly" title="Shuffle only to live video cams (skip photo cams)">📹 Video only</button>
 <span class="kbd-hint">Tip: <kbd>Space</kbd> shuffle · <kbd>←</kbd> <kbd>→</kbd> flick · <kbd>Esc</kbd> stop</span>
 </div>
 <div class="player" id="player">
@@ -424,8 +430,12 @@ var META={};(window.CAMMETA||[]).forEach(function(m){META[m.i]=m;});
 function isDay(id){var m=META[id];if(!m)return true;var h=(new Date().getUTCHours()+m.off+24)%24;return h>=6&&h<20;}
 function smart(){try{return localStorage.getItem('wtc_smart')!=='0'}catch(e){return true}}
 function seen(){try{return JSON.parse(sessionStorage.getItem('wtc_seen')||'[]')}catch(e){return[]}}
-function rnd(){var pool=ids;
- if(smart()){var day=ids.filter(function(id){return id!==cur&&isDay(id);});if(day.length>5)pool=day;}
+function vidOnly(){try{return localStorage.getItem('wtc_vid')==='1'}catch(e){return false}}
+function rnd(){var vids=(window.VIDS||[]),base=ids;
+ // Lead with live video: the toggle forces it, otherwise ~60% of shuffles land on a video cam.
+ if(vids.length>5&&(vidOnly()||Math.random()<0.6))base=vids;
+ var pool=base;
+ if(smart()){var day=base.filter(function(id){return id!==cur&&isDay(id);});if(day.length>5)pool=day;}
  var sn=seen(),fresh=pool.filter(function(id){return id!==cur&&sn.indexOf(id)<0;});
  if(fresh.length>3)pool=fresh;   // avoid cams already seen this session
  var id=cur,n=0;while(id===cur&&pool.length>1&&n++<40)id=pool[Math.floor(Math.random()*pool.length)];return '/cam/'+id+'.html';}
@@ -472,6 +482,10 @@ if(lt&&mm){(function p(){var d=new Date(),h=(d.getUTCHours()+mm.off+24)%24,mn=d.
 var sn=document.getElementById('skipnight');
 function paintSmart(){sn.classList.toggle('on',smart());sn.innerHTML=(smart()?'☀ ':'🌙 ')+'skip night';}
 if(sn){sn.onclick=function(){try{localStorage.setItem('wtc_smart',smart()?'0':'1')}catch(e){}paintSmart();};paintSmart();}
+// Video-only toggle: shuffle only to live video cams
+var vo=document.getElementById('vidonly');
+function paintVid(){vo.classList.toggle('on',vidOnly());}
+if(vo){vo.onclick=function(){try{localStorage.setItem('wtc_vid',vidOnly()?'0':'1')}catch(e){}paintVid();};paintVid();}
 // Sound toggle (YouTube cams start muted so they can autoplay)
 var snd=document.getElementById('sound');
 if(snd){var yf=document.getElementById('ytframe'),son=false;
