@@ -55,6 +55,28 @@
   "source": "https://www.youtube.com/watch?v=wUQc3RoLAPs"
  },
  {
+  "id": "big-bear-bald-eagle-nest-1",
+  "name": "Big Bear Bald Eagle Nest - 1",
+  "country": "US",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "B4-L2nfGcuE",
+  "channel": "FOBBV CAM",
+  "watching": "1,819 watching",
+  "source": "https://www.youtube.com/watch?v=B4-L2nfGcuE"
+ },
+ {
+  "id": "treasure-island-california",
+  "name": "Treasure Island, California",
+  "country": "US",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "_VqvVJfmyfs",
+  "channel": "ABC7 News Bay Area",
+  "watching": "1 watching",
+  "source": "https://www.youtube.com/watch?v=_VqvVJfmyfs"
+ },
+ {
   "id": "san-francisco-oakland-bay-bridge-camera",
   "name": "San Francisco-Oakland Bay Bridge Camera",
   "country": "US",
@@ -123,7 +145,7 @@
  {
   "id": "brooks-falls-katmai-national-park-alaska",
   "name": "Brooks Falls - Katmai National Park, Alaska 2026",
-  "country": "XX",
+  "country": "US",
   "category": "nature",
   "type": "youtube",
   "videoId": "J7ZrIDvqlic",
@@ -134,7 +156,7 @@
  {
   "id": "trains-in-the-street-at-la-grange-kentuc",
   "name": "Trains in the Street at La Grange, Kentucky, USA",
-  "country": "XX",
+  "country": "US",
   "category": "transport",
   "type": "youtube",
   "videoId": "9SLt3AT0rXk",
@@ -145,7 +167,7 @@
  {
   "id": "kearney-nebraska-usa",
   "name": "Kearney, Nebraska, USA",
-  "country": "CA",
+  "country": "US",
   "category": "transport",
   "type": "youtube",
   "videoId": "23tmCNeFh7A",
@@ -156,7 +178,7 @@
  {
   "id": "galesburg-illinois-usa",
   "name": "Galesburg, Illinois, USA",
-  "country": "XX",
+  "country": "US",
   "category": "beach",
   "type": "youtube",
   "videoId": "On1MRt0NqFs",
@@ -167,7 +189,7 @@
  {
   "id": "rochelle-illinois-usa",
   "name": "Rochelle, Illinois, USA",
-  "country": "XX",
+  "country": "US",
   "category": "transport",
   "type": "youtube",
   "videoId": "LhNpn9L5ndM",
@@ -178,7 +200,7 @@
  {
   "id": "chehalis-washington-usa",
   "name": "Chehalis, Washington, USA",
-  "country": "XX",
+  "country": "US",
   "category": "transport",
   "type": "youtube",
   "videoId": "wSZCdFJNkR4",
@@ -189,7 +211,7 @@
  {
   "id": "austell-georgia-usa",
   "name": "Austell, Georgia, USA",
-  "country": "XX",
+  "country": "US",
   "category": "transport",
   "type": "youtube",
   "videoId": "Ux0rtJXPPQ0",
@@ -255,7 +277,7 @@
  {
   "id": "riffles-katmai-national-park-alaska",
   "name": "Riffles - Katmai National Park, Alaska",
-  "country": "XX",
+  "country": "US",
   "category": "nature",
   "type": "youtube",
   "videoId": "z7_GhJeFxQI",
@@ -266,7 +288,7 @@
  {
   "id": "wetter-panorama-webcams-sterreich",
   "name": "Wetter-Panorama – Webcams Österreich",
-  "country": "XX",
+  "country": "AT",
   "category": "ski",
   "type": "youtube",
   "videoId": "NIuO6hrFTrg",
@@ -297,9 +319,20 @@
   "source": "https://www.youtube.com/watch?v=enYFXf8u7Lc"
  },
  {
+  "id": "destination-deutschland-webcams-germany",
+  "name": "Destination Deutschland – Webcams Germany",
+  "country": "DE",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "Li3Dvqlo5uE",
+  "channel": "feratel – your window to the world",
+  "watching": "37 watching",
+  "source": "https://www.youtube.com/watch?v=Li3Dvqlo5uE"
+ },
+ {
   "id": "hurricane-isaias-camera-orange-beach-ala",
   "name": "Hurricane Isaias camera: Orange Beach, Alabama and the Gulf",
-  "country": "XX",
+  "country": "US",
   "category": "beach",
   "type": "youtube",
   "videoId": "5Ijk8QsR-nw",
@@ -311,7 +344,7 @@
   "id": "jackson-hole-town-square-see-the-action",
   "name": "Jackson Hole Town Square – See the Action",
   "country": "US",
-  "category": "ski",
+  "category": "nature",
   "type": "youtube",
   "videoId": "1EiC9bvVGnk",
   "channel": "See Jackson Hole",
@@ -354,7 +387,7 @@
  {
   "id": "greenville-jct-maine-canadian-pacific-ra",
   "name": "Greenville Jct, Maine - Canadian Pacific Railway - Railfan",
-  "country": "XX",
+  "country": "US",
   "category": "transport",
   "type": "youtube",
   "videoId": "fLT0G1R9S5o",
@@ -387,7 +420,7 @@
  {
   "id": "los-angeles-venice-beach-venice-v-hotel-",
   "name": "Los Angeles · Venice Beach · Venice V Hotel · Camera",
-  "country": "IT",
+  "country": "US",
   "category": "beach",
   "type": "youtube",
   "videoId": "EO_1LWqsCNE",
@@ -563,7 +596,7 @@
  {
   "id": "uw-lake-washington",
   "name": "UW Lake Washington",
-  "country": "XX",
+  "country": "US",
   "category": "nature",
   "type": "youtube",
   "videoId": "NCzKkn0wD30",
@@ -605,6 +638,17 @@
   "source": "https://www.youtube.com/watch?v=f-iNvCTTZo0"
  },
  {
+  "id": "san-diego-harbor-island",
+  "name": "San Diego Harbor Island",
+  "country": "US",
+  "category": "harbour",
+  "type": "youtube",
+  "videoId": "iaBfYxbmwXA",
+  "channel": "San Diego Web Cam",
+  "watching": "14 watching",
+  "source": "https://www.youtube.com/watch?v=iaBfYxbmwXA"
+ },
+ {
   "id": "san-diego",
   "name": "San Diego",
   "country": "US",
@@ -636,6 +680,39 @@
   "channel": "Coast Cams",
   "watching": "2 watching",
   "source": "https://www.youtube.com/watch?v=c1-8Qg8bQec"
+ },
+ {
+  "id": "camera-mt-fuji",
+  "name": "Camera Mt.FUJI",
+  "country": "JP",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "Sv9hcJ3k5h4",
+  "channel": "フジヤマNAVI",
+  "watching": "6 watching",
+  "source": "https://www.youtube.com/watch?v=Sv9hcJ3k5h4"
+ },
+ {
+  "id": "camera-of-grinpa-theme-park-at-the-2nd-s",
+  "name": "\" Camera of 'Grinpa' Theme Park at the 2nd Station of Mt. Fu",
+  "country": "JP",
+  "category": "transport",
+  "type": "youtube",
+  "videoId": "Joer2U0vki4",
+  "channel": "フジヤマNAVI",
+  "watching": "3 watching",
+  "source": "https://www.youtube.com/watch?v=Joer2U0vki4"
+ },
+ {
+  "id": "camera-hotel-mt-fuji",
+  "name": "Camera Hotel Mt.fuji",
+  "country": "JP",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "Gn2CJjzY068",
+  "channel": "フジヤマNAVI",
+  "watching": "3 watching",
+  "source": "https://www.youtube.com/watch?v=Gn2CJjzY068"
  },
  {
   "id": "ferry-southampton-to-cowes-isle-of-wight",
@@ -684,7 +761,7 @@
  {
   "id": "leavenworth-washington-from-kris-kringl",
   "name": "Leavenworth Washington from Kris Kringl!",
-  "country": "XX",
+  "country": "US",
   "category": "city",
   "type": "youtube",
   "videoId": "TmtVbezZaqg",
@@ -695,7 +772,7 @@
  {
   "id": "leavenworth-washington-from-downtown",
   "name": "Leavenworth Washington from Downtown",
-  "country": "XX",
+  "country": "US",
   "category": "city",
   "type": "youtube",
   "videoId": "XjhxRZEm638",
@@ -706,8 +783,8 @@
  {
   "id": "leavenworth-washington-from-bavarian-lod",
   "name": "Leavenworth Washington from Bavarian Lodge Suites & Mountain",
-  "country": "XX",
-  "category": "ski",
+  "country": "US",
+  "category": "nature",
   "type": "youtube",
   "videoId": "NdW8Mh0lmOo",
   "channel": "Visit Leavenworth",
@@ -737,6 +814,17 @@
   "source": "https://www.youtube.com/watch?v=xa_7z1bHsPM"
  },
  {
+  "id": "eagle-beach",
+  "name": "Eagle Beach",
+  "country": "CL",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "_ZXMjk5K0_s",
+  "channel": "SHOWME Caribbean",
+  "watching": "6 watching",
+  "source": "https://www.youtube.com/watch?v=_ZXMjk5K0_s"
+ },
+ {
   "id": "handelskade-curacao-world-heritage",
   "name": "Handelskade - Curacao World Heritage",
   "country": "CB",
@@ -761,7 +849,7 @@
  {
   "id": "mambo-beach",
   "name": "Mambo Beach",
-  "country": "XX",
+  "country": "CB",
   "category": "beach",
   "type": "youtube",
   "videoId": "loHbMM9JfCs",
@@ -825,6 +913,39 @@
   "source": "https://www.youtube.com/watch?v=CkNeltsc5ps"
  },
  {
+  "id": "orvieto",
+  "name": "Orvieto",
+  "country": "XX",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "y7QcpQwxHrA",
+  "channel": "Umbria Webcam",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=y7QcpQwxHrA"
+ },
+ {
+  "id": "uty-mt-fuji-in-japan",
+  "name": "UTY Mt.Fuji in Japan",
+  "country": "JP",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "rW5aaFv8oxs",
+  "channel": "UTYテレビ山梨公式チャンネル",
+  "watching": "3 watching",
+  "source": "https://www.youtube.com/watch?v=rW5aaFv8oxs"
+ },
+ {
+  "id": "kawaguchiko-station-camera-in-japan-uty",
+  "name": "Kawaguchiko Station Camera in Japan UTY",
+  "country": "JP",
+  "category": "transport",
+  "type": "youtube",
+  "videoId": "ipbHUjTeUIw",
+  "channel": "UTYテレビ山梨公式チャンネル",
+  "watching": "5 watching",
+  "source": "https://www.youtube.com/watch?v=ipbHUjTeUIw"
+ },
+ {
   "id": "nyc-brooklyn-bridge-lower-manhattan-new-",
   "name": "NYC Brooklyn Bridge, Lower Manhattan & New York Harbor",
   "country": "US",
@@ -834,6 +955,39 @@
   "channel": "St. George Tower",
   "watching": "15 watching",
   "source": "https://www.youtube.com/watch?v=1kvGNR_A3DY"
+ },
+ {
+  "id": "las-olas-fort-lauderdale-patio",
+  "name": "LAS OLAS Fort Lauderdale Patio",
+  "country": "US",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "bM0GplM_vPY",
+  "channel": "Elbo Room (Home of ElboTV)",
+  "watching": "24 watching",
+  "source": "https://www.youtube.com/watch?v=bM0GplM_vPY"
+ },
+ {
+  "id": "manarola-italy-cinque-terre",
+  "name": "Manarola Italy - Cinque Terre",
+  "country": "IT",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "QpqsJKI0Wfk",
+  "channel": "Paesaggi Digitali",
+  "watching": "3 watching",
+  "source": "https://www.youtube.com/watch?v=QpqsJKI0Wfk"
+ },
+ {
+  "id": "riomaggiore-italy-cinque-terre",
+  "name": "Riomaggiore Italy - Cinque Terre",
+  "country": "IT",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "A7oGJdUmVkg",
+  "channel": "Paesaggi Digitali",
+  "watching": "1 watching",
+  "source": "https://www.youtube.com/watch?v=A7oGJdUmVkg"
  },
  {
   "id": "south-shore-surf",
@@ -880,6 +1034,17 @@
   "source": "https://www.youtube.com/watch?v=MwcqP3ta6RI"
  },
  {
+  "id": "central-memorial-park-calgary-alberta",
+  "name": "Central Memorial Park, Calgary, Alberta",
+  "country": "CA",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "xsRDTfuksyI",
+  "channel": "DELTATECH Calgary",
+  "watching": "5 watching",
+  "source": "https://www.youtube.com/watch?v=xsRDTfuksyI"
+ },
+ {
   "id": "white-bay-beach-soggy-dollar-and-sandcas",
   "name": "White Bay Beach — Soggy Dollar and Sandcastle Hotel, Jost Va",
   "country": "CB",
@@ -900,6 +1065,39 @@
   "channel": "Tripwebcam",
   "watching": "6 watching",
   "source": "https://www.youtube.com/watch?v=R2jNOtYEwdI"
+ },
+ {
+  "id": "mount-fuji-camera-from-lake-kawaguchiko-",
+  "name": "\"mount fuji camera\" from Lake Kawaguchiko Oishi Park",
+  "country": "JP",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "bdUbACCWmoY",
+  "channel": "【KTV】ケーブルテレビ河口湖",
+  "watching": "18 watching",
+  "source": "https://www.youtube.com/watch?v=bdUbACCWmoY"
+ },
+ {
+  "id": "mount-fuji-camera-from-lake-yamanakako-f",
+  "name": "\"mount fuji camera\" from Lake Yamanakako FUJISAN",
+  "country": "JP",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "F2NbYrc-gBU",
+  "channel": "【KTV】ケーブルテレビ河口湖",
+  "watching": "17 watching",
+  "source": "https://www.youtube.com/watch?v=F2NbYrc-gBU"
+ },
+ {
+  "id": "mount-fuji-camera-from-lake-kawaguchiko",
+  "name": "\"mount fuji camera\" from Lake Kawaguchiko",
+  "country": "JP",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "1cnReFAU04k",
+  "channel": "【KTV】ケーブルテレビ河口湖",
+  "watching": "17 watching",
+  "source": "https://www.youtube.com/watch?v=1cnReFAU04k"
  },
  {
   "id": "oxford-martin-school-broad-street-oxford",
@@ -926,7 +1124,18 @@
  {
   "id": "bryant-park",
   "name": "Bryant Park",
-  "country": "XX",
+  "country": "US",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "hMWSUCXkj6w",
+  "channel": "Bryant Park NYC",
+  "watching": "82 watching",
+  "source": "https://www.youtube.com/watch?v=hMWSUCXkj6w"
+ },
+ {
+  "id": "bryant-park-2",
+  "name": "Bryant Park",
+  "country": "US",
   "category": "nature",
   "type": "youtube",
   "videoId": "QIIVxUJzJQw",
@@ -979,6 +1188,17 @@
   "source": "https://www.youtube.com/watch?v=afyrMxe0qjg"
  },
  {
+  "id": "bird-feeder-wildlife-gettysburg-pa",
+  "name": "Bird Feeder & Wildlife - Gettysburg, PA",
+  "country": "US",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "y9t1g8Ike6g",
+  "channel": "Gettysburg LiveCam",
+  "watching": "109 watching",
+  "source": "https://www.youtube.com/watch?v=y9t1g8Ike6g"
+ },
+ {
   "id": "box-camera-falconcam-project",
   "name": "Box Camera - FalconCam Project",
   "country": "XX",
@@ -993,7 +1213,7 @@
   "id": "turystyczne-uj-cia-z-polskich-miast-webc",
   "name": "Turystyczne ujęcia z polskich miast - WebCamera.pl",
   "country": "PL",
-  "category": "ski",
+  "category": "city",
   "type": "youtube",
   "videoId": "Rn_ga4yXkME",
   "channel": "WebCamera.pl",
@@ -1089,6 +1309,17 @@
   "source": "https://www.youtube.com/watch?v=_0wPODlF9wU"
  },
  {
+  "id": "brazil",
+  "name": "Brazil",
+  "country": "BR",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "-Xtz0Jo5Ln8",
+  "channel": "Earth Now",
+  "watching": "6 watching",
+  "source": "https://www.youtube.com/watch?v=-Xtz0Jo5Ln8"
+ },
+ {
   "id": "japan",
   "name": "Japan",
   "country": "JP",
@@ -1133,15 +1364,15 @@
   "source": "https://www.youtube.com/watch?v=5uZa3-RMFos"
  },
  {
-  "id": "hotel-sturgis-on-main-st-and-harley-davi",
-  "name": "Hotel Sturgis on Main St. and Harley-Davidson Way in Sturgis",
+  "id": "hamptons-com-sag-harbor-bay-sag-harbor-n",
+  "name": "Hamptons.com - ! Sag Harbor Bay, Sag Harbor, New York",
   "country": "US",
-  "category": "city",
+  "category": "beach",
   "type": "youtube",
-  "videoId": "uu82CI54eJU",
-  "channel": "UDrive Tech LIVE Streaming",
-  "watching": "13 watching",
-  "source": "https://www.youtube.com/watch?v=uu82CI54eJU"
+  "videoId": "WU2QHNNAN_M",
+  "channel": "Hamptons. com",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=WU2QHNNAN_M"
  },
  {
   "id": "ter-heijde-beach-camera",
@@ -1164,6 +1395,17 @@
   "channel": "iTSCOM",
   "watching": "",
   "source": "https://www.youtube.com/watch?v=f50R4vDlCmA"
+ },
+ {
+  "id": "leeward-key-miramar-beach-fl",
+  "name": "Leeward Key Miramar Beach, FL",
+  "country": "US",
+  "category": "beach",
+  "type": "youtube",
+  "videoId": "CVgBM39TOh8",
+  "channel": "ENCO Electronic Systems",
+  "watching": "2 watching",
+  "source": "https://www.youtube.com/watch?v=CVgBM39TOh8"
  },
  {
   "id": "the-lower-keys",
@@ -1199,15 +1441,15 @@
   "source": "https://www.youtube.com/watch?v=NqOmHpwMUxs"
  },
  {
-  "id": "downtown-telluride-camera",
-  "name": "Downtown Telluride Camera",
-  "country": "XX",
-  "category": "city",
+  "id": "jbay-south-africa",
+  "name": "JBay South Africa",
+  "country": "ZA",
+  "category": "beach",
   "type": "youtube",
-  "videoId": "8Et9fVZld7E",
-  "channel": "Alpine Lodging Telluride Youtube",
-  "watching": "4 watching",
-  "source": "https://www.youtube.com/watch?v=8Et9fVZld7E"
+  "videoId": "7rdk79WCsQs",
+  "channel": "SA Webcams",
+  "watching": "10 watching",
+  "source": "https://www.youtube.com/watch?v=7rdk79WCsQs"
  },
  {
   "id": "amsterdam-stationseiland-centraal-statio",
@@ -1243,15 +1485,37 @@
   "source": "https://www.youtube.com/watch?v=SpE5lieibJk"
  },
  {
+  "id": "mount-fuji-webcams-from-japan-world-heri",
+  "name": "Mount Fuji webcams from Japan. world heritage",
+  "country": "JP",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "PxzwnWh1dKk",
+  "channel": "FujiyamaTV - FujigokoTV",
+  "watching": "6 watching",
+  "source": "https://www.youtube.com/watch?v=PxzwnWh1dKk"
+ },
+ {
   "id": "dania-beach-pier",
   "name": "Dania Beach Pier",
-  "country": "XX",
+  "country": "US",
   "category": "beach",
   "type": "youtube",
   "videoId": "o1eTLR7Degs",
   "channel": "City of Dania Beach Pier Cam",
   "watching": "19 watching",
   "source": "https://www.youtube.com/watch?v=o1eTLR7Degs"
+ },
+ {
+  "id": "bryant-park-nyc-ice-skating",
+  "name": "Bryant Park NYC Ice Skating",
+  "country": "US",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "JkkMj6V2IJg",
+  "channel": "Volcoholics - Wild Horizons",
+  "watching": "2 watching",
+  "source": "https://www.youtube.com/watch?v=JkkMj6V2IJg"
  },
  {
   "id": "hamamatsu-cho-railway-tracks-tokyo",
@@ -1263,6 +1527,17 @@
   "channel": "共同通信LiveCamera",
   "watching": "16 watching",
   "source": "https://www.youtube.com/watch?v=W0V8-6WrgBY"
+ },
+ {
+  "id": "mt-fuji-camera",
+  "name": "Mt.Fuji Camera",
+  "country": "JP",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "ViHMZfmURiw",
+  "channel": "共同通信LiveCamera",
+  "watching": "3 watching",
+  "source": "https://www.youtube.com/watch?v=ViHMZfmURiw"
  },
  {
   "id": "manhattan-beach-and-surf-report",
@@ -1285,17 +1560,6 @@
   "channel": "テイケイ公式チャンネル",
   "watching": "37 watching",
   "source": "https://www.youtube.com/watch?v=ErHJBXTmm2Q"
- },
- {
-  "id": "miami-skyline",
-  "name": "Miami Skyline",
-  "country": "US",
-  "category": "city",
-  "type": "youtube",
-  "videoId": "GkBMgHwSIV0",
-  "channel": "Ozolio Live",
-  "watching": "5 watching",
-  "source": "https://www.youtube.com/watch?v=GkBMgHwSIV0"
  },
  {
   "id": "napili-kai-beach-resort",
@@ -1377,7 +1641,7 @@
  {
   "id": "the-best-western-in-jacksonville-beach-f",
   "name": "The Best Western In Jacksonville Beach, Fl.",
-  "country": "XX",
+  "country": "US",
   "category": "surf",
   "type": "youtube",
   "videoId": "bZ4uxyLqV-E",
@@ -1441,17 +1705,6 @@
   "source": "https://www.youtube.com/watch?v=2occtpoOu_w"
  },
  {
-  "id": "fremont-street-camera-2-brand-new-view-o",
-  "name": "Fremont Street ◆ CAMERA 2 - BRAND NEW ◆ View of Downtown Las",
-  "country": "US",
-  "category": "city",
-  "type": "youtube",
-  "videoId": "uaIhqF1hz0I",
-  "channel": "Justin Clouse",
-  "watching": "4 watching",
-  "source": "https://www.youtube.com/watch?v=uaIhqF1hz0I"
- },
- {
   "id": "costa-da-caparica-1-panor-mica",
   "name": "Costa da Caparica 1 Panorâmica",
   "country": "PT",
@@ -1485,17 +1738,6 @@
   "source": "https://www.youtube.com/watch?v=w7rzgn6WXs8"
  },
  {
-  "id": "nine-one-five-key-west",
-  "name": "Nine One Five Key West",
-  "country": "US",
-  "category": "city",
-  "type": "youtube",
-  "videoId": "zAXQjQZUhB0",
-  "channel": "Seek Florida Keys",
-  "watching": "1 watching",
-  "source": "https://www.youtube.com/watch?v=zAXQjQZUhB0"
- },
- {
   "id": "baby-s-coffee",
   "name": "Baby's Coffee",
   "country": "XX",
@@ -1516,6 +1758,17 @@
   "channel": "Breckenridge Associates Real Estate",
   "watching": "18 watching",
   "source": "https://www.youtube.com/watch?v=SH63YaIWyK0"
+ },
+ {
+  "id": "mt-fuji-and-lake-ashinoko-camera-from-ha",
+  "name": "Mt. Fuji and Lake Ashinoko Camera - from Hakone, Japan",
+  "country": "JP",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "maMMEh-2Bsk",
+  "channel": "箱根ターンパイク株式会社 Official YouTube Channel",
+  "watching": "2 watching",
+  "source": "https://www.youtube.com/watch?v=maMMEh-2Bsk"
  },
  {
   "id": "lanzarote-from-the-beachbar-in-costa-teg",
@@ -1696,7 +1949,7 @@
  {
   "id": "windmill-bar-jam-fam-st-john-usvi",
   "name": "Windmill Bar Jam Fam - St. John, USVI",
-  "country": "XX",
+  "country": "CB",
   "category": "bar",
   "type": "youtube",
   "videoId": "d-drfinzIWU",
@@ -1771,6 +2024,39 @@
   "source": "https://www.youtube.com/watch?v=ev1hgKJlnQA"
  },
  {
+  "id": "table-mountain",
+  "name": "Table Mountain",
+  "country": "ZA",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "jOqASqt3vVI",
+  "channel": "Table Mountain Live Stream",
+  "watching": "3 watching",
+  "source": "https://www.youtube.com/watch?v=jOqASqt3vVI"
+ },
+ {
+  "id": "table-mountain-bloubergstrand-beach-came",
+  "name": "Table Mountain & Bloubergstrand Beach Camera",
+  "country": "ZA",
+  "category": "beach",
+  "type": "youtube",
+  "videoId": "vOLCjL4kv-w",
+  "channel": "Table Mountain Live Stream",
+  "watching": "1 watching",
+  "source": "https://www.youtube.com/watch?v=vOLCjL4kv-w"
+ },
+ {
+  "id": "langebaan-lagoon-camera",
+  "name": "Langebaan Lagoon Camera",
+  "country": "ZA",
+  "category": "beach",
+  "type": "youtube",
+  "videoId": "mxEholKv57A",
+  "channel": "Table Mountain Live Stream",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=mxEholKv57A"
+ },
+ {
   "id": "camera-downtown-singapore",
   "name": "CAMERA Downtown Singapore",
   "country": "SG",
@@ -1795,7 +2081,7 @@
  {
   "id": "vancouver",
   "name": "Vancouver",
-  "country": "CA",
+  "country": "US",
   "category": "harbour",
   "type": "youtube",
   "videoId": "rxyNjFKwzJA",
@@ -1806,8 +2092,8 @@
  {
   "id": "smokies-fall-webcams-10-25-26",
   "name": "SMOKIES FALL WEBCAMS 10.25.26",
-  "country": "XX",
-  "category": "ski",
+  "country": "US",
+  "category": "nature",
   "type": "youtube",
   "videoId": "pJ-KmokJMj8",
   "channel": "Explore Tennessee with Paul & Sherry",
@@ -1872,7 +2158,7 @@
  {
   "id": "state-street-south-newburyport",
   "name": "State Street South - Newburyport",
-  "country": "XX",
+  "country": "US",
   "category": "harbour",
   "type": "youtube",
   "videoId": "WkjZg22TBfQ",
@@ -1914,17 +2200,6 @@
   "source": "https://www.youtube.com/watch?v=mxfelXmWtCA"
  },
  {
-  "id": "skid-row-1",
-  "name": "Skid Row 1",
-  "country": "XX",
-  "category": "ski",
-  "type": "youtube",
-  "videoId": "IjzXRg2p-Ek",
-  "channel": "Rescue Rescue",
-  "watching": "64 watching",
-  "source": "https://www.youtube.com/watch?v=IjzXRg2p-Ek"
- },
- {
   "id": "woz-ere",
   "name": "WOZ ERE",
   "country": "US",
@@ -1934,6 +2209,17 @@
   "channel": "WOZ ERE",
   "watching": "5 watching",
   "source": "https://www.youtube.com/watch?v=f_yY-0miTzo"
+ },
+ {
+  "id": "grand-avenue-bridge-in-glenwood-springs-",
+  "name": "Grand Avenue Bridge in Glenwood Springs Camera",
+  "country": "XX",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "SNvppiU1-IM",
+  "channel": "Colorado Mountain College",
+  "watching": "4 watching",
+  "source": "https://www.youtube.com/watch?v=SNvppiU1-IM"
  },
  {
   "id": "new-york-city",
@@ -1958,6 +2244,17 @@
   "source": "https://www.youtube.com/watch?v=nWFcWooDAxI"
  },
  {
+  "id": "camera-inside-jazzle-house-united-kingdo",
+  "name": "Camera Inside Jazzle House, United Kingdom",
+  "country": "XX",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "IONwBYLZ15E",
+  "channel": "Jazzle Live Cams",
+  "watching": "14 watching",
+  "source": "https://www.youtube.com/watch?v=IONwBYLZ15E"
+ },
+ {
   "id": "miami-river-camera",
   "name": "Miami River Camera",
   "country": "US",
@@ -1967,6 +2264,28 @@
   "channel": "Miami River Camera ",
   "watching": "10 watching",
   "source": "https://www.youtube.com/watch?v=FHzIIYECzmM"
+ },
+ {
+  "id": "sandy-hook-bay",
+  "name": "Sandy Hook Bay",
+  "country": "US",
+  "category": "beach",
+  "type": "youtube",
+  "videoId": "xIxvTSVeHGk",
+  "channel": "Above the Hook",
+  "watching": "2 watching",
+  "source": "https://www.youtube.com/watch?v=xIxvTSVeHGk"
+ },
+ {
+  "id": "tokyo-wide-area-live-camera",
+  "name": "東京広域ライブカメラ Tokyo Wide Area Live Camera ",
+  "country": "JP",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "rHbVqrM_pZs",
+  "channel": "東京広域ライブカメラ Tokyo Wide Area Live Camera ",
+  "watching": "8,661 views",
+  "source": "https://www.youtube.com/watch?v=rHbVqrM_pZs"
  },
  {
   "id": "rhine-falls",
@@ -2002,17 +2321,6 @@
   "source": "https://www.youtube.com/watch?v=iCxfe27HpaY"
  },
  {
-  "id": "kauai-beach",
-  "name": "Kauai Beach",
-  "country": "US",
-  "category": "beach",
-  "type": "youtube",
-  "videoId": "tuj4OvU6UZI",
-  "channel": "Ozolio Plus",
-  "watching": "3 watching",
-  "source": "https://www.youtube.com/watch?v=tuj4OvU6UZI"
- },
- {
   "id": "notting-hill-gate-station-london",
   "name": "Notting Hill Gate Station - London",
   "country": "GB",
@@ -2035,15 +2343,26 @@
   "source": "https://www.youtube.com/watch?v=Md2B3FQB918"
  },
  {
-  "id": "fort-zachary-taylor-beach-key-west-flori",
-  "name": "Fort Zachary Taylor Beach - Key West, Florida",
-  "country": "US",
-  "category": "beach",
+  "id": "niagara-falls-2",
+  "name": "Niagara Falls 2",
+  "country": "CA",
+  "category": "nature",
   "type": "youtube",
-  "videoId": "sDXwrYQPeOQ",
-  "channel": "Florida Live",
-  "watching": "3 watching",
-  "source": "https://www.youtube.com/watch?v=sDXwrYQPeOQ"
+  "videoId": "DbsjV_O67Ts",
+  "channel": "The Currie’s",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=DbsjV_O67Ts"
+ },
+ {
+  "id": "niagara-falls",
+  "name": "Niagara Falls",
+  "country": "CA",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "PS46DvoJY-c",
+  "channel": "The Currie’s",
+  "watching": "1 watching",
+  "source": "https://www.youtube.com/watch?v=PS46DvoJY-c"
  },
  {
   "id": "st-clare-s-church-carlow-back-camera",
@@ -2079,6 +2398,17 @@
   "source": "https://www.youtube.com/watch?v=D38HQbFbMzs"
  },
  {
+  "id": "strand-bodyboard-collective-false-bay-ca",
+  "name": "Strand Bodyboard Collective , False Bay, Cape Town - Strand ",
+  "country": "ZA",
+  "category": "beach",
+  "type": "youtube",
+  "videoId": "zGlGodTfncQ",
+  "channel": "Cape Ocean Adventures ",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=zGlGodTfncQ"
+ },
+ {
   "id": "runway-23",
   "name": "Runway 23",
   "country": "AU",
@@ -2101,6 +2431,28 @@
   "source": "https://www.youtube.com/watch?v=CcnlJI_UXyM"
  },
  {
+  "id": "baby-turtle-at-echo-leahy-center-for-lak",
+  "name": "Baby Turtle at ECHO, Leahy Center for Lake Champlain",
+  "country": "US",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "IA28S7y5rvI",
+  "channel": "ECHO Leahy Center for Lake Champlain",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=IA28S7y5rvI"
+ },
+ {
+  "id": "carte-de-surveillance-la-ville-de-l-amou",
+  "name": "Carte de Surveillance · La Ville de l'Amour · Paris en Franc",
+  "country": "FR",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "UHlDzWrBEPI",
+  "channel": "Surveillance Map Foundation",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=UHlDzWrBEPI"
+ },
+ {
   "id": "aloha-beachclub-surfschool-surfshop-de-z",
   "name": "Aloha Beachclub, Surfschool & Surfshop De Zuid",
   "country": "XX",
@@ -2121,17 +2473,6 @@
   "channel": "Roma Five Suites",
   "watching": "1 watching",
   "source": "https://www.youtube.com/watch?v=VfH8gQJQnBE"
- },
- {
-  "id": "santa-monica-beach-pier-california",
-  "name": "Santa Monica Beach & Pier : California",
-  "country": "US",
-  "category": "beach",
-  "type": "youtube",
-  "videoId": "v97JpT3ZA0w",
-  "channel": "Explore Big Surf, Beaches and Sunsets",
-  "watching": "13 watching",
-  "source": "https://www.youtube.com/watch?v=v97JpT3ZA0w"
  },
  {
   "id": "nazar-big-waves-camera",
@@ -2178,15 +2519,15 @@
   "source": "https://www.youtube.com/watch?v=cVRG4zYdUP0"
  },
  {
-  "id": "moonshine-mountain-coaster-gatlinburg-ca",
-  "name": "Moonshine Mountain Coaster, Gatlinburg, Camera",
-  "country": "XX",
-  "category": "ski",
+  "id": "cape-town",
+  "name": "Cape Town",
+  "country": "ZA",
+  "category": "harbour",
   "type": "youtube",
-  "videoId": "td55JeRkesE",
-  "channel": "Moonshine Mountain Coaster",
-  "watching": "2 watching",
-  "source": "https://www.youtube.com/watch?v=td55JeRkesE"
+  "videoId": "rG5WkQXo5dI",
+  "channel": "FLOORING․CO․ZA",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=rG5WkQXo5dI"
  },
  {
   "id": "nature-sound-hong-kong-aberdeen-harbour-",
@@ -2222,6 +2563,17 @@
   "source": "https://www.youtube.com/watch?v=7Lu9rWg7ngI"
  },
  {
+  "id": "nyc-harbor-view-october-29-2026-night-an",
+  "name": "NYC - HARBOR VIEW - October 29, 2026 - Night and Morning",
+  "country": "US",
+  "category": "harbour",
+  "type": "youtube",
+  "videoId": "KLmA4Di5D9I",
+  "channel": "New York Live Camera",
+  "watching": "1 watching",
+  "source": "https://www.youtube.com/watch?v=KLmA4Di5D9I"
+ },
+ {
   "id": "camera-from-the-royal-oak-saundersfoot-p",
   "name": "Camera from the Royal Oak Saundersfoot, Pembrokeshire",
   "country": "GB",
@@ -2233,17 +2585,6 @@
   "source": "https://www.youtube.com/watch?v=L9ZF139ihQ8"
  },
  {
-  "id": "skid-row-los-angeles",
-  "name": "Skid Row - Los Angeles",
-  "country": "XX",
-  "category": "ski",
-  "type": "youtube",
-  "videoId": "8ucy5a4oQ2g",
-  "channel": "Mexico Live",
-  "watching": "7 watching",
-  "source": "https://www.youtube.com/watch?v=8ucy5a4oQ2g"
- },
- {
   "id": "peneco-beach-albufeira-portugal",
   "name": "Peneco Beach - Albufeira, Portugal",
   "country": "PT",
@@ -2253,6 +2594,17 @@
   "channel": "Mexico Live",
   "watching": "",
   "source": "https://www.youtube.com/watch?v=3d3BSdKfJn0"
+ },
+ {
+  "id": "tourism-red-deer",
+  "name": "Tourism Red Deer",
+  "country": "CA",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "8iOlmdT-QeQ",
+  "channel": "Tourism Red Deer",
+  "watching": "2 watching",
+  "source": "https://www.youtube.com/watch?v=8iOlmdT-QeQ"
  },
  {
   "id": "bagenalstown-parish-church",
@@ -2288,6 +2640,17 @@
   "source": "https://www.youtube.com/watch?v=etCrL04QgsM"
  },
  {
+  "id": "cattolica-from-residence-fiorella",
+  "name": "Cattolica - from Residence FIORELLA",
+  "country": "IT",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "qWlry5rSTBo",
+  "channel": "Residence Fiorella",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=qWlry5rSTBo"
+ },
+ {
   "id": "wyndham-harbour-web-camera-view",
   "name": "Wyndham Harbour Web Camera - View",
   "country": "AU",
@@ -2301,13 +2664,24 @@
  {
   "id": "port-erin-on-the-isle-of-man",
   "name": "Port Erin on the Isle of Man",
-  "country": "XX",
+  "country": "GB",
   "category": "harbour",
   "type": "youtube",
   "videoId": "d8C5u3PFgSM",
   "channel": "Island Escapes",
   "watching": "291 watching",
   "source": "https://www.youtube.com/watch?v=d8C5u3PFgSM"
+ },
+ {
+  "id": "san-george-corfu-greece",
+  "name": "San George Corfu Greece",
+  "country": "GR",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "j4lwhbJYHXk",
+  "channel": "Alexandros Pajatakis",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=j4lwhbJYHXk"
  },
  {
   "id": "praia-da-alagoa-porto-da-cruz-madeira-is",

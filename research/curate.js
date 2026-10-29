@@ -34,12 +34,12 @@ const RULES = [
   ['volcano', /volcano|volcan|volcán|erupt|erupc|kilauea|etna|stromboli|fuego|mayon|merapi|semeru/i],
   ['wildlife', /eagle|bear|panda|otter|puffin|osprey|bird|feeder|zoo|giraffe|safari|africam|reef|aquarium|coral|falcon|nest|wildlife|animal|cat ?cafe|puppy|dog/i],
   ['space', /nasa|iss |space|earth from|orbit|rocket/i],
-  ['ski', /ski|slope|piste|alps|alpine|snow|mountain|zermatt|matterhorn|jungfrau|dolomiten|panorama/i],
+  ['ski', /\bski\b|\bskiing|ski resort|slope|piste|\balps\b|alpine|\bsnow|zermatt|matterhorn|jungfrau|dolomiten/i],
   ['surf', /surf/i],
   ['beach', /beach|playa|praia|strand|bay|lagoon|seaside|ocean|coast|pipeline/i],
   ['harbour', /harbour|harbor|port|marina|pier|wharf|dock|ferry|canal|ships?/i],
   ['transport', /airport|runway|plane|train|railway|rail|station|metro|underground|tram/i],
-  ['nature', /falls|lake|river|aurora|northern lights|forest|desert|park|nature|waterfall|fjord/i],
+  ['nature', /falls|lake|river|aurora|northern lights|forest|desert|park|nature|waterfall|fjord|mountain|panorama|glacier|canyon/i],
   ['bar', /bar\b|pub|saloon|cafe|café|kitchen|tavern/i],
   ['city', /.*/],
 ];
@@ -50,8 +50,8 @@ function countryOf(c) {
   const map = { IE: /dublin|ireland|galway|cork|kerry|donegal|belfast|carlow|larne|portrush|bennekerry|graiguecullen|bagenalstown/i,
     AU: /sydney|bondi|melbourne|gold coast|byron|newcastle|townsville|adelaide|australia|wyndham|yarra|perisher|thredbo|brisbane|perth/i,
     PT: /portugal|lisbon|lisboa|porto|algarve|nazar|madeira|funchal|azores|caparica|portim|albufeira|pico|machico|moniz/i,
-    US: /new york|nyc|times square|vegas|nashville|key west|miami|hawaii|oahu|maui|kauai|florida|california|texas|jackson hole|galveston|chicago|san diego|bourbon|new orleans|oakland|brooklyn|manhattan|sturgis|seattle|boston|austin|denver|san francisco/i,
-    GB: /london|oxford|yorkshire|somerset|isle of wight|southampton|scotland|fort william|wales|saundersfoot|weymouth|dartmouth|port isaac|notting hill|edinburgh|piccadilly/i,
+    US: /new york|nyc|times square|vegas|nashville|key west|miami|hawaii|oahu|maui|kauai|waikiki|florida|\bfl\b|california|texas|jackson hole|galveston|chicago|san diego|bourbon|new orleans|oakland|brooklyn|manhattan|bryant park|los angeles|skid row|sturgis|seattle|washington|boston|austin|denver|san francisco|\busa\b|kentucky|illinois|alaska|alabama|wyoming|tennessee|vermont|\bmaine\b|iowa|pennsylvania|gettysburg|gatlinburg|telluride|fort lauderdale|miramar beach|dania beach|winter garden|newburyport|sag harbor|sandy hook|lake champlain|big bear|leavenworth/i,
+    GB: /london|oxford|yorkshire|somerset|isle of wight|isle of man|southampton|scotland|fort william|wales|saundersfoot|weymouth|dartmouth|port isaac|notting hill|edinburgh|piccadilly/i,
     JP: /tokyo|shibuya|shinjuku|japan|osaka|kyoto|odaiba|fuji|hamamatsu|kabukicho/i,
     IT: /venice|rome|roma|italy|assisi|dolomiten|san marco|rialto|milan|florence|firenze/i,
     NL: /amsterdam|netherlands|groningen|nijmegen|zaanse|ijmuiden|rotterdam/i,
@@ -61,7 +61,7 @@ function countryOf(c) {
     SG: /singapore/i, IN: /mumbai|delhi|india\b|bangalore|chennai|kolkata/i, AE: /dubai|abu dhabi|uae|emirates/i,
     TH: /thailand|samui|chaweng|lamai|bangkok|phuket/i, VN: /vietnam|hanoi|saigon|ho chi minh/i, ID: /indonesia|jakarta|bali/i,
     PH: /philippines|manila|davao|cebu/i, MY: /malaysia|kuala lumpur/i,
-    DE: /germany|berlin|munich|münchen|hamburg|cologne|frankfurt|deutschland/i, AT: /austria|vienna|wien|kitzb|hotham|tyrol|salzburg/i,
+    DE: /germany|berlin|munich|münchen|hamburg|cologne|frankfurt|deutschland/i, AT: /austria|vienna|wien|kitzb|hotham|tyrol|salzburg|österreich|osterreich/i,
     FR: /france|paris|nice|marseille|lyon|montmartre|sacr/i, GR: /greece|athens|santorini|corfu|crete/i,
     TR: /turkey|istanbul|turkiye/i, RU: /russia|moscow|ufa/i, CZ: /czech|prague|praha/i, HU: /hungary|budapest|bekescsaba|békéscsaba/i,
     PL: /poland|warsaw|krakow|webcamera\.pl/i, DK: /denmark|copenhagen/i, SE: /sweden|stockholm|vilhelmina|overtornea/i,
@@ -70,10 +70,10 @@ function countryOf(c) {
     BR: /brazil|rio de janeiro|sao paulo|manaus|amzlive|camboriu|florian[oó]polis|jericoacoara|angra dos reis|balne[aá]rio|lagoinha/i,
     CL: /chile|santiago|la silla|eso/i, PE: /peru|lima/i, CO: /colombia|bogota/i, ZA: /south africa|cape town|johannesburg|knysna/i,
     GT: /guatemala|fuego/i, NA: /namibia|namib/i,
-    KE: /kenya|nairobi/i, EG: /egypt|cairo/i, MA: /morocco|marrakech/i, CA: /canada|toronto|vancouver|montreal|calgary|canmore|alberta|kootenay|kearney/i,
+    KE: /kenya|nairobi/i, EG: /egypt|cairo/i, MA: /morocco|marrakech/i, CA: /canada|toronto|vancouver|montreal|calgary|canmore|alberta|kootenay|kearney|red deer|niagara/i,
     FI: /finland|helsinki|modeemi|lasipalatsi/i, IS: /iceland|reykjavik/i, NZ: /new zealand|auckland|wellington|queenstown|arthur/i };
   for (const [k, re] of Object.entries(map)) if (re.test(s)) return k;
-  if (/caribbean|curacao|st mart|maho|jost van|bvi|bahamas|aruba/i.test(s)) return 'CB';
+  if (/caribbean|curacao|st mart|maho|jost van|bvi|bahamas|aruba|usvi|mambo beach/i.test(s)) return 'CB';
   return 'XX';
 }
 
