@@ -826,7 +826,8 @@ const ARTICLES = [
       { m: /sandycove|forty foot/i, country: 'IE', why: 'The Forty Foot at Sandycove — the famous sea-swimming spot on Dublin Bay. Watch the brave ones take the plunge, Christmas morning or any morning.' },
       { m: /howth harbour|howth/i, country: 'IE', cat: 'harbour', why: 'Howth Harbour, boats rocking on the edge of Dublin Bay. You can nearly smell the chipper from here.' },
       { m: /cobh/i, country: 'IE', why: 'Cobh in Cork Harbour — the Titanic’s last port of call, and the port so many emigrants sailed from. A poignant one if you left from here yourself.' },
-      { m: /rathmines/i, country: 'IE', why: 'A Dublin street getting on with its day — buses, brollies and all. Nothing much happening, and somehow you can’t look away. Pure home.' },
+      { m: /rathmines/i, country: 'IE', why: 'Live over the Rathmines rooftops — the great green dome of the church against that unmistakable grey Dublin sky. As home as it gets.' },
+      { m: /collins avenue|cabra/i, country: 'IE', why: 'A Dublin street getting on with its day — buses, brollies and all. Nothing much happening, and somehow you still can’t look away. Pure home.' },
       { m: /lahinch/i, country: 'IE', why: 'Lahinch in County Clare — Atlantic rollers and surfers in the cold. The Wild Atlantic Way doing its thing, live.' },
       { m: /strandhill/i, country: 'IE', why: 'Strandhill in Sligo — big western skies and bigger waves, the Atlantic right in your face.' },
       { m: /derrynane|caherdaniel|kenmare/i, country: 'IE', why: 'Kerry, out on the Wild Atlantic Way near Derrynane. The kind of view that quietly has you checking flights.' },
@@ -910,6 +911,7 @@ for (const a of ARTICLES) {
   const resolved = [], seen = new Set();
   for (const pk of a.picks) { const c = pickCam(pk.m, pk.cat, pk.country); if (c && !seen.has(c.id)) { seen.add(c.id); resolved.push({ c, why: pk.why }); } }
   if (!resolved.length) continue;
+  resolved.sort((x, y) => (x.c.type === 'image' ? 1 : 0) - (y.c.type === 'image' ? 1 : 0)); // live video first
   const p = `/guide/${a.slug}.html`;
   articleUrls.push({ p, title: a.title, desc: a.desc, n: resolved.length });
   // Share/OG image: prefer a YouTube thumbnail (stable, daytime) over a live image-cam snapshot (can be dark/flaky).
@@ -923,7 +925,7 @@ for (const a of ARTICLES) {
       { '@type': 'ListItem', position: 3, name: a.title }] },
   ];
   const picksHtml = resolved.map(({ c, why }) => `<article class="pick">
-<a class="pthumb" href="/cam/${c.id}.html"><img loading="lazy" ${ONERR} src="${thumb(c)}" alt="${esc(c.name)}"></a>
+<a class="pthumb" href="/cam/${c.id}.html">${livePill(c)}<img loading="lazy" ${ONERR} src="${thumb(c)}" alt="${esc(c.name)}"></a>
 <div class="pbody"><h3><a href="/cam/${c.id}.html">${esc(c.name)}</a></h3>
 <p class="pwhere">${esc([c.countryLabel, c.catLabel].filter(Boolean).join(' · '))}</p>
 <p>${esc(why)}</p><a class="plink" href="/cam/${c.id}.html">Watch live →</a></div></article>`).join('');
