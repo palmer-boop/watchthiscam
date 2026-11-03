@@ -260,6 +260,32 @@ const countrySlug = {}; hubCountries.forEach(co => countrySlug[co] = slugify(cou
 const hubCats = Object.keys(CATS).filter(k => cams.some(c => c.category === k));
 const topCountries = hubCountries.slice().sort((a, b) => nByCountry[b] - nByCountry[a]).slice(0, 18);
 const placeTiles = topCountries.map(co => `<a class="tile" href="/place/${countrySlug[co]}.html"><b>${esc(countryName[co])}</b><span>${nByCountry[co]}</span></a>`).join('');
+// Curated city hubs — the biggest webcam-search queries. [display, country, match terms]
+const CITIES = [
+  ['Tokyo','JP',['tokyo','shibuya','shinjuku','odaiba']],['Kyoto','JP',['kyoto']],['Osaka','JP',['osaka']],
+  ['London','GB',['london']],['New York','US',['new york','nyc','times square','brooklyn','manhattan','bryant park','sandy hook']],
+  ['Las Vegas','US',['las vegas','vegas']],['Miami','US',['miami']],['Key West','US',['key west']],['New Orleans','US',['new orleans','bourbon']],
+  ['Chicago','US',['chicago']],['San Diego','US',['san diego']],['Honolulu','US',['waikiki','honolulu','oahu']],['Fort Lauderdale','US',['fort lauderdale','dania beach']],
+  ['Paris','FR',['paris','eiffel','montmartre']],['Venice','IT',['venice','venezia','san marco','rialto']],['Rome','IT',['rome','roma','trevi','colosseum']],
+  ['Florence','IT',['florence','firenze']],['Milan','IT',['milan','milano']],['Naples','IT',['naples','napoli']],['Cinque Terre','IT',['cinque terre','manarola','riomaggiore']],
+  ['Barcelona','ES',['barcelona']],['Madrid','ES',['madrid']],['Amsterdam','NL',['amsterdam']],['Rotterdam','NL',['rotterdam']],
+  ['Dublin','IE',['dublin']],['Galway','IE',['galway']],['Sydney','AU',['sydney','bondi']],['Melbourne','AU',['melbourne']],
+  ['Lisbon','PT',['lisbon','lisboa']],['Porto','PT',['porto']],['Prague','CZ',['prague','praha']],['Vienna','AT',['vienna','wien']],
+  ['Berlin','DE',['berlin']],['Munich','DE',['munich','munchen','münchen']],['Zurich','CH',['zurich']],['Geneva','CH',['geneva']],
+  ['Zermatt','CH',['zermatt','matterhorn']],['Athens','GR',['athens']],['Istanbul','TR',['istanbul']],['Dubai','AE',['dubai']],
+  ['Singapore','SG',['singapore']],['Hong Kong','HK',['hong kong']],['Bangkok','TH',['bangkok']],['Seoul','KR',['seoul']],
+  ['Taipei','TW',['taipei']],['Reykjavik','IS',['reykjavik']],['Rio de Janeiro','BR',['rio de janeiro']],['Cape Town','ZA',['cape town','table mountain','bloubergstrand']],
+  ['Auckland','NZ',['auckland']],['Queenstown','NZ',['queenstown']],['Toronto','CA',['toronto']],['Vancouver','CA',['vancouver']],
+  ['Edinburgh','GB',['edinburgh']],['Nazare','PT',['nazar']],['Madeira','PT',['madeira','funchal','machico']],['Tenerife','ES',['tenerife']],
+  ['Corfu','GR',['corfu']],['Santorini','GR',['santorini']],['Jackson Hole','US',['jackson hole']],['Niagara Falls','CA',['niagara']],
+];
+const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const cityDefs = CITIES.map(([name, cc, terms]) => ({ name, cc, slug: slugify(name), re: new RegExp('\\b(' + terms.map(reEsc).join('|') + ')\\b', 'i') }));
+const cityOf = c => cityDefs.find(d => d.cc === c.country && d.re.test(c.name || '')) || null;
+const cityCams = {}; cams.forEach(c => { const d = cityOf(c); if (d) (cityCams[d.slug] = cityCams[d.slug] || []).push(c); });
+const hubCities = cityDefs.filter(d => (cityCams[d.slug] || []).length >= 2);
+const topCities = hubCities.slice().sort((a, b) => cityCams[b.slug].length - cityCams[a.slug].length).slice(0, 18);
+const cityTiles = topCities.map(d => `<a class="tile" href="/city/${d.slug}.html"><b>${esc(d.name)}</b><span>${cityCams[d.slug].length}</span></a>`).join('');
 // Thrills: the dramatic ones.
 const THRILL = /volcano|nazar|aurora|fuji|matterhorn|jungfrau|times square|vegas|bourbon|nightlife|night|safari|africa|lion|storm|hurricane|falls|piccadilly|rocket|shibuya|big ?wave|pipeline|banzai/i;
 const thrills = cams.filter(c => ['volcano', 'surf', 'bar'].includes(c.category) || THRILL.test(c.name + ' ' + c.catLabel));
@@ -302,6 +328,8 @@ ${busiest.length >= 4 ? `<div class="section-head"><h2>🔥 Busiest right now <s
 <div class="tiles">${catTiles}</div>
 <div class="section-head"><h2>Browse by place</h2><a href="/place/${countrySlug[topCountries[0]]}.html">See all →</a></div>
 <div class="tiles">${placeTiles}</div>
+<div class="section-head"><h2>Popular cities</h2><a href="/city/${topCities[0].slug}.html">See all →</a></div>
+<div class="tiles">${cityTiles}</div>
 <div class="section-head"><h2>A few to start you off</h2><a href="/browse.html">See all →</a></div>
 <div class="grid">${strip}</div>
 </main>
@@ -436,7 +464,7 @@ ${c.type !== 'image' ? `<button class="iconbtn" id="sound" data-mute="${embed(c)
 <button class="iconbtn" id="share">🔗 Share</button>
 </div>
 <h1>${flag(c.country) ? flag(c.country) + ' ' : ''}${esc(c.name)}</h1>
-<p class="where">${[(c.country && c.country !== 'XX' && countrySlug[c.country]) ? `<a href="/place/${countrySlug[c.country]}.html">${esc(c.countryLabel)}</a>` : (c.countryLabel ? esc(c.countryLabel) : ''), c.catLabel ? `<a href="/kind/${c.category}.html">${esc(c.catLabel)}</a>` : ''].filter(Boolean).join(' · ')}<span id="localtime" class="localtime"></span></p>
+<p class="where">${[(() => { const d = cityOf(c); return d ? `<a href="/city/${d.slug}.html">${esc(d.name)}</a>` : ''; })(), (c.country && c.country !== 'XX' && countrySlug[c.country]) ? `<a href="/place/${countrySlug[c.country]}.html">${esc(c.countryLabel)}</a>` : (c.countryLabel ? esc(c.countryLabel) : ''), c.catLabel ? `<a href="/kind/${c.category}.html">${esc(c.catLabel)}</a>` : ''].filter(Boolean).join(' · ')}<span id="localtime" class="localtime"></span></p>
 <p class="about">${esc(c.blurb)}</p>
 </div>
 <aside class="side">
@@ -681,7 +709,9 @@ const CAT_PAGE = {
 // Every hub links to every other hub: the internal-link backbone that helps Google crawl + rank.
 const placesNav = hubCountries.map(co => `<a href="/place/${countrySlug[co]}.html">${esc(countryName[co])}<span class="n">${nByCountry[co]}</span></a>`).join('');
 const kindsNav = hubCats.map(k => `<a href="/kind/${k}.html">${esc(CATS[k])}<span class="n">${nByCat[k]}</span></a>`).join('');
+const citiesNav = hubCities.map(d => `<a href="/city/${d.slug}.html">${esc(d.name)}<span class="n">${cityCams[d.slug].length}</span></a>`).join('');
 const hubFooter = `<section class="hubnav">
+<div class="section-head"><h2>Live cams by city</h2></div><nav class="linkrow">${citiesNav}</nav>
 <div class="section-head"><h2>Live cams by place</h2></div><nav class="linkrow">${placesNav}</nav>
 <div class="section-head"><h2>Live cams by kind</h2></div><nav class="linkrow">${kindsNav}</nav>
 </section>`;
@@ -741,6 +771,34 @@ for (const k of hubCats) {
 <div class="actions"><a class="btn" href="/random.html"><span class="dice">🎲</span> Surprise me</a><a class="btn ghost" href="/browse.html#${k}">Filter in Browse</a></div></div>
 <div class="grid">${shown.map(card).join('')}</div>
 ${list.length > shown.length ? `<p class="muted-h" style="margin:16px 0"><a href="/browse.html#${k}">See all ${list.length} →</a></p>` : ''}
+${hubFooter}
+</main>` + footer);
+}
+
+// City pages (the biggest webcam-search queries)
+fs.mkdirSync(path.join(DIST, 'city'), { recursive: true });
+for (const d of hubCities) {
+  const list = cityCams[d.slug], name = d.name, p = `/city/${d.slug}.html`;
+  hubUrls.push(p);
+  const byCat = {}; list.forEach(c => byCat[c.category] = (byCat[c.category] || 0) + 1);
+  const topCats = Object.entries(byCat).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([k]) => CATS[k].toLowerCase());
+  const live = livecount(list), country = countryName[d.cc] || '';
+  const title = `${name} Live Webcams — watch ${list.length} cameras now`;
+  const desc = `Watch ${list.length} live webcams in ${name}${country ? ', ' + country : ''} right now${topCats.length ? ` — ${topCats.join(', ')}` : ''}. Free, 24/7, on Watch This Cam.`;
+  const intro = `${list.length} live ${list.length === 1 ? 'camera' : 'cameras'} streaming from ${name}${country ? ', ' + country : ''} right now${topCats.length ? ` — ${topCats.join(', ')}` : ''}.${live ? ` ${live} of them are live video.` : ''} Pick one, or hit Surprise me to shuffle.`;
+  const ld = [
+    { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `Live webcams in ${name}`, description: desc, url: SITE_URL + cleanPath(p), isPartOf: { '@type': 'WebSite', name: 'Watch This Cam', url: SITE_URL + '/' } },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
+      { '@type': 'ListItem', position: 2, name: country || 'Browse', item: (country && countrySlug[d.cc]) ? SITE_URL + '/place/' + countrySlug[d.cc] : SITE_URL + '/browse' },
+      { '@type': 'ListItem', position: 3, name }] },
+  ];
+  fs.writeFileSync(path.join(DIST, 'city', d.slug + '.html'), head(title, desc, thumb(list[0]), p, ld) + header + `
+<main class="wrap">
+<nav class="crumbs"><a href="/">Home</a> › ${(country && countrySlug[d.cc]) ? `<a href="/place/${countrySlug[d.cc]}.html">${esc(country)}</a>` : `<a href="/browse.html">Browse</a>`} › ${esc(name)}</nav>
+<div class="hubhead"><h1>Live webcams in ${esc(name)}</h1><p>${esc(intro)}</p>
+<div class="actions"><a class="btn" href="/random.html"><span class="dice">🎲</span> Surprise me</a><a class="btn ghost" href="/map.html">See on the map</a></div></div>
+<div class="grid">${list.map(card).join('')}</div>
 ${hubFooter}
 </main>` + footer);
 }
