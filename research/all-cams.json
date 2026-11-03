@@ -66,6 +66,17 @@
   "source": "https://www.youtube.com/watch?v=B4-L2nfGcuE"
  },
  {
+  "id": "lake-tahoe-nevada",
+  "name": "Lake Tahoe, Nevada",
+  "country": "US",
+  "category": "ski",
+  "type": "youtube",
+  "videoId": "Lk0Z5ExUWL0",
+  "channel": "ABC7 News Bay Area",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=Lk0Z5ExUWL0"
+ },
+ {
   "id": "treasure-island-california",
   "name": "Treasure Island, California",
   "country": "US",
@@ -86,17 +97,6 @@
   "channel": "ABC7 News Bay Area",
   "watching": "51 watching",
   "source": "https://www.youtube.com/watch?v=CXYr04BWvmc"
- },
- {
-  "id": "san-francisco-camera",
-  "name": "San Francisco Camera",
-  "country": "US",
-  "category": "city",
-  "type": "youtube",
-  "videoId": "G8RIAgPxaMc",
-  "channel": "ABC7 News Bay Area",
-  "watching": "",
-  "source": "https://www.youtube.com/watch?v=G8RIAgPxaMc"
  },
  {
   "id": "webcams-around-the-world",
@@ -207,6 +207,17 @@
   "channel": "Virtual Railfan",
   "watching": "5 watching",
   "source": "https://www.youtube.com/watch?v=Ux0rtJXPPQ0"
+ },
+ {
+  "id": "tropical-birds-at-the-panama-fruit-feede",
+  "name": "Tropical Birds at the Panama Fruit Feeder at Canopy Lodge",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "WtoxxHADnGk",
+  "channel": "Cornell Lab Bird Cams",
+  "watching": "24 watching",
+  "source": "https://www.youtube.com/watch?v=WtoxxHADnGk"
  },
  {
   "id": "surfline-tv",
@@ -539,6 +550,17 @@
   "source": "https://www.youtube.com/watch?v=U2hp0tRcOUU"
  },
  {
+  "id": "duluth-canal",
+  "name": "Duluth Canal",
+  "country": "US",
+  "category": "ski",
+  "type": "youtube",
+  "videoId": "HPS48TMmNag",
+  "channel": "Duluth Harbor Cam",
+  "watching": "226 watching",
+  "source": "https://www.youtube.com/watch?v=HPS48TMmNag"
+ },
+ {
   "id": "york-roc-camera-no-1-yorkshire-uk-in-par",
   "name": "York ROC Camera No.1, Yorkshire UK - in Partnership with Net",
   "country": "GB",
@@ -779,6 +801,17 @@
   "channel": "Visit Leavenworth",
   "watching": "12 watching",
   "source": "https://www.youtube.com/watch?v=NdW8Mh0lmOo"
+ },
+ {
+  "id": "saint-v-ran-centre-village",
+  "name": "Saint-Véran - Centre Village",
+  "country": "XX",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "hoN9su9T-G4",
+  "channel": "🔴 Vision-Environnement - Webcams LIVE",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=hoN9su9T-G4"
  },
  {
   "id": "philippines-camera-inside-cynthia-store-",
@@ -1089,6 +1122,17 @@
   "source": "https://www.youtube.com/watch?v=1cnReFAU04k"
  },
  {
+  "id": "colorado-springs",
+  "name": "Colorado Springs",
+  "country": "US",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "75K1IfdF2MM",
+  "channel": "Joseph Shenouda",
+  "watching": "1 watching",
+  "source": "https://www.youtube.com/watch?v=75K1IfdF2MM"
+ },
+ {
   "id": "oxford-martin-school-broad-street-oxford",
   "name": "Oxford Martin School - Broad Street, Oxford",
   "country": "GB",
@@ -1342,6 +1386,17 @@
   "source": "https://www.youtube.com/watch?v=5uZa3-RMFos"
  },
  {
+  "id": "hotel-sturgis-on-main-st-and-harley-davi",
+  "name": "Hotel Sturgis on Main St. and Harley-Davidson Way in Sturgis",
+  "country": "US",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "uu82CI54eJU",
+  "channel": "UDrive Tech LIVE Streaming",
+  "watching": "13 watching",
+  "source": "https://www.youtube.com/watch?v=uu82CI54eJU"
+ },
+ {
   "id": "hamptons-com-sag-harbor-bay-sag-harbor-n",
   "name": "Hamptons.com - ! Sag Harbor Bay, Sag Harbor, New York",
   "country": "US",
@@ -1351,6 +1406,39 @@
   "channel": "Hamptons. com",
   "watching": "",
   "source": "https://www.youtube.com/watch?v=WU2QHNNAN_M"
+ },
+ {
+  "id": "transmisi-n-en-vivo-puente-internacional",
+  "name": "Transmisión en vivo Puente Internacional Paso del Norte",
+  "country": "XX",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "IcvugJWPXz8",
+  "channel": "Fideicomiso de Puentes Fronterizos de Chihuahua",
+  "watching": "11 watching",
+  "source": "https://www.youtube.com/watch?v=IcvugJWPXz8"
+ },
+ {
+  "id": "transmisi-n-en-vivo-puente-internacional-2",
+  "name": "Transmisión en vivo Puente Internacional Lerdo",
+  "country": "XX",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "sOHFG6_3zAs",
+  "channel": "Fideicomiso de Puentes Fronterizos de Chihuahua",
+  "watching": "2 watching",
+  "source": "https://www.youtube.com/watch?v=sOHFG6_3zAs"
+ },
+ {
+  "id": "transmisi-n-en-vivo-puente-internacional-3",
+  "name": "Transmisión en vivo Puente Internacional Córdova - Américas",
+  "country": "XX",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "mp3RS0y77tY",
+  "channel": "Fideicomiso de Puentes Fronterizos de Chihuahua",
+  "watching": "7 watching",
+  "source": "https://www.youtube.com/watch?v=mp3RS0y77tY"
  },
  {
   "id": "ter-heijde-beach-camera",
@@ -1430,6 +1518,17 @@
   "source": "https://www.youtube.com/watch?v=7rdk79WCsQs"
  },
  {
+  "id": "ski-resort-webcams-snow-conditions",
+  "name": "Ski Resort Webcams & Snow Conditions",
+  "country": "CL",
+  "category": "ski",
+  "type": "youtube",
+  "videoId": "KgE-3tr1IUg",
+  "channel": "OnTheSnow",
+  "watching": "4 watching",
+  "source": "https://www.youtube.com/watch?v=KgE-3tr1IUg"
+ },
+ {
   "id": "amsterdam-stationseiland-centraal-statio",
   "name": "Amsterdam - Stationseiland - Centraal station",
   "country": "NL",
@@ -1494,6 +1593,17 @@
   "channel": "Volcoholics - Wild Horizons",
   "watching": "2 watching",
   "source": "https://www.youtube.com/watch?v=JkkMj6V2IJg"
+ },
+ {
+  "id": "main-lodge-woolly",
+  "name": "Main Lodge Woolly",
+  "country": "XX",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "AXyxIFY3JaA",
+  "channel": "Mammoth Mountain",
+  "watching": "2 watching",
+  "source": "https://www.youtube.com/watch?v=AXyxIFY3JaA"
  },
  {
   "id": "hamamatsu-cho-railway-tracks-tokyo",
@@ -1595,6 +1705,17 @@
   "source": "https://www.youtube.com/watch?v=thzfsD7VDFg"
  },
  {
+  "id": "storchennest-kirchzarten-jungst-rche-mar",
+  "name": "Storchennest Kirchzarten: Jungstörche Mars, Saturn und Jupit",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "W2CicgFq5oo",
+  "channel": "regiowebcam",
+  "watching": "3 watching",
+  "source": "https://www.youtube.com/watch?v=W2CicgFq5oo"
+ },
+ {
   "id": "cowes-floating-bridge-camera",
   "name": "Cowes Floating Bridge Camera",
   "country": "GB",
@@ -1626,6 +1747,17 @@
   "channel": "911 Surf Report",
   "watching": "17 watching",
   "source": "https://www.youtube.com/watch?v=bZ4uxyLqV-E"
+ },
+ {
+  "id": "big-bear-lake",
+  "name": "Big Bear Lake",
+  "country": "US",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "pofGnqJbCBY",
+  "channel": "California Live Cams",
+  "watching": "16 watching",
+  "source": "https://www.youtube.com/watch?v=pofGnqJbCBY"
  },
  {
   "id": "las-palmas-port",
@@ -1716,6 +1848,17 @@
   "source": "https://www.youtube.com/watch?v=w7rzgn6WXs8"
  },
  {
+  "id": "breckenridge-ski-area-and-mountain-by-br",
+  "name": "Breckenridge Ski Area and Mountain by Breckenridge Associate",
+  "country": "XX",
+  "category": "ski",
+  "type": "youtube",
+  "videoId": "mHTTPNYltZo",
+  "channel": "Breckenridge Associates Real Estate",
+  "watching": "9 watching",
+  "source": "https://www.youtube.com/watch?v=mHTTPNYltZo"
+ },
+ {
   "id": "baby-s-coffee",
   "name": "Baby's Coffee",
   "country": "XX",
@@ -1736,6 +1879,17 @@
   "channel": "Breckenridge Associates Real Estate",
   "watching": "18 watching",
   "source": "https://www.youtube.com/watch?v=SH63YaIWyK0"
+ },
+ {
+  "id": "steamboat-square",
+  "name": "Steamboat Square",
+  "country": "XX",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "2UJDLWcSADk",
+  "channel": "Steamboat Resort",
+  "watching": "11 watching",
+  "source": "https://www.youtube.com/watch?v=2UJDLWcSADk"
  },
  {
   "id": "mt-fuji-and-lake-ashinoko-camera-from-ha",
@@ -1824,6 +1978,17 @@
   "channel": "Webcamtaxi",
   "watching": "1 watching",
   "source": "https://www.youtube.com/watch?v=_idE_q5kgtA"
+ },
+ {
+  "id": "residenzhochalm-com",
+  "name": "Residenzhochalm.com",
+  "country": "XX",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "7gikDXbCmVo",
+  "channel": "WebCam NL",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=7gikDXbCmVo"
  },
  {
   "id": "webcam-nl",
@@ -1958,17 +2123,6 @@
   "source": "https://www.youtube.com/watch?v=2UYUFoxWWIc"
  },
  {
-  "id": "north-circular-road",
-  "name": "North Circular Road",
-  "country": "XX",
-  "category": "city",
-  "type": "youtube",
-  "videoId": "eSWxGOZLgCU",
-  "channel": "LivefromIreland - Live Streaming Webcams",
-  "watching": "2 watching",
-  "source": "https://www.youtube.com/watch?v=eSWxGOZLgCU"
- },
- {
   "id": "cabra-dublin-ireland",
   "name": "Cabra Dublin Ireland",
   "country": "IE",
@@ -1978,6 +2132,17 @@
   "channel": "LivefromIreland - Live Streaming Webcams",
   "watching": "",
   "source": "https://www.youtube.com/watch?v=f43rKPCALls"
+ },
+ {
+  "id": "rathmines-dublin",
+  "name": "Rathmines Dublin .",
+  "country": "IE",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "hIlYtjhRK_0",
+  "channel": "LivefromIreland - Live Streaming Webcams",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=hIlYtjhRK_0"
  },
  {
   "id": "london",
@@ -2000,6 +2165,17 @@
   "channel": "Beach Life Cams",
   "watching": "2 watching",
   "source": "https://www.youtube.com/watch?v=ev1hgKJlnQA"
+ },
+ {
+  "id": "base-winter-park-resort",
+  "name": "Base @ Winter Park Resort",
+  "country": "CL",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "vyWAzJAWv4w",
+  "channel": "Winter Park Resort",
+  "watching": "3 watching",
+  "source": "https://www.youtube.com/watch?v=vyWAzJAWv4w"
  },
  {
   "id": "table-mountain",
@@ -2101,28 +2277,6 @@
   "source": "https://www.youtube.com/watch?v=HDlmUp4JBLg"
  },
  {
-  "id": "market-square-west",
-  "name": "Market Square West",
-  "country": "XX",
-  "category": "city",
-  "type": "youtube",
-  "videoId": "VsuSbXPN93o",
-  "channel": "Newburyport.com",
-  "watching": "17 watching",
-  "source": "https://www.youtube.com/watch?v=VsuSbXPN93o"
- },
- {
-  "id": "inn-street-south",
-  "name": "Inn Street South",
-  "country": "XX",
-  "category": "city",
-  "type": "youtube",
-  "videoId": "4vMn1XPEO54",
-  "channel": "Newburyport.com",
-  "watching": "",
-  "source": "https://www.youtube.com/watch?v=4vMn1XPEO54"
- },
- {
   "id": "state-street-south-newburyport",
   "name": "State Street South - Newburyport",
   "country": "US",
@@ -2178,15 +2332,15 @@
   "source": "https://www.youtube.com/watch?v=f_yY-0miTzo"
  },
  {
-  "id": "grand-avenue-bridge-in-glenwood-springs-",
-  "name": "Grand Avenue Bridge in Glenwood Springs Camera",
+  "id": "west-base",
+  "name": "West Base",
   "country": "XX",
-  "category": "city",
+  "category": "nature",
   "type": "youtube",
-  "videoId": "SNvppiU1-IM",
-  "channel": "Colorado Mountain College",
-  "watching": "4 watching",
-  "source": "https://www.youtube.com/watch?v=SNvppiU1-IM"
+  "videoId": "YcQT1a6K1Mo",
+  "channel": "Mountain High",
+  "watching": "1 watching",
+  "source": "https://www.youtube.com/watch?v=YcQT1a6K1Mo"
  },
  {
   "id": "tossa-de-mar",
@@ -2200,15 +2354,15 @@
   "source": "https://www.youtube.com/watch?v=nWFcWooDAxI"
  },
  {
-  "id": "camera-inside-jazzle-house-united-kingdo",
-  "name": "Camera Inside Jazzle House, United Kingdom",
+  "id": "port-lorain",
+  "name": "PORT LORAIN",
   "country": "XX",
-  "category": "city",
+  "category": "harbour",
   "type": "youtube",
-  "videoId": "IONwBYLZ15E",
-  "channel": "Jazzle Live Cams",
-  "watching": "14 watching",
-  "source": "https://www.youtube.com/watch?v=IONwBYLZ15E"
+  "videoId": "1MVB3fgg7kg",
+  "channel": "Lorain Port and Finance Authority",
+  "watching": "4 watching",
+  "source": "https://www.youtube.com/watch?v=1MVB3fgg7kg"
  },
  {
   "id": "miami-river-camera",
@@ -2222,15 +2376,26 @@
   "source": "https://www.youtube.com/watch?v=FHzIIYECzmM"
  },
  {
-  "id": "campus",
-  "name": "Campus",
-  "country": "XX",
-  "category": "city",
+  "id": "northern-lights-camera-at-lyngen-north-i",
+  "name": "Northern lights camera at Lyngen North in Northern Norway",
+  "country": "NO",
+  "category": "nature",
   "type": "youtube",
-  "videoId": "3Yaho-uceGw",
-  "channel": "Colorado College",
-  "watching": "1 watching",
-  "source": "https://www.youtube.com/watch?v=3Yaho-uceGw"
+  "videoId": "SwXtDFC9Bro",
+  "channel": "Lyngen North",
+  "watching": "2 watching",
+  "source": "https://www.youtube.com/watch?v=SwXtDFC9Bro"
+ },
+ {
+  "id": "pier-camera",
+  "name": "Pier Camera",
+  "country": "XX",
+  "category": "harbour",
+  "type": "youtube",
+  "videoId": "4MK3E9EWDSY",
+  "channel": "COWhiteRock",
+  "watching": "27 watching",
+  "source": "https://www.youtube.com/watch?v=4MK3E9EWDSY"
  },
  {
   "id": "sandy-hook-bay",
@@ -2288,6 +2453,17 @@
   "source": "https://www.youtube.com/watch?v=iCxfe27HpaY"
  },
  {
+  "id": "upper-east-river-valley-north-camera-got",
+  "name": "Upper East River valley, north camera - Gothic, CO",
+  "country": "XX",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "gsq6eUddqTE",
+  "channel": "billy barr",
+  "watching": "6 watching",
+  "source": "https://www.youtube.com/watch?v=gsq6eUddqTE"
+ },
+ {
   "id": "niagara-falls-2",
   "name": "Niagara Falls 2",
   "country": "CA",
@@ -2308,6 +2484,17 @@
   "channel": "The Currie’s",
   "watching": "1 watching",
   "source": "https://www.youtube.com/watch?v=PS46DvoJY-c"
+ },
+ {
+  "id": "mystery-peak",
+  "name": "Mystery Peak",
+  "country": "CA",
+  "category": "ski",
+  "type": "youtube",
+  "videoId": "vLawo-FrBKk",
+  "channel": "Mt Seymour",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=vLawo-FrBKk"
  },
  {
   "id": "st-clare-s-church-carlow-back-camera",
@@ -2341,6 +2528,17 @@
   "channel": "Cape Ocean Adventures ",
   "watching": "",
   "source": "https://www.youtube.com/watch?v=zGlGodTfncQ"
+ },
+ {
+  "id": "aus-dem-storchennest-in-leutershausen-mi",
+  "name": "Aus dem Storchennest in Leutershausen Mittelfranken",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "rurvbn9yH-k",
+  "channel": "Heimatverein Leutershausen",
+  "watching": "14 watching",
+  "source": "https://www.youtube.com/watch?v=rurvbn9yH-k"
  },
  {
   "id": "runway-23",
@@ -2387,6 +2585,17 @@
   "source": "https://www.youtube.com/watch?v=UHlDzWrBEPI"
  },
  {
+  "id": "city-of-ellsworth-maine-harbor-park",
+  "name": "City of Ellsworth, Maine - Harbor Park",
+  "country": "US",
+  "category": "harbour",
+  "type": "youtube",
+  "videoId": "Xvkhe3T4b30",
+  "channel": "City of Ellsworth, Maine",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=Xvkhe3T4b30"
+ },
+ {
   "id": "aloha-beachclub-surfschool-surfshop-de-z",
   "name": "Aloha Beachclub, Surfschool & Surfshop De Zuid",
   "country": "XX",
@@ -2396,6 +2605,17 @@
   "channel": "Aloha Beachclub, Surfschool & Surfshop",
   "watching": "6 watching",
   "source": "https://www.youtube.com/watch?v=XB2T9RjIM-g"
+ },
+ {
+  "id": "sierra-at-tahoe-grandview",
+  "name": "Sierra-at-Tahoe Grandview",
+  "country": "US",
+  "category": "ski",
+  "type": "youtube",
+  "videoId": "adxDs4z-y34",
+  "channel": "Sierra-at-Tahoe",
+  "watching": "1 watching",
+  "source": "https://www.youtube.com/watch?v=adxDs4z-y34"
  },
  {
   "id": "roma-five-suites-piazza-venezia-from-rom",
@@ -2451,6 +2671,17 @@
   "channel": "Tony Silvagni Surf School",
   "watching": "11 watching",
   "source": "https://www.youtube.com/watch?v=cVRG4zYdUP0"
+ },
+ {
+  "id": "deep-cove-vancouver-canada",
+  "name": "Deep Cove, Vancouver Canada",
+  "country": "CA",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "T0oUufecXeE",
+  "channel": "Paddler's Paradise",
+  "watching": "2 watching",
+  "source": "https://www.youtube.com/watch?v=T0oUufecXeE"
  },
  {
   "id": "cape-town",
@@ -2684,6 +2915,17 @@
   "source": "https://www.youtube.com/watch?v=MOuzujw_Z7E"
  },
  {
+  "id": "nottingham-park-upper-field-avon-colorad",
+  "name": "Nottingham Park Upper Field , Avon, Colorado",
+  "country": "US",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "hc-wNhICyAo",
+  "channel": "Town of Avon",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=hc-wNhICyAo"
+ },
+ {
   "id": "st-mary-s-church-bennekerry",
   "name": "St Mary's Church Bennekerry",
   "country": "IE",
@@ -2728,6 +2970,17 @@
   "source": "https://www.youtube.com/watch?v=OIyy1ZmRryM"
  },
  {
+  "id": "breckenridge-colorado-snow-watch-before-",
+  "name": "Breckenridge Colorado Snow Watch Before Opening Day",
+  "country": "US",
+  "category": "ski",
+  "type": "youtube",
+  "videoId": "m2oeBW_GivE",
+  "channel": "Gilson TV",
+  "watching": "18 watching",
+  "source": "https://www.youtube.com/watch?v=m2oeBW_GivE"
+ },
+ {
   "id": "ballygally-beach",
   "name": "Ballygally Beach",
   "country": "XX",
@@ -2748,6 +3001,50 @@
   "channel": "Larne Live Webcam",
   "watching": "1 watching",
   "source": "https://www.youtube.com/watch?v=18S_qUWg__w"
+ },
+ {
+  "id": "breckenridge-resort-quicksilver-lift",
+  "name": "Breckenridge Resort Quicksilver Lift",
+  "country": "CL",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "3FvCSlV4yZ0",
+  "channel": "Village at Breckenridge HOA",
+  "watching": "2 watching",
+  "source": "https://www.youtube.com/watch?v=3FvCSlV4yZ0"
+ },
+ {
+  "id": "main-lodge",
+  "name": "Main Lodge",
+  "country": "XX",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "pUy85S4xS5I",
+  "channel": "Mammoth Live Cams",
+  "watching": "1 watching",
+  "source": "https://www.youtube.com/watch?v=pUy85S4xS5I"
+ },
+ {
+  "id": "june-j3",
+  "name": "June J3",
+  "country": "XX",
+  "category": "nature",
+  "type": "youtube",
+  "videoId": "-8keQPZV3rw",
+  "channel": "Mammoth Live Cams",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=-8keQPZV3rw"
+ },
+ {
+  "id": "carson-city",
+  "name": "Carson City",
+  "country": "XX",
+  "category": "ski",
+  "type": "youtube",
+  "videoId": "dA0R00HYNlY",
+  "channel": "Carson City Live Webcam",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=dA0R00HYNlY"
  },
  {
   "id": "penha-de-fran-a-mar",
