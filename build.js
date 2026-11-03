@@ -912,7 +912,9 @@ for (const a of ARTICLES) {
   if (!resolved.length) continue;
   const p = `/guide/${a.slug}.html`;
   articleUrls.push({ p, title: a.title, desc: a.desc, n: resolved.length });
-  const img = thumb(resolved[0].c);
+  // Share/OG image: prefer a YouTube thumbnail (stable, daytime) over a live image-cam snapshot (can be dark/flaky).
+  const ogPick = resolved.find(r => r.c.type !== 'image') || resolved[0];
+  const img = ogPick.c.type !== 'image' ? `https://i.ytimg.com/vi/${ogPick.c.videoId}/hqdefault.jpg` : thumb(ogPick.c);
   const ld = [
     { '@context': 'https://schema.org', '@type': 'Article', headline: a.title, description: a.desc, url: SITE_URL + cleanPath(p), image: [img], datePublished: BUILD_DATE, dateModified: BUILD_DATE, author: { '@type': 'Organization', name: 'Watch This Cam' }, publisher: { '@type': 'Organization', name: 'Watch This Cam', logo: { '@type': 'ImageObject', url: SITE_URL + '/icon-512.png' } } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
