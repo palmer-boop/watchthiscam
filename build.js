@@ -249,6 +249,17 @@ const CAT_ICON = { city: '🏙️', beach: '🏖️', surf: '🌊', harbour: '�
   wildlife: '🦉', nature: '🌲', mountain: '⛰️', ski: '🏔️', volcano: '🌋', weather: '🌤️', landmark: '🗼', bar: '🍸', space: '🛰️', other: '📷' };
 const catTiles = Object.keys(CATS).filter(k => cams.some(c => c.category === k))
   .map(k => `<a class="tile" href="/browse.html#${k}"><b>${CAT_ICON[k] || ''} ${CATS[k]}</b><span>${cams.filter(c => c.category === k).length}</span></a>`).join('');
+// ---- Hub (landing page) helpers: one page per country and per category (SEO) ----
+const slugify = s => String(s).toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const nByCountry = {}, nByCat = {};
+cams.forEach(c => { nByCountry[c.country] = (nByCountry[c.country] || 0) + 1; nByCat[c.category] = (nByCat[c.category] || 0) + 1; });
+const countryName = {};
+cams.forEach(c => { if (c.country && c.country !== 'XX' && c.countryLabel) countryName[c.country] = c.countryLabel; });
+const hubCountries = Object.keys(countryName).sort((a, b) => countryName[a].localeCompare(countryName[b]));
+const countrySlug = {}; hubCountries.forEach(co => countrySlug[co] = slugify(countryName[co]));
+const hubCats = Object.keys(CATS).filter(k => cams.some(c => c.category === k));
+const topCountries = hubCountries.slice().sort((a, b) => nByCountry[b] - nByCountry[a]).slice(0, 18);
+const placeTiles = topCountries.map(co => `<a class="tile" href="/place/${countrySlug[co]}.html"><b>${esc(countryName[co])}</b><span>${nByCountry[co]}</span></a>`).join('');
 // Thrills: the dramatic ones.
 const THRILL = /volcano|nazar|aurora|fuji|matterhorn|jungfrau|times square|vegas|bourbon|nightlife|night|safari|africa|lion|storm|hurricane|falls|piccadilly|rocket|shibuya|big ?wave|pipeline|banzai/i;
 const thrills = cams.filter(c => ['volcano', 'surf', 'bar'].includes(c.category) || THRILL.test(c.name + ' ' + c.catLabel));
@@ -289,6 +300,8 @@ ${busiest.length >= 4 ? `<div class="section-head"><h2>🔥 Busiest right now <s
 <div class="grid">${busiest.map(card).join('')}</div>` : ''}
 <div class="section-head"><h2>Browse by kind</h2></div>
 <div class="tiles">${catTiles}</div>
+<div class="section-head"><h2>Browse by place</h2><a href="/place/${countrySlug[topCountries[0]]}.html">See all →</a></div>
+<div class="tiles">${placeTiles}</div>
 <div class="section-head"><h2>A few to start you off</h2><a href="/browse.html">See all →</a></div>
 <div class="grid">${strip}</div>
 </main>
@@ -423,14 +436,14 @@ ${c.type !== 'image' ? `<button class="iconbtn" id="sound" data-mute="${embed(c)
 <button class="iconbtn" id="share">🔗 Share</button>
 </div>
 <h1>${flag(c.country) ? flag(c.country) + ' ' : ''}${esc(c.name)}</h1>
-<p class="where">${esc([c.countryLabel, c.catLabel].filter(Boolean).join(' · '))}<span id="localtime" class="localtime"></span></p>
+<p class="where">${[(c.country && c.country !== 'XX' && countrySlug[c.country]) ? `<a href="/place/${countrySlug[c.country]}.html">${esc(c.countryLabel)}</a>` : (c.countryLabel ? esc(c.countryLabel) : ''), c.catLabel ? `<a href="/kind/${c.category}.html">${esc(c.catLabel)}</a>` : ''].filter(Boolean).join(' · ')}<span id="localtime" class="localtime"></span></p>
 <p class="about">${esc(c.blurb)}</p>
 </div>
 <aside class="side">
 <div class="box"><h3>About this cam</h3>
 <dl class="facts">
-<dt>Type</dt><dd>${esc(c.catLabel)}</dd>
-${c.countryLabel ? `<dt>Where</dt><dd>${esc(c.countryLabel)}</dd>` : ''}
+<dt>Type</dt><dd><a href="/kind/${c.category}.html">${esc(c.catLabel)}</a></dd>
+${(c.country && c.country !== 'XX' && countrySlug[c.country]) ? `<dt>Where</dt><dd><a href="/place/${countrySlug[c.country]}.html">${esc(c.countryLabel)}</a></dd>` : (c.countryLabel ? `<dt>Where</dt><dd>${esc(c.countryLabel)}</dd>` : '')}
 ${c.type !== 'image' && watchers(c) > 0 ? `<dt>Watching</dt><dd>👁 ${watchers(c) >= 1000 ? (watchers(c) / 1000).toFixed(1) + 'k' : watchers(c)} on YouTube</dd>` : ''}
 <dt>Source</dt><dd><a href="${esc(c.source)}" target="_blank" rel="noopener">${esc(c.channel || 'YouTube')}</a></dd>
 </dl>
@@ -656,9 +669,86 @@ document.addEventListener('fullscreenchange',function(){
 });
 </script>` + footer);
 
+// ---- Location & category landing pages (SEO hubs) ----
+fs.mkdirSync(path.join(DIST, 'place'), { recursive: true });
+fs.mkdirSync(path.join(DIST, 'kind'), { recursive: true });
+const CAT_PAGE = {
+  city: 'City Street Cams', beach: 'Beach Cams', surf: 'Surf Cams', harbour: 'Harbour & Port Cams',
+  transport: 'Airport & Train Cams', traffic: 'Road & Traffic Cams', wildlife: 'Animal & Wildlife Cams',
+  nature: 'Nature Cams', mountain: 'Mountain Cams', ski: 'Mountain & Snow Cams', volcano: 'Volcano Cams',
+  weather: 'Weather & Sky Cams', landmark: 'Landmark Cams', bar: 'Bar & Nightlife Cams', space: 'Space Cams', other: 'Live Cams',
+};
+// Every hub links to every other hub: the internal-link backbone that helps Google crawl + rank.
+const placesNav = hubCountries.map(co => `<a href="/place/${countrySlug[co]}.html">${esc(countryName[co])}<span class="n">${nByCountry[co]}</span></a>`).join('');
+const kindsNav = hubCats.map(k => `<a href="/kind/${k}.html">${esc(CATS[k])}<span class="n">${nByCat[k]}</span></a>`).join('');
+const hubFooter = `<section class="hubnav">
+<div class="section-head"><h2>Live cams by place</h2></div><nav class="linkrow">${placesNav}</nav>
+<div class="section-head"><h2>Live cams by kind</h2></div><nav class="linkrow">${kindsNav}</nav>
+</section>`;
+const hubUrls = [];
+const livecount = l => l.filter(c => !(c.type === 'image' && !c.isMjpeg)).length;
+
+// Country pages
+for (const co of hubCountries) {
+  const list = cams.filter(c => c.country === co), name = countryName[co], p = `/place/${countrySlug[co]}.html`;
+  hubUrls.push(p);
+  const byCat = {}; list.forEach(c => byCat[c.category] = (byCat[c.category] || 0) + 1);
+  const topCats = Object.entries(byCat).sort((a, b) => b[1] - a[1]).slice(0, 4).map(([k]) => CATS[k].toLowerCase());
+  const live = livecount(list);
+  const title = `${name} Live Webcams — watch ${list.length} cameras now`;
+  const desc = `Watch ${list.length} live webcams in ${name} right now${topCats.length ? ` — ${topCats.slice(0, 3).join(', ')} and more` : ''}. Free, streaming 24/7 on Watch This Cam.`;
+  const intro = `${list.length} live ${list.length === 1 ? 'camera' : 'cameras'} streaming from ${name} right now${topCats.length ? ` — ${topCats.join(', ')}` : ''}.${live ? ` ${live} of them are live video.` : ''} Pick one to watch, or hit Surprise me to shuffle through them.`;
+  const shown = list.slice(0, 160);
+  const ld = [
+    { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `Live webcams in ${name}`, description: desc, url: SITE_URL + cleanPath(p), isPartOf: { '@type': 'WebSite', name: 'Watch This Cam', url: SITE_URL + '/' } },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Browse', item: SITE_URL + '/browse' },
+      { '@type': 'ListItem', position: 3, name }] },
+  ];
+  fs.writeFileSync(path.join(DIST, 'place', countrySlug[co] + '.html'), head(title, desc, thumb(list[0]), p, ld) + header + `
+<main class="wrap">
+<nav class="crumbs"><a href="/">Home</a> › <a href="/browse.html">Browse</a> › ${esc(name)}</nav>
+<div class="hubhead"><h1>Live webcams in ${esc(name)}</h1><p>${esc(intro)}</p>
+<div class="actions"><a class="btn" href="/random.html"><span class="dice">🎲</span> Surprise me</a><a class="btn ghost" href="/map.html">See on the map</a></div></div>
+<div class="grid">${shown.map(card).join('')}</div>
+${list.length > shown.length ? `<p class="muted-h" style="margin:16px 0"><a href="/browse.html">See all ${list.length} cams →</a></p>` : ''}
+${hubFooter}
+</main>` + footer);
+}
+
+// Category pages
+for (const k of hubCats) {
+  const list = cams.filter(c => c.category === k), label = CAT_PAGE[k] || CATS[k], p = `/kind/${k}.html`;
+  hubUrls.push(p);
+  const countries = [...new Set(list.map(c => c.countryLabel).filter(Boolean))];
+  const live = livecount(list), lc = label.toLowerCase();
+  const title = `Live ${label} — watch ${list.length} now | Watch This Cam`;
+  const desc = `Watch ${list.length} live ${lc} from ${countries.length} ${countries.length === 1 ? 'country' : 'countries'}, streaming free right now on Watch This Cam.`;
+  const intro = `${list.length} live ${lc} from ${countries.length} ${countries.length === 1 ? 'country' : 'countries'} around the world${live ? `, ${live} of them live video` : ''}. Watching is free — pick one, or hit Surprise me to shuffle.`;
+  const shown = list.slice(0, 160);
+  const ld = [
+    { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `Live ${lc}`, description: desc, url: SITE_URL + cleanPath(p), isPartOf: { '@type': 'WebSite', name: 'Watch This Cam', url: SITE_URL + '/' } },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Browse', item: SITE_URL + '/browse' },
+      { '@type': 'ListItem', position: 3, name: label }] },
+  ];
+  fs.writeFileSync(path.join(DIST, 'kind', k + '.html'), head(title, desc, thumb(list[0]), p, ld) + header + `
+<main class="wrap">
+<nav class="crumbs"><a href="/">Home</a> › <a href="/browse.html">Browse</a> › ${esc(label)}</nav>
+<div class="hubhead"><h1>Live ${esc(lc)}</h1><p>${esc(intro)}</p>
+<div class="actions"><a class="btn" href="/random.html"><span class="dice">🎲</span> Surprise me</a><a class="btn ghost" href="/browse.html#${k}">Filter in Browse</a></div></div>
+<div class="grid">${shown.map(card).join('')}</div>
+${list.length > shown.length ? `<p class="muted-h" style="margin:16px 0"><a href="/browse.html#${k}">See all ${list.length} →</a></p>` : ''}
+${hubFooter}
+</main>` + footer);
+}
+
 // ---- robots.txt + sitemap.xml (for launch / SEO) ----
 fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 const sitemapUrls = ['/', '/browse.html', '/thrills.html', '/map.html', '/wall.html', '/favourites.html', '/about.html',
+  ...hubUrls,
   ...cams.map(c => `/cam/${c.id}.html`)];
 fs.writeFileSync(path.join(DIST, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +

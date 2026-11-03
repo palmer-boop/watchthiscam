@@ -217,3 +217,16 @@ body.ambient .top, body.ambient footer, body.ambient .section-head, body.ambient
 body.ambient main { max-width: none; margin: 0; padding: 0; }
 body.ambient .wall { gap: 2px; height: 100vh; grid-auto-rows: 1fr; margin: 0; }
 body.ambient .wtile { aspect-ratio: auto; border: 0; border-radius: 0; }
+
+/* --- Location / category landing hubs --- */
+.crumbs { color: var(--muted); font-size: 14px; margin: 18px 0 4px; }
+.crumbs a { color: var(--muted); }
+.hubhead { padding: 6px 0 20px; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
+.hubhead h1 { font-size: clamp(26px, 4vw, 40px); line-height: 1.08; margin: 0 0 10px; letter-spacing: -.02em; }
+.hubhead p { color: var(--muted); font-size: 17px; margin: 0 0 16px; max-width: 48em; }
+.hubhead .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.hubnav { margin-top: 44px; border-top: 1px solid var(--line); padding-top: 10px; }
+.linkrow { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 2px 0 14px; }
+.linkrow a { color: var(--muted); background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; font-size: 14px; }
+.linkrow a:hover { color: var(--ink); background: var(--panel-2); text-decoration: none; }
+.linkrow a .n { color: var(--blue-2); font-weight: 700; margin-left: 3px; font-size: 13px; }
