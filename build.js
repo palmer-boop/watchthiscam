@@ -51,11 +51,15 @@ const GEO = {
 };
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const thumb = c => c.type === 'image' ? c.imageUrl : `https://i.ytimg.com/vi/${c.videoId}/mqdefault.jpg`;
+// Windy webcams expose an embeddable player (timelapse + near-live) keyed by the webcam id in the source URL.
+const windyId = c => { const m = (c.source || '').match(/windy\.com\/webcams\/(\d+)/); return m ? m[1] : null; };
 const embed = c => `https://www.youtube-nocookie.com/embed/${c.videoId}?autoplay=1&mute=1&playsinline=1&rel=0`;
 // Player markup differs by source: YouTube iframe, MJPEG <img> stream, or a still image we refresh ourselves.
 function playerInner(c) {
   if (c.type !== 'image') return `<span class="pill"><span class="dot"></span>LIVE</span>
 <iframe id="ytframe" src="${embed(c)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="${esc(c.name)}"></iframe>`;
+  const wid = windyId(c);
+  if (wid) return `<iframe class="windyplayer" src="https://webcams.windy.com/webcams/public/embed/player/${wid}/day" allow="autoplay; fullscreen" allowfullscreen title="${esc(c.name)}"></iframe>`;
   const live = c.isMjpeg;
   return `<span class="pill${live ? '' : ' snap'}"><span class="dot"></span><span id="campilltxt">${live ? 'LIVE' : 'PHOTO'}</span></span>
 <img class="contain" id="camimg" onerror="this.onerror=null;this.src='/ph.svg'" src="${esc(c.imageUrl)}" alt="${esc(c.name)}"${live ? '' : ` data-refresh="${c.refreshSeconds || 10}"`}>
@@ -485,7 +489,9 @@ ${(c.country && c.country !== 'XX' && countrySlug[c.country]) ? `<dt>Where</dt><
 ${c.type !== 'image' && watchers(c) > 0 ? `<dt>Watching</dt><dd>👁 ${watchers(c) >= 1000 ? (watchers(c) / 1000).toFixed(1) + 'k' : watchers(c)} on YouTube</dd>` : ''}
 <dt>Source</dt><dd><a href="${esc(c.source)}" target="_blank" rel="noopener">${esc(c.channel || 'YouTube')}</a></dd>
 </dl>
-<p class="credit">${c.type === 'image'
+<p class="credit">${windyId(c)
+  ? `A near-live view via windy.com's own webcam player (press play for the day's timelapse). Watch This Cam embeds it and links back to the source.`
+  : c.type === 'image'
   ? `Published by ${esc(c.channel || 'its operator')}. Watch This Cam shows it refreshing and links back to the source.`
   : `Streamed live by ${esc(c.channel || 'its operator')} on YouTube. Watch This Cam just points you at it.`}</p>
 </div>
