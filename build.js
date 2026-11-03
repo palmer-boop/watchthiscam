@@ -333,6 +333,7 @@ ${busiest.length >= 4 ? `<div class="section-head"><h2>🔥 Busiest right now <s
 <div class="tiles">${cityTiles}</div>
 <div class="section-head"><h2>Guides</h2><a href="/guide/">See all →</a></div>
 <div class="guidegrid">
+<a class="guidecard" href="/guide/ireland-live-cams"><b>Watch Ireland live — a little bit of home</b><span>☘️ For the Irish abroad</span></a>
 <a class="guidecard" href="/guide/best-live-cams"><b>The best live cams in the world right now</b><span>Our pick of the lot</span></a>
 <a class="guidecard" href="/guide/live-volcano-cams"><b>Live volcano cams: watch an eruption right now</b><span>Active &amp; erupting</span></a>
 <a class="guidecard" href="/guide/northern-lights-live-cams"><b>Watch the northern lights live</b><span>Aurora webcams</span></a>
@@ -816,6 +817,24 @@ ${hubFooter}
 fs.mkdirSync(path.join(DIST, 'guide'), { recursive: true });
 const pickCam = (m, cat, country) => cams.find(c => m.test(c.name || '') && (!cat || c.category === cat) && (!country || c.country === country));
 const ARTICLES = [
+  {
+    slug: 'ireland-live-cams', title: 'Watch Ireland live — a little bit of home',
+    metaTitle: 'Live cams of Ireland — watch home right now | Watch This Cam',
+    desc: 'Live webcams from all over Ireland — the Forty Foot, Howth Harbour, Cobh, Lahinch and the Wild Atlantic Way. A window home, wherever you are in the world.',
+    lede: 'If home feels a long way off tonight, here’s the next best thing — cameras pointed at Ireland right now. The Forty Foot at first light, boats in Howth Harbour, a Dublin street in the rain. No ads, no edit, just home, live. Put the kettle on.',
+    picks: [
+      { m: /sandycove|forty foot/i, country: 'IE', why: 'The Forty Foot at Sandycove — the famous sea-swimming spot on Dublin Bay. Watch the brave ones take the plunge, Christmas morning or any morning.' },
+      { m: /howth harbour|howth/i, country: 'IE', cat: 'harbour', why: 'Howth Harbour, boats rocking on the edge of Dublin Bay. You can nearly smell the chipper from here.' },
+      { m: /cobh/i, country: 'IE', why: 'Cobh in Cork Harbour — the Titanic’s last port of call, and the port so many emigrants sailed from. A poignant one if you left from here yourself.' },
+      { m: /rathmines/i, country: 'IE', why: 'A Dublin street getting on with its day — buses, brollies and all. Nothing much happening, and somehow you can’t look away. Pure home.' },
+      { m: /lahinch/i, country: 'IE', why: 'Lahinch in County Clare — Atlantic rollers and surfers in the cold. The Wild Atlantic Way doing its thing, live.' },
+      { m: /strandhill/i, country: 'IE', why: 'Strandhill in Sligo — big western skies and bigger waves, the Atlantic right in your face.' },
+      { m: /derrynane|caherdaniel|kenmare/i, country: 'IE', why: 'Kerry, out on the Wild Atlantic Way near Derrynane. The kind of view that quietly has you checking flights.' },
+      { m: /dun laoghaire east pier|east pier/i, country: 'IE', why: 'The East Pier at Dún Laoghaire — the great Sunday-walk pier. Ninety-nine optional.' },
+      { m: /portrush/i, country: 'IE', why: 'Portrush up on the Causeway Coast in Antrim — surf and sea air on the north coast.' },
+      { m: /\bgpo\b/i, country: 'IE', why: 'O’Connell Street by the GPO — the beating heart of Dublin, and of 1916. The city rolling past the pillars.' },
+    ],
+  },
   {
     slug: 'best-live-cams', title: 'The best live cams in the world right now',
     metaTitle: 'The best live cams in the world right now | Watch This Cam',
