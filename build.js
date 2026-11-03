@@ -53,6 +53,10 @@ const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(
 const thumb = c => c.type === 'image' ? c.imageUrl : `https://i.ytimg.com/vi/${c.videoId}/mqdefault.jpg`;
 // Windy webcams expose an embeddable player (timelapse + near-live) keyed by the webcam id in the source URL.
 const windyId = c => { const m = (c.source || '').match(/windy\.com\/webcams\/(\d+)/); return m ? m[1] : null; };
+// Tide-times cross-link to tides.watch: match a coastal cam to the nearest tide spot (contextual, not sitewide).
+const TIDES = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'research', 'tides-spots.json'))); } catch (e) { return []; } })();
+const kmBetween = (a, b, c, d) => { const R = 6371, t = x => x * Math.PI / 180, dla = t(c - a), dlo = t(d - b); const h = Math.sin(dla / 2) ** 2 + Math.cos(t(a)) * Math.cos(t(c)) * Math.sin(dlo / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)); };
+const tideFor = c => { if (c.lat == null || c.lon == null || !['beach', 'surf', 'harbour', 'nature'].includes(c.category)) return null; let best = null, bd = 1e9; for (const s of TIDES) { const d = kmBetween(c.lat, c.lon, s.lat, s.lon); if (d < bd) { bd = d; best = s; } } return bd <= 25 ? best : null; };
 const embed = c => `https://www.youtube-nocookie.com/embed/${c.videoId}?autoplay=1&mute=1&playsinline=1&rel=0`;
 // Player markup differs by source: YouTube iframe, MJPEG <img> stream, or a still image we refresh ourselves.
 function playerInner(c) {
@@ -487,6 +491,7 @@ ${c.type !== 'image' ? `<button class="iconbtn" id="sound" data-mute="${embed(c)
 <dt>Type</dt><dd><a href="/kind/${c.category}.html">${esc(c.catLabel)}</a></dd>
 ${(c.country && c.country !== 'XX' && countrySlug[c.country]) ? `<dt>Where</dt><dd><a href="/place/${countrySlug[c.country]}.html">${esc(c.countryLabel)}</a></dd>` : (c.countryLabel ? `<dt>Where</dt><dd>${esc(c.countryLabel)}</dd>` : '')}
 ${c.type !== 'image' && watchers(c) > 0 ? `<dt>Watching</dt><dd>👁 ${watchers(c) >= 1000 ? (watchers(c) / 1000).toFixed(1) + 'k' : watchers(c)} on YouTube</dd>` : ''}
+${(() => { const t = tideFor(c); return t ? `<dt>Tides</dt><dd><a href="https://tides.watch/spots/${t.slug}" rel="noopener">Tide times →</a></dd>` : ''; })()}
 <dt>Source</dt><dd><a href="${esc(c.source)}" target="_blank" rel="noopener">${esc(c.channel || 'YouTube')}</a></dd>
 </dl>
 <p class="credit">${windyId(c)
