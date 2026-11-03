@@ -230,3 +230,23 @@ body.ambient .wtile { aspect-ratio: auto; border: 0; border-radius: 0; }
 .linkrow a { color: var(--muted); background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; font-size: 14px; }
 .linkrow a:hover { color: var(--ink); background: var(--panel-2); text-decoration: none; }
 .linkrow a .n { color: var(--blue-2); font-weight: 700; margin-left: 3px; font-size: 13px; }
+
+/* --- Guides / articles --- */
+.article { max-width: 860px; }
+.article .lede { color: var(--muted); font-size: 18px; margin: 0; }
+.picklist { margin: 24px 0; display: grid; gap: 18px; }
+.pick { display: grid; grid-template-columns: 240px 1fr; gap: 18px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.pick .pthumb { position: relative; aspect-ratio: 16 / 9; background: #000; display: block; }
+.pick .pthumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pick .pbody { padding: 14px 16px 16px 0; min-width: 0; }
+.pick h3 { margin: 2px 0 5px; font-size: 19px; line-height: 1.2; }
+.pick h3 a { color: var(--ink); }
+.pick .pwhere { color: var(--muted); font-size: 13px; margin: 0 0 8px; }
+.pick p { margin: 0 0 10px; color: #c6cfe0; }
+.pick .plink { font-weight: 700; }
+.guidegrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.guidecard { display: block; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
+.guidecard:hover { border-color: #34446a; background: var(--panel-2); text-decoration: none; }
+.guidecard b { font-size: 16px; color: var(--ink); display: block; margin-bottom: 4px; line-height: 1.25; }
+.guidecard span { color: var(--muted); font-size: 14px; }
+@media (max-width: 620px) { .pick { grid-template-columns: 1fr; } .pick .pthumb { aspect-ratio: 16 / 9; } .pick .pbody { padding: 0 16px 16px; } }

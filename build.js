@@ -153,6 +153,7 @@ const header = `<header class="top"><div class="wrap">
 <a href="/wall.html">📺 Wall</a>
 <a href="/thrills.html">⚡ Thrills</a>
 <a class="hide-sm" href="/browse.html">Browse</a>
+<a class="hide-sm" href="/guide/">Guides</a>
 <a href="/favourites.html">Favourites</a>
 <a class="hide-sm" href="/map.html">Map</a>
 <a class="hide-sm" href="/about.html">About</a>
@@ -330,6 +331,14 @@ ${busiest.length >= 4 ? `<div class="section-head"><h2>🔥 Busiest right now <s
 <div class="tiles">${placeTiles}</div>
 <div class="section-head"><h2>Popular cities</h2><a href="/city/${topCities[0].slug}.html">See all →</a></div>
 <div class="tiles">${cityTiles}</div>
+<div class="section-head"><h2>Guides</h2><a href="/guide/">See all →</a></div>
+<div class="guidegrid">
+<a class="guidecard" href="/guide/best-live-cams"><b>The best live cams in the world right now</b><span>Our pick of the lot</span></a>
+<a class="guidecard" href="/guide/live-volcano-cams"><b>Live volcano cams: watch an eruption right now</b><span>Active &amp; erupting</span></a>
+<a class="guidecard" href="/guide/northern-lights-live-cams"><b>Watch the northern lights live</b><span>Aurora webcams</span></a>
+<a class="guidecard" href="/guide/best-beach-cams"><b>The best beach cams for a hit of sunshine</b><span>Borrow some sun</span></a>
+<a class="guidecard" href="/guide/live-ski-resort-cams"><b>Live ski-resort cams: who's got snow right now</b><span>Check the snow</span></a>
+</div>
 <div class="section-head"><h2>A few to start you off</h2><a href="/browse.html">See all →</a></div>
 <div class="grid">${strip}</div>
 </main>
@@ -803,9 +812,123 @@ ${hubFooter}
 </main>` + footer);
 }
 
+// ---- Guides / articles (editorial, every pick grounded in a real cam) ----
+fs.mkdirSync(path.join(DIST, 'guide'), { recursive: true });
+const pickCam = (m, cat, country) => cams.find(c => m.test(c.name || '') && (!cat || c.category === cat) && (!country || c.country === country));
+const ARTICLES = [
+  {
+    slug: 'best-live-cams', title: 'The best live cams in the world right now',
+    metaTitle: 'The best live cams in the world right now | Watch This Cam',
+    desc: 'A hand-picked tour of the most watchable live cameras on the planet — an erupting volcano, the world’s busiest crossing, the northern lights and more. All free.',
+    lede: 'Thousands of cameras stream the world live, around the clock. These are the ones worth dropping everything for — a mix of the jaw-dropping, the beautiful and the quietly hypnotic. Every one is free and live right now.',
+    picks: [
+      { m: /shibuya/i, cat: 'city', why: 'The busiest pedestrian crossing on earth. Hundreds surge across at every light change, neon reflecting off the wet tarmac. It never stops being mesmerising.' },
+      { m: /etna/i, cat: 'volcano', why: 'Europe’s most active volcano, live from Sicily. On a quiet day you’ll catch it steaming; on a louder one, glowing.' },
+      { m: /mt\.?\s*fuji|mount fuji/i, cat: 'city', why: 'Japan’s snow-capped cone above the rooftops. Worth catching at dawn, when the peak turns pink before the city wakes.' },
+      { m: /maho beach/i, why: 'Jets on the Caribbean’s shortest approach come in just metres over the sunbathers’ heads. You’ll flinch every single time.' },
+      { m: /rolling venice|venice/i, cat: 'city', country: 'IT', why: 'Gondolas and water-taxis drifting along the canal, no crowds to shoulder through. The next best thing to standing on the bridge.' },
+      { m: /tromso|troms|lyngen/i, why: 'Deep in the Norwegian aurora zone. When the sky is clear and the lights are out, this is a front-row seat to the northern lights.' },
+      { m: /kilauea/i, why: 'A live USGS feed into the caldera of an active Hawaiian volcano. Quiet for now tends not to stay that way.' },
+      { m: /bald eagle/i, cat: 'wildlife', why: 'A bald-eagle pair on the nest in California. Slow TV at its finest — and once the chicks arrive, you won’t look away.' },
+      { m: /duval street|key west/i, cat: 'city', why: 'The end-of-the-road party street in the Florida Keys, where it always seems to be happy hour. Pure people-watching.' },
+      { m: /coral city/i, why: 'A living coral reef streaming its fish traffic all day. Oddly calming — and you never know what will swim past next.' },
+    ],
+  },
+  {
+    slug: 'live-volcano-cams', title: 'Live volcano cams: watch an eruption right now',
+    metaTitle: 'Live volcano cams — watch an eruption right now | Watch This Cam',
+    desc: 'Watch active and erupting volcanoes live, from Etna and Kilauea to Mayon, Semeru and Fuego. Free 24/7 volcano webcams.',
+    lede: 'Some of these are rumbling; a few are genuinely erupting as you read this. Live volcano cameras are the internet at its most humbling — nature doing its thing, no filter, no edit.',
+    picks: [
+      { m: /etna/i, cat: 'volcano', why: 'Mount Etna, Sicily — Europe’s most active volcano, almost always doing something. Steam, glow, and now and then a proper show.' },
+      { m: /kilauea/i, why: 'Kilauea in Hawai’i, straight from the US Geological Survey. One of the most closely watched volcanoes on the planet.' },
+      { m: /mayon/i, why: 'Mayon in the Philippines, famous for its near-perfect cone — and, when it stirs, for glowing lava at night.' },
+      { m: /semeru/i, why: 'Semeru on Java, Indonesia — one of the country’s most restless peaks, often puffing ash high into the sky.' },
+      { m: /fuego/i, why: 'Volcán de Fuego in Guatemala. “Fuego” means fire, and it earns the name with regular bursts.' },
+    ],
+  },
+  {
+    slug: 'northern-lights-live-cams', title: 'Watch the northern lights live',
+    metaTitle: 'Watch the northern lights live — aurora webcams | Watch This Cam',
+    desc: 'Live aurora cams from inside the northern-lights zone — Tromsø, Lyngen, the Arctic Circle and Swedish Lapland. Best after dark on a clear night.',
+    lede: 'You can’t summon the aurora, but you can leave a camera pointed north and wait. These all sit inside the aurora zone — check back after dark, local time, when the sky is clear and the forecast is active.',
+    picks: [
+      { m: /tromso|troms/i, why: 'Tromsø, northern Norway — one of the best-placed cities on earth for catching the lights. Dark, clear winter nights are the ones.' },
+      { m: /lyngen/i, why: 'The Lyngen area of Arctic Norway, away from town lights. When the aurora is out, the whole sky can ripple green.' },
+      { m: /rovaniemi|arctic circle/i, why: 'Rovaniemi, right on the Arctic Circle in Finnish Lapland. Reindeer country — and prime aurora territory.' },
+      { m: /porjus|kiruna/i, why: 'Swedish Lapland, deep in the north. Long polar nights mean plenty of chances when the forecast lines up.' },
+    ],
+  },
+  {
+    slug: 'best-beach-cams', title: 'The best beach cams for a hit of sunshine',
+    metaTitle: 'The best live beach cams | Watch This Cam',
+    desc: 'Live beach webcams from the Caribbean, Florida, California, Thailand and more — check the waves, the weather and the crowd before you go.',
+    lede: 'Grey day where you are? Borrow some sunshine. These live beach cameras are good for checking the surf, the weather and the vibe — or just for a few minutes of waves and nothing else.',
+    picks: [
+      { m: /maho beach/i, why: 'Maho Beach, St Martin — the one where the planes land right over your head. Sunbathing with a jet-engine soundtrack.' },
+      { m: /venice beach/i, why: 'Venice Beach, Los Angeles — skaters, street performers and the Pacific. California people-watching at its best.' },
+      { m: /crystal bay|chaweng|lamai|samui/i, country: 'TH', why: 'A Thai island beach — palm trees, warm water and that unhurried pace. Instant armchair holiday.' },
+      { m: /galveston seawall|galveston/i, why: 'The Galveston seawall in Texas — a proper slice of the Gulf Coast, waves rolling in all day.' },
+      { m: /deerfield|manhattan beach|jacksonville beach/i, cat: 'surf', why: 'A Florida surf break — handy for a wave check, and easy watching when the sets roll through.' },
+    ],
+  },
+  {
+    slug: 'live-ski-resort-cams', title: 'Live ski-resort cams: who’s got snow right now',
+    metaTitle: 'Live ski-resort webcams — check the snow | Watch This Cam',
+    desc: 'Live mountain and ski-resort webcams — check the snow, the cloud and the conditions before you book or drive up. Alps, Rockies and more.',
+    lede: 'The season’s turning. Before you book a trip or drive up the hill, these mountain cameras show you exactly what’s falling — fresh powder, low cloud or bluebird sky.',
+    picks: [
+      { m: /breckenridge/i, why: 'Breckenridge, Colorado — high in the Rockies, usually one of the first to open and the last to close.' },
+      { m: /tahoe/i, why: 'Lake Tahoe on the California–Nevada line — big terrain and a famously deep snowpack when the storms line up.' },
+      { m: /dolomit/i, why: 'The Italian Dolomites — pink-tinged limestone peaks and some of the most beautiful pistes in the Alps.' },
+      { m: /österreich|osterreich|austria|tyrol|kitzb/i, cat: 'ski', why: 'The Austrian Alps — classic ski country, villages tucked under the peaks and reliable winter snow.' },
+      { m: /zermatt|matterhorn/i, why: 'Zermatt, under the Matterhorn — one of the most recognisable mountains on earth, and skiing most of the year.' },
+    ],
+  },
+];
+const articleUrls = [];
+for (const a of ARTICLES) {
+  const resolved = [], seen = new Set();
+  for (const pk of a.picks) { const c = pickCam(pk.m, pk.cat, pk.country); if (c && !seen.has(c.id)) { seen.add(c.id); resolved.push({ c, why: pk.why }); } }
+  if (!resolved.length) continue;
+  const p = `/guide/${a.slug}.html`;
+  articleUrls.push({ p, title: a.title, desc: a.desc, n: resolved.length });
+  const img = thumb(resolved[0].c);
+  const ld = [
+    { '@context': 'https://schema.org', '@type': 'Article', headline: a.title, description: a.desc, url: SITE_URL + cleanPath(p), image: [img], datePublished: BUILD_DATE, dateModified: BUILD_DATE, author: { '@type': 'Organization', name: 'Watch This Cam' }, publisher: { '@type': 'Organization', name: 'Watch This Cam', logo: { '@type': 'ImageObject', url: SITE_URL + '/icon-512.png' } } },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Guides', item: SITE_URL + '/guide/' },
+      { '@type': 'ListItem', position: 3, name: a.title }] },
+  ];
+  const picksHtml = resolved.map(({ c, why }) => `<article class="pick">
+<a class="pthumb" href="/cam/${c.id}.html"><img loading="lazy" ${ONERR} src="${thumb(c)}" alt="${esc(c.name)}"></a>
+<div class="pbody"><h3><a href="/cam/${c.id}.html">${esc(c.name)}</a></h3>
+<p class="pwhere">${esc([c.countryLabel, c.catLabel].filter(Boolean).join(' · '))}</p>
+<p>${esc(why)}</p><a class="plink" href="/cam/${c.id}.html">Watch live →</a></div></article>`).join('');
+  fs.writeFileSync(path.join(DIST, 'guide', a.slug + '.html'), head(a.metaTitle || a.title, a.desc, img, p, ld) + header + `
+<main class="wrap article">
+<nav class="crumbs"><a href="/">Home</a> › <a href="/guide/">Guides</a> › ${esc(a.title)}</nav>
+<div class="hubhead"><h1>${esc(a.title)}</h1><p class="lede">${esc(a.lede)}</p></div>
+<div class="picklist">${picksHtml}</div>
+<div style="margin:8px 0 40px"><a class="btn" href="/random.html"><span class="dice">🎲</span> Surprise me</a> <a class="btn ghost" href="/guide/">More guides</a></div>
+</main>` + footer);
+}
+// Guides index
+const guideCards = articleUrls.map(a => `<a class="guidecard" href="${cleanPath(a.p)}"><b>${esc(a.title)}</b><span>${a.n} cams</span></a>`).join('');
+fs.writeFileSync(path.join(DIST, 'guide', 'index.html'), head('Guides to the world’s best live cams | Watch This Cam', 'Hand-picked guides to the best live cameras in the world — volcanoes, the northern lights, beaches, ski resorts and more.', null, '/guide/', [
+  { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Watch This Cam guides', url: SITE_URL + '/guide/', isPartOf: { '@type': 'WebSite', name: 'Watch This Cam', url: SITE_URL + '/' } },
+]) + header + `
+<main class="wrap">
+<nav class="crumbs"><a href="/">Home</a> › Guides</nav>
+<div class="hubhead"><h1>Guides</h1><p>Hand-picked tours of the best live cameras in the world — the dramatic, the beautiful and the strangely watchable.</p></div>
+<div class="guidegrid">${guideCards}</div>
+</main>` + footer);
+
 // ---- robots.txt + sitemap.xml (for launch / SEO) ----
 fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 const sitemapUrls = ['/', '/browse.html', '/thrills.html', '/map.html', '/wall.html', '/favourites.html', '/about.html',
+  '/guide/', ...articleUrls.map(a => a.p),
   ...hubUrls,
   ...cams.map(c => `/cam/${c.id}.html`)];
 fs.writeFileSync(path.join(DIST, 'sitemap.xml'),
