@@ -342,6 +342,7 @@ ${busiest.length >= 4 ? `<div class="section-head"><h2>🔥 Busiest right now <s
 <div class="section-head"><h2>Guides</h2><a href="/guide/">See all →</a></div>
 <div class="guidegrid">
 <a class="guidecard" href="/guide/ireland-live-cams"><b>Watch Ireland live — a little bit of home</b><span>☘️ For the Irish abroad</span></a>
+<a class="guidecard" href="/guide/wildest-live-cams"><b>Live cams you won't believe exist</b><span>The wild &amp; weird</span></a>
 <a class="guidecard" href="/guide/best-live-cams"><b>The best live cams in the world right now</b><span>Our pick of the lot</span></a>
 <a class="guidecard" href="/guide/live-volcano-cams"><b>Live volcano cams: watch an eruption right now</b><span>Active &amp; erupting</span></a>
 <a class="guidecard" href="/guide/northern-lights-live-cams"><b>Watch the northern lights live</b><span>Aurora webcams</span></a>
@@ -845,6 +846,26 @@ const ARTICLES = [
       { m: /dun laoghaire east pier|east pier/i, country: 'IE', why: 'The East Pier at Dún Laoghaire — the great Sunday-walk pier. Ninety-nine optional.' },
       { m: /portrush/i, country: 'IE', why: 'Portrush up on the Causeway Coast in Antrim — surf and sea air on the north coast.' },
       { m: /\bgpo\b/i, country: 'IE', why: 'O’Connell Street by the GPO — the beating heart of Dublin, and of 1916. The city rolling past the pillars.' },
+    ],
+  },
+  {
+    slug: 'wildest-live-cams', title: 'Live cams you won’t believe exist',
+    metaTitle: 'The wildest live cams on the internet | Watch This Cam',
+    desc: 'The most unbelievable live cameras online — an erupting volcano, an underwater reef, an octopus tank, manatees, a Kenyan safari waterhole and the northern lights. All real, all live.',
+    lede: 'Some of these you have to see to believe. Every one is a real, public, live camera — nothing hacked, nothing dodgy — just the weird and wonderful corners of the world that almost nobody knows are being streamed right now.',
+    picks: [
+      { m: /mayon/i, why: 'An actively erupting volcano in the Philippines. Not a loop, not old footage — the real thing, and it glows after dark.' },
+      { m: /ol donyo/i, why: 'A waterhole at a lodge in Kenya. Elephants, giraffes and whoever else wanders down to drink — and it comes alive after dark.' },
+      { m: /utopia village|deep ocean|open sea/i, why: 'A camera bolted to a reef wall in the Caribbean, streaming the fish traffic out in the blue. You’ll lose ten minutes easy.' },
+      { m: /octopus/i, why: 'A live octopus in a tank at an Oregon science centre. Watch it hunt, sulk, or quietly rearrange its furniture.' },
+      { m: /manatee/i, why: 'Underwater with the manatees at a Florida spring — gentle giants drifting right past the lens.' },
+      { m: /toba.*otter|sea otter/i, cat: 'wildlife', why: 'Sea otters, paws and all. Exactly as good as that sounds.' },
+      { m: /riffles|katmai|brooks falls/i, why: 'Brown-bear country in Alaska. In salmon season they line up at the falls to catch fish mid-leap.' },
+      { m: /lyngen|tromso|aurora|northern light/i, why: 'Aimed at the Arctic sky in northern Norway. When the aurora is out, there is no better seat in the house.' },
+      { m: /penguin/i, why: 'A whole colony of penguins — waddling, swimming and squabbling — live.' },
+      { m: /\bshark\b/i, cat: 'wildlife', why: 'A tank full of sharks gliding past on a slow loop. Somehow more relaxing than it has any right to be.' },
+      { m: /fruit feeder/i, why: 'A fruit feeder deep in a Panama cloud forest — toucans, tanagers and hummingbirds dropping in all day.' },
+      { m: /cura.?ao/i, cat: 'wildlife', why: 'A Caribbean sea aquarium off Curaçao, reef fish drifting past the glass.' },
     ],
   },
   {

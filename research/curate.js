@@ -32,7 +32,7 @@ function cleanName(t, c) {
 // Category from title/queries
 const RULES = [
   ['volcano', /volcano|volcan|volcán|erupt|erupc|kilauea|etna|stromboli|fuego|mayon|merapi|semeru/i],
-  ['wildlife', /eagle|bear|panda|otter|puffin|osprey|bird|feeder|zoo|giraffe|safari|africam|reef|aquarium|coral|falcon|nest|wildlife|animal|cat ?cafe|puppy|dog/i],
+  ['wildlife', /eagle|bear|panda|otter|puffin|osprey|bird|feeder|zoo|giraffe|safari|africam|reef|aquarium|coral|falcon|nest|wildlife|animal|cat ?cafe|puppy|dog|manatee|underwater|octopus|shark|jellyfish|penguin|seal\b|whale|dolphin|crab|stingray|open sea|deep ocean|lodge|waterhole/i],
   ['space', /nasa|iss |space|earth from|orbit|rocket/i],
   ['ski', /\bski\b|\bskiing|ski resort|slope|piste|\balps\b|alpine|\bsnow|zermatt|matterhorn|jungfrau|dolomiten/i],
   ['surf', /surf/i],

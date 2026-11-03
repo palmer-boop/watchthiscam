@@ -110,6 +110,17 @@
   "source": "https://www.youtube.com/watch?v=ShuBcJKNbl4"
  },
  {
+  "id": "underwater-manatee-at-homosassa-springs",
+  "name": "Underwater Manatee At Homosassa Springs",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "Fz6sl9YJZE0",
+  "channel": "Explore Live Nature Cams",
+  "watching": "14 watching",
+  "source": "https://www.youtube.com/watch?v=Fz6sl9YJZE0"
+ },
+ {
   "id": "tropical-reef-camera",
   "name": "Tropical Reef Camera",
   "country": "XX",
@@ -209,6 +220,39 @@
   "source": "https://www.youtube.com/watch?v=Ux0rtJXPPQ0"
  },
  {
+  "id": "open-sea",
+  "name": "Open Sea",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "n_GpVsz4nHU",
+  "channel": "Monterey Bay Aquarium",
+  "watching": "29 watching",
+  "source": "https://www.youtube.com/watch?v=n_GpVsz4nHU"
+ },
+ {
+  "id": "spider-crab",
+  "name": "Spider Crab",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "dzmJXWmA2EM",
+  "channel": "Monterey Bay Aquarium",
+  "watching": "6 watching",
+  "source": "https://www.youtube.com/watch?v=dzmJXWmA2EM"
+ },
+ {
+  "id": "shark",
+  "name": "Shark",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "tEtg5Kg3voQ",
+  "channel": "Monterey Bay Aquarium",
+  "watching": "78 watching",
+  "source": "https://www.youtube.com/watch?v=tEtg5Kg3voQ"
+ },
+ {
   "id": "tropical-birds-at-the-panama-fruit-feede",
   "name": "Tropical Birds at the Panama Fruit Feeder at Canopy Lodge",
   "country": "XX",
@@ -229,6 +273,17 @@
   "channel": "Surfline",
   "watching": "183 watching",
   "source": "https://www.youtube.com/watch?v=hm9iAviOZ20"
+ },
+ {
+  "id": "toba-auariuim-sea-otter-camera",
+  "name": "TOBA AUARIUIM SEA OTTER CAMERA",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "YonXVFE9C3g",
+  "channel": "鳥羽水族館 TOBA AQUARIUM",
+  "watching": "951 watching",
+  "source": "https://www.youtube.com/watch?v=YonXVFE9C3g"
  },
  {
   "id": "rolling-venice-in-venice-italy",
@@ -264,6 +319,39 @@
   "source": "https://www.youtube.com/watch?v=gzgrofStPJ0"
  },
  {
+  "id": "utopia-village-sandy-channel-underwater-",
+  "name": "Utopia Village Sandy Channel Underwater Reef",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "jzx_n25g3kA",
+  "channel": "Explore Oceans",
+  "watching": "47 watching",
+  "source": "https://www.youtube.com/watch?v=jzx_n25g3kA"
+ },
+ {
+  "id": "utopia-village-top-of-wall-underwater-re",
+  "name": "Utopia Village Top-of-Wall Underwater Reef",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "1zcIUk66HX4",
+  "channel": "Explore Oceans",
+  "watching": "46 watching",
+  "source": "https://www.youtube.com/watch?v=1zcIUk66HX4"
+ },
+ {
+  "id": "utopia-village-back-channel-underwater-r",
+  "name": "Utopia Village Back Channel Underwater Reef Cams",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "nmjlQlYygB4",
+  "channel": "Explore Oceans",
+  "watching": "8 watching",
+  "source": "https://www.youtube.com/watch?v=nmjlQlYygB4"
+ },
+ {
   "id": "farallon-islands",
   "name": "Farallon Islands",
   "country": "US",
@@ -273,6 +361,17 @@
   "channel": "California Academy of Sciences",
   "watching": "1 watching",
   "source": "https://www.youtube.com/watch?v=fHb0eB9RUgA"
+ },
+ {
+  "id": "coral-reef",
+  "name": "Coral Reef",
+  "country": "US",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "je7nCiZhEJE",
+  "channel": "California Academy of Sciences",
+  "watching": "",
+  "source": "https://www.youtube.com/watch?v=je7nCiZhEJE"
  },
  {
   "id": "riffles-katmai-national-park-alaska",
@@ -372,6 +471,17 @@
   "channel": "See Jackson Hole",
   "watching": "",
   "source": "https://www.youtube.com/watch?v=j-0fhrHzEiM"
+ },
+ {
+  "id": "ol-donyo-lodge",
+  "name": "Ol Donyo Lodge",
+  "country": "KE",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "XsOU8JnEpNM",
+  "channel": "Africam",
+  "watching": "626 watching",
+  "source": "https://www.youtube.com/watch?v=XsOU8JnEpNM"
  },
  {
   "id": "wild-africa-safari",
@@ -548,6 +658,17 @@
   "channel": "LanzaroteWebcam",
   "watching": "10 watching",
   "source": "https://www.youtube.com/watch?v=U2hp0tRcOUU"
+ },
+ {
+  "id": "moody-gardens-penguin",
+  "name": "Moody Gardens Penguin",
+  "country": "US",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "HHp4rjhJsWI",
+  "channel": "Moody Gardens",
+  "watching": "541 watching",
+  "source": "https://www.youtube.com/watch?v=HHp4rjhJsWI"
  },
  {
   "id": "duluth-canal",
@@ -795,12 +916,23 @@
   "id": "leavenworth-washington-from-bavarian-lod",
   "name": "Leavenworth Washington from Bavarian Lodge Suites & Mountain",
   "country": "US",
-  "category": "nature",
+  "category": "wildlife",
   "type": "youtube",
   "videoId": "NdW8Mh0lmOo",
   "channel": "Visit Leavenworth",
   "watching": "12 watching",
   "source": "https://www.youtube.com/watch?v=NdW8Mh0lmOo"
+ },
+ {
+  "id": "puppy-playroom-at-warrior-canine-connect",
+  "name": "Puppy Playroom at Warrior Canine Connection",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "h-Z0wCdD3dI",
+  "channel": "Explore Dogs",
+  "watching": "37 watching",
+  "source": "https://www.youtube.com/watch?v=h-Z0wCdD3dI"
  },
  {
   "id": "saint-v-ran-centre-village",
@@ -834,6 +966,50 @@
   "channel": "JazBaz Philippines",
   "watching": "2 watching",
   "source": "https://www.youtube.com/watch?v=xa_7z1bHsPM"
+ },
+ {
+  "id": "wildlife-in-the-forest-by-morten-hilmer",
+  "name": "Wildlife In The Forest - by Morten Hilmer",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "F0GOOP82094",
+  "channel": "Nature Live Camera",
+  "watching": "224 watching",
+  "source": "https://www.youtube.com/watch?v=F0GOOP82094"
+ },
+ {
+  "id": "sea-otter-2",
+  "name": "Sea Otter 2",
+  "country": "CA",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "_KXHUb0wFRE",
+  "channel": "Vancouver Aquarium",
+  "watching": "125 watching",
+  "source": "https://www.youtube.com/watch?v=_KXHUb0wFRE"
+ },
+ {
+  "id": "sea-otter",
+  "name": "Sea Otter",
+  "country": "CA",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "9mg9PoFEX2U",
+  "channel": "Vancouver Aquarium",
+  "watching": "614 watching",
+  "source": "https://www.youtube.com/watch?v=9mg9PoFEX2U"
+ },
+ {
+  "id": "cura-ao-sea-aquarium",
+  "name": "Curaçao Sea Aquarium",
+  "country": "XX",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "P9gFih_9T6k",
+  "channel": "SHOWME Caribbean",
+  "watching": "2 watching",
+  "source": "https://www.youtube.com/watch?v=P9gFih_9T6k"
  },
  {
   "id": "eagle-beach",
@@ -1221,17 +1397,6 @@
   "source": "https://www.youtube.com/watch?v=y9t1g8Ike6g"
  },
  {
-  "id": "box-camera-falconcam-project",
-  "name": "Box Camera - FalconCam Project",
-  "country": "XX",
-  "category": "wildlife",
-  "type": "youtube",
-  "videoId": "gnF7_gRHHMQ",
-  "channel": "FalconCam Project",
-  "watching": "139 watching",
-  "source": "https://www.youtube.com/watch?v=gnF7_gRHHMQ"
- },
- {
   "id": "turystyczne-uj-cia-z-polskich-miast-webc",
   "name": "Turystyczne ujęcia z polskich miast - WebCamera.pl",
   "country": "PL",
@@ -1463,6 +1628,17 @@
   "source": "https://www.youtube.com/watch?v=f50R4vDlCmA"
  },
  {
+  "id": "whales-tail-seascape-fl",
+  "name": "Whales Tail Seascape FL",
+  "country": "US",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "TyX02EtQcYI",
+  "channel": "ENCO Electronic Systems",
+  "watching": "36 watching",
+  "source": "https://www.youtube.com/watch?v=TyX02EtQcYI"
+ },
+ {
   "id": "leeward-key-miramar-beach-fl",
   "name": "Leeward Key Miramar Beach, FL",
   "country": "US",
@@ -1595,17 +1771,6 @@
   "source": "https://www.youtube.com/watch?v=JkkMj6V2IJg"
  },
  {
-  "id": "main-lodge-woolly",
-  "name": "Main Lodge Woolly",
-  "country": "XX",
-  "category": "nature",
-  "type": "youtube",
-  "videoId": "AXyxIFY3JaA",
-  "channel": "Mammoth Mountain",
-  "watching": "2 watching",
-  "source": "https://www.youtube.com/watch?v=AXyxIFY3JaA"
- },
- {
   "id": "hamamatsu-cho-railway-tracks-tokyo",
   "name": "Hamamatsu-cho railway tracks Tokyo",
   "country": "JP",
@@ -1703,17 +1868,6 @@
   "channel": "Hogs Breath Saloon Key West",
   "watching": "8 watching",
   "source": "https://www.youtube.com/watch?v=thzfsD7VDFg"
- },
- {
-  "id": "storchennest-kirchzarten-jungst-rche-mar",
-  "name": "Storchennest Kirchzarten: Jungstörche Mars, Saturn und Jupit",
-  "country": "XX",
-  "category": "wildlife",
-  "type": "youtube",
-  "videoId": "W2CicgFq5oo",
-  "channel": "regiowebcam",
-  "watching": "3 watching",
-  "source": "https://www.youtube.com/watch?v=W2CicgFq5oo"
  },
  {
   "id": "cowes-floating-bridge-camera",
@@ -2530,17 +2684,6 @@
   "source": "https://www.youtube.com/watch?v=zGlGodTfncQ"
  },
  {
-  "id": "aus-dem-storchennest-in-leutershausen-mi",
-  "name": "Aus dem Storchennest in Leutershausen Mittelfranken",
-  "country": "XX",
-  "category": "wildlife",
-  "type": "youtube",
-  "videoId": "rurvbn9yH-k",
-  "channel": "Heimatverein Leutershausen",
-  "watching": "14 watching",
-  "source": "https://www.youtube.com/watch?v=rurvbn9yH-k"
- },
- {
   "id": "runway-23",
   "name": "Runway 23",
   "country": "AU",
@@ -3014,17 +3157,6 @@
   "source": "https://www.youtube.com/watch?v=3FvCSlV4yZ0"
  },
  {
-  "id": "main-lodge",
-  "name": "Main Lodge",
-  "country": "XX",
-  "category": "nature",
-  "type": "youtube",
-  "videoId": "pUy85S4xS5I",
-  "channel": "Mammoth Live Cams",
-  "watching": "1 watching",
-  "source": "https://www.youtube.com/watch?v=pUy85S4xS5I"
- },
- {
   "id": "june-j3",
   "name": "June J3",
   "country": "XX",
@@ -3265,6 +3397,17 @@
   "channel": "afarTV",
   "watching": "1 watching",
   "source": "https://www.youtube.com/watch?v=F2KrH4QQnms"
+ },
+ {
+  "id": "hawaii-humpback-whale-marine-sanctuary-i",
+  "name": "Hawaii Humpback Whale Marine Sanctuary in Maui, Hawaii Ultra",
+  "country": "US",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "QzQ-7eiMw1w",
+  "channel": "afarTV",
+  "watching": "84 watching",
+  "source": "https://www.youtube.com/watch?v=QzQ-7eiMw1w"
  },
  {
   "id": "heping-island-park-camera-taiwan",
