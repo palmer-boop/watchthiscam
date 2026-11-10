@@ -3,3 +3,9 @@ node_modules/
 research/net/
 research/*.backup*.json
 research/*-log.txt
+research/dry-picked.json
+research/need-*.json
+research/curated.before-import.json
+research/verified.pre-curate.json
+research/verify-ids-done.json
+.wrangler/

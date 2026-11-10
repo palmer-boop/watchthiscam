@@ -1,0 +1,9 @@
+# Collects "not working?" reports from watchthiscam.com cam pages. Deploy: wrangler deploy (from this folder).
+name = "wtc-report"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "REPORTS"
+id = "9484ccbaeeb241559527c04e52081bc8"

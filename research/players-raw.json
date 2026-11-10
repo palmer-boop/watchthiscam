@@ -1,0 +1,1190 @@
+[
+ {
+  "name": "Paddington, London",
+  "country": "GB",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=darlingtonhotel&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=darlingtonhotel&autoplay=1"
+ },
+ {
+  "name": "Nashville, Tennessee",
+  "country": "US",
+  "state": "Tennessee",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=broadwaycam&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=broadwaycam&autoplay=1"
+ },
+ {
+  "name": "Crested Butte, Colorado",
+  "country": "US",
+  "state": "Colorado",
+  "category": "mountain",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=5dcc7be5d5f02&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=5dcc7be5d5f02&autoplay=1"
+ },
+ {
+  "name": "Gregory Butte, Lake Powell",
+  "country": "US",
+  "category": "nature",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=gregory&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=gregory&autoplay=1"
+ },
+ {
+  "name": "Deadwood, South Dakota",
+  "country": "US",
+  "state": "South Dakota",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=deadwoodsilverado&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=deadwoodsilverado&autoplay=1"
+ },
+ {
+  "name": "Norfolk Broads",
+  "country": "GB",
+  "category": "nature",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=571908f191d12&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=571908f191d12&autoplay=1"
+ },
+ {
+  "name": "Akumal",
+  "country": "MX",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=68fa86ac03ac6&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=68fa86ac03ac6&autoplay=1"
+ },
+ {
+  "name": "Timmins, Ontario",
+  "country": "CA",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=chwebcam&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=chwebcam&autoplay=1"
+ },
+ {
+  "name": "Hamilton Harbour, Bermuda",
+  "country": "BM",
+  "category": "harbour",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=rhadc&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=rhadc&autoplay=1"
+ },
+ {
+  "name": "Loch Ness, Scotland",
+  "country": "GB",
+  "category": "nature",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=clansmanhotel&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=clansmanhotel&autoplay=1"
+ },
+ {
+  "name": "Cēsis",
+  "country": "LV",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=1cesis&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=1cesis&autoplay=1"
+ },
+ {
+  "name": "Glenwood Springs, Colorado",
+  "country": "US",
+  "state": "Colorado",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=compasspeak&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=compasspeak&autoplay=1"
+ },
+ {
+  "name": "Saint John, New Brunswick",
+  "country": "CA",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=loyalistplaza&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=loyalistplaza&autoplay=1"
+ },
+ {
+  "name": "El Gouna, Hurghada",
+  "country": "EG",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=60cb1d6db5a51&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=60cb1d6db5a51&autoplay=1"
+ },
+ {
+  "name": "Mawgan Porth, Cornwall",
+  "country": "GB",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=678eec19a8aa0&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=678eec19a8aa0&autoplay=1"
+ },
+ {
+  "name": "Tenby Harbour, Wales",
+  "country": "GB",
+  "category": "harbour",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=629772897c638&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=629772897c638&autoplay=1"
+ },
+ {
+  "name": "Tralee Bay, Benderloch, Scotland",
+  "country": "GB",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=6763ad1468567&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=6763ad1468567&autoplay=1"
+ },
+ {
+  "name": "Bryher, Isles of Scilly",
+  "country": "GB",
+  "category": "nature",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=fragglecam&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=fragglecam&autoplay=1"
+ },
+ {
+  "name": "Vágur, Faroe Islands",
+  "country": "FO",
+  "category": "harbour",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=6383cdbb1e85c&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=6383cdbb1e85c&autoplay=1"
+ },
+ {
+  "name": "New Delhi",
+  "country": "IN",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=aqi02&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=aqi02&autoplay=1"
+ },
+ {
+  "name": "Ponta Preta, Sal, Cape Verde",
+  "country": "CV",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=5e454f7085ee7&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=5e454f7085ee7&autoplay=1"
+ },
+ {
+  "name": "Tsada, Cyprus",
+  "country": "CY",
+  "category": "other",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=tsada&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=tsada&autoplay=1"
+ },
+ {
+  "name": "Cabarete, Dominican Republic",
+  "country": "DO",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=57b46c9ad2666&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=57b46c9ad2666&autoplay=1"
+ },
+ {
+  "name": "Topeka, Kansas",
+  "country": "US",
+  "state": "Kansas",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=5ad64dfb68455&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=5ad64dfb68455&autoplay=1"
+ },
+ {
+  "name": "Taupō",
+  "country": "NZ",
+  "category": "nature",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=6368655532e88&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=6368655532e88&autoplay=1"
+ },
+ {
+  "name": "Mykines, Faroe Islands",
+  "country": "FO",
+  "category": "nature",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=64b7ba1aae907&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=64b7ba1aae907&autoplay=1"
+ },
+ {
+  "name": "Tórshavn, Faroe Islands",
+  "country": "FO",
+  "category": "harbour",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=645fc855caa56&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=645fc855caa56&autoplay=1"
+ },
+ {
+  "name": "Clarksville",
+  "country": "US",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=mainstreeteast&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=mainstreeteast&autoplay=1"
+ },
+ {
+  "name": "Wichita, Kansas",
+  "country": "US",
+  "state": "Kansas",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=skyviewwichita&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=skyviewwichita&autoplay=1"
+ },
+ {
+  "name": "Skálavík, Faroe Islands",
+  "country": "FO",
+  "category": "harbour",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=6450e95699ac0&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=6450e95699ac0&autoplay=1"
+ },
+ {
+  "name": "Narragansett, Rhode Island",
+  "country": "US",
+  "state": "Rhode Island",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=5bb3a358d751e&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=5bb3a358d751e&autoplay=1"
+ },
+ {
+  "name": "Chobe National Park, Botswana",
+  "country": "BW",
+  "category": "wildlife",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=57053402af5ea&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=57053402af5ea&autoplay=1"
+ },
+ {
+  "name": "Leirvík, Faroe Islands",
+  "country": "FO",
+  "category": "harbour",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=666865a1a803a&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=666865a1a803a&autoplay=1"
+ },
+ {
+  "name": "Klaksvík, Faroe Islands",
+  "country": "FO",
+  "category": "harbour",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=644b947a99c3f&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=644b947a99c3f&autoplay=1"
+ },
+ {
+  "name": "Žabljak, Montenegro",
+  "country": "ME",
+  "category": "mountain",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=savinkuk&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=savinkuk&autoplay=1"
+ },
+ {
+  "name": "Lake Cumberland, Kentucky",
+  "country": "US",
+  "state": "Kentucky",
+  "category": "nature",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=60a3c2cdbba45&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=60a3c2cdbba45&autoplay=1"
+ },
+ {
+  "name": "Austurvöllur square, Reykjavik",
+  "country": "IS",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=67407bb0cb656&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=67407bb0cb656&autoplay=1"
+ },
+ {
+  "name": "Mountain Village, Colorado",
+  "country": "US",
+  "state": "Colorado",
+  "category": "mountain",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=plazacam&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=plazacam&autoplay=1"
+ },
+ {
+  "name": "Island Park, Idaho",
+  "country": "US",
+  "state": "Idaho",
+  "category": "nature",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=highmtn&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=highmtn&autoplay=1"
+ },
+ {
+  "name": "Graeagle, California",
+  "country": "US",
+  "state": "California",
+  "category": "other",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=66b00e4264609&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=66b00e4264609&autoplay=1"
+ },
+ {
+  "name": "Bondi Beach, Sydney",
+  "country": "AU",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=646f0edf4f480&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=646f0edf4f480&autoplay=1"
+ },
+ {
+  "name": "Dubrovnik",
+  "country": "HR",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=oldtown001&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=oldtown001&autoplay=1"
+ },
+ {
+  "name": "Kolašin, Montenegro",
+  "country": "ME",
+  "category": "mountain",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=jeze&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=jeze&autoplay=1"
+ },
+ {
+  "name": "Barcelona",
+  "country": "ES",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=sagradafamilia&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=sagradafamilia&autoplay=1"
+ },
+ {
+  "name": "Surf Center, Eilat",
+  "country": "IL",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=surfcenterkite&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=surfcenterkite&autoplay=1"
+ },
+ {
+  "name": "Ashkelon",
+  "country": "IL",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=604f5fc79d973&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=604f5fc79d973&autoplay=1"
+ },
+ {
+  "name": "Kiryat Haim beach, Haifa",
+  "country": "IL",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=6469b4554f45e&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=6469b4554f45e&autoplay=1"
+ },
+ {
+  "name": "Santa Maria, Sal, Cape Verde",
+  "country": "CV",
+  "category": "other",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=5909f8967b7d3&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=5909f8967b7d3&autoplay=1"
+ },
+ {
+  "name": "Aremiti 6 ferry, French Polynesia",
+  "country": "PF",
+  "category": "harbour",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=66396fd8b8eee&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=66396fd8b8eee&autoplay=1"
+ },
+ {
+  "name": "Arenzano",
+  "country": "IT",
+  "category": "harbour",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=psmwebcam&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=psmwebcam&autoplay=1"
+ },
+ {
+  "name": "Circuit Zolder",
+  "country": "BE",
+  "category": "other",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=645135af2e7f0&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=645135af2e7f0&autoplay=1"
+ },
+ {
+  "name": "North Conway Country Club, New Hampshire",
+  "country": "US",
+  "state": "New Hampshire",
+  "category": "mountain",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=64d0dfdae996f&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=64d0dfdae996f&autoplay=1"
+ },
+ {
+  "name": "Apex Mountain Resort, British Columbia",
+  "country": "CA",
+  "category": "ski",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=5f91b68c1adc4&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=5f91b68c1adc4&autoplay=1"
+ },
+ {
+  "name": "Galway",
+  "country": "IE",
+  "category": "city",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=5de0fb1182963&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=5de0fb1182963&autoplay=1"
+ },
+ {
+  "name": "Calpe, Alicante",
+  "country": "ES",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=5c35e0c28ae9d&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=5c35e0c28ae9d&autoplay=1"
+ },
+ {
+  "name": "Tinajo, Lanzarote",
+  "country": "ES",
+  "category": "other",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=clswebcam01&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=clswebcam01&autoplay=1"
+ },
+ {
+  "name": "El Oasis, Las Palmas",
+  "country": "ES",
+  "category": "beach",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=5c0fd772efa48&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=5c0fd772efa48&autoplay=1"
+ },
+ {
+  "name": "Eisenerz",
+  "country": "AT",
+  "category": "mountain",
+  "network": "ipcamlive",
+  "embedUrl": "https://ipcamlive.com/player/player.php?alias=esamcam&autoplay=1",
+  "sourcePage": "https://ipcamlive.com/player/player.php?alias=esamcam&autoplay=1"
+ },
+ {
+  "name": "Pompano Beach, Florida",
+  "country": "US",
+  "state": "Florida",
+  "category": "beach",
+  "network": "Brownrice",
+  "embedUrl": "https://player.brownrice.com/embed/copbfl1",
+  "sourcePage": "https://player.brownrice.com/embed/copbfl1"
+ },
+ {
+  "name": "Horseheads, New York",
+  "country": "US",
+  "state": "New York",
+  "category": "city",
+  "network": "Brownrice",
+  "embedUrl": "https://player.brownrice.com/embed/horseheadsskycam",
+  "sourcePage": "https://player.brownrice.com/embed/horseheadsskycam"
+ },
+ {
+  "name": "Mansfield, Pennsylvania",
+  "country": "US",
+  "state": "Pennsylvania",
+  "category": "city",
+  "network": "Brownrice",
+  "embedUrl": "https://player.brownrice.com/embed/mansfieldskycam",
+  "sourcePage": "https://player.brownrice.com/embed/mansfieldskycam"
+ },
+ {
+  "name": "Corning, New York",
+  "country": "US",
+  "state": "New York",
+  "category": "city",
+  "network": "Brownrice",
+  "embedUrl": "https://player.brownrice.com/embed/gafferdistrictskycam",
+  "sourcePage": "https://player.brownrice.com/embed/gafferdistrictskycam"
+ },
+ {
+  "name": "Corner Brook, Newfoundland",
+  "country": "CA",
+  "category": "city",
+  "network": "Brownrice",
+  "embedUrl": "https://player.brownrice.com/embed/live",
+  "sourcePage": "https://player.brownrice.com/embed/live"
+ },
+ {
+  "name": "Bass Lake, California",
+  "country": "US",
+  "state": "California",
+  "category": "nature",
+  "network": "Brownrice",
+  "embedUrl": "https://player.brownrice.com/embed/basslakemarina",
+  "sourcePage": "https://player.brownrice.com/embed/basslakemarina"
+ },
+ {
+  "name": "South Lake Tahoe, California",
+  "country": "US",
+  "state": "California",
+  "category": "nature",
+  "network": "Brownrice",
+  "embedUrl": "https://player.brownrice.com/embed/heavenlytram",
+  "sourcePage": "https://player.brownrice.com/embed/heavenlytram"
+ },
+ {
+  "name": "Stevens Pass, Washington",
+  "country": "US",
+  "state": "Washington",
+  "category": "ski",
+  "network": "Brownrice",
+  "embedUrl": "https://player.brownrice.com/embed/stevenspassskyline",
+  "sourcePage": "https://player.brownrice.com/embed/stevenspassskyline"
+ },
+ {
+  "name": "Kollen Park, Holland, Michigan",
+  "country": "US",
+  "state": "Michigan",
+  "category": "nature",
+  "network": "Brownrice",
+  "embedUrl": "https://player.brownrice.com/embed/cityofhollandkollenpark",
+  "sourcePage": "https://player.brownrice.com/embed/cityofhollandkollenpark"
+ },
+ {
+  "name": "Sanibel Island, Florida",
+  "country": "US",
+  "state": "Florida",
+  "category": "beach",
+  "network": "Brownrice",
+  "embedUrl": "https://player.brownrice.com/embed/sanibelsiesta3",
+  "sourcePage": "https://player.brownrice.com/embed/sanibelsiesta3"
+ },
+ {
+  "name": "Blue Ridge, Georgia",
+  "country": "US",
+  "state": "Georgia",
+  "category": "other",
+  "network": "WetMet",
+  "embedUrl": "https://api.wetmet.net/widgets/stream/frame.php?uid=323ab035a50da4028e978034e91dc9bf",
+  "sourcePage": "https://api.wetmet.net/widgets/stream/frame.php?uid=323ab035a50da4028e978034e91dc9bf"
+ },
+ {
+  "name": "Blue Mountain, Pennsylvania",
+  "country": "US",
+  "state": "Pennsylvania",
+  "category": "ski",
+  "network": "WetMet",
+  "embedUrl": "https://api.wetmet.net/widgets/stream/frame.php?uid=b265e71e704e012963a5ad7cf195cd03",
+  "sourcePage": "https://api.wetmet.net/widgets/stream/frame.php?uid=b265e71e704e012963a5ad7cf195cd03"
+ },
+ {
+  "name": "Downtown Grand Rapids, Michigan",
+  "country": "US",
+  "state": "Michigan",
+  "category": "city",
+  "network": "WetMet",
+  "embedUrl": "https://api.wetmet.net/widgets/stream/frame.php?uid=7bcde7d22d900d7061461d4953482c4b",
+  "sourcePage": "https://api.wetmet.net/widgets/stream/frame.php?uid=7bcde7d22d900d7061461d4953482c4b"
+ },
+ {
+  "name": "Jasper, Alabama",
+  "country": "US",
+  "state": "Alabama",
+  "category": "city",
+  "network": "WetMet",
+  "embedUrl": "https://api.wetmet.net/widgets/stream/frame.php?uid=8413f5aed266449c980e2394017ca169",
+  "sourcePage": "https://api.wetmet.net/widgets/stream/frame.php?uid=8413f5aed266449c980e2394017ca169"
+ },
+ {
+  "name": "Crystal River, Florida",
+  "country": "US",
+  "state": "Florida",
+  "category": "harbour",
+  "network": "WetMet",
+  "embedUrl": "https://api.wetmet.net/widgets/stream/frame.php?uid=fbb839cb29a8388b2a09ad8ca1b3325f",
+  "sourcePage": "https://api.wetmet.net/widgets/stream/frame.php?uid=fbb839cb29a8388b2a09ad8ca1b3325f"
+ },
+ {
+  "name": "Oklahoma City",
+  "country": "US",
+  "state": "Oklahoma",
+  "category": "city",
+  "network": "WetMet",
+  "embedUrl": "https://api.wetmet.net/widgets/stream/frame.php?uid=14b2c84205dd85af1926947149fa68c0",
+  "sourcePage": "https://api.wetmet.net/widgets/stream/frame.php?uid=14b2c84205dd85af1926947149fa68c0"
+ },
+ {
+  "name": "Atlanta, Georgia",
+  "country": "US",
+  "state": "Georgia",
+  "category": "city",
+  "network": "WetMet",
+  "embedUrl": "https://api.wetmet.net/widgets/stream/frame.php?uid=6ef33c174c6df51d1039a65309c54783",
+  "sourcePage": "https://api.wetmet.net/widgets/stream/frame.php?uid=6ef33c174c6df51d1039a65309c54783"
+ },
+ {
+  "name": "Blanchard",
+  "country": "US",
+  "category": "other",
+  "network": "WetMet",
+  "embedUrl": "https://api.wetmet.net/widgets/stream/frame.php?uid=cf0ba6e800cf135999a6c1be09273fdd",
+  "sourcePage": "https://api.wetmet.net/widgets/stream/frame.php?uid=cf0ba6e800cf135999a6c1be09273fdd"
+ },
+ {
+  "name": "Flagstaff, Arizona",
+  "country": "US",
+  "state": "Arizona",
+  "category": "city",
+  "network": "WetMet",
+  "embedUrl": "https://api.wetmet.net/widgets/stream/frame.php?uid=e1f43d2c0ee1817ba9a478551f226045",
+  "sourcePage": "https://api.wetmet.net/widgets/stream/frame.php?uid=e1f43d2c0ee1817ba9a478551f226045"
+ },
+ {
+  "name": "Governor's Harbour, Eleuthera, Bahamas",
+  "country": "BS",
+  "category": "harbour",
+  "network": "WetMet",
+  "embedUrl": "https://api.wetmet.net/widgets/stream/frame.php?uid=6da9a5e49706edddf31814e58670654c",
+  "sourcePage": "https://api.wetmet.net/widgets/stream/frame.php?uid=6da9a5e49706edddf31814e58670654c"
+ },
+ {
+  "name": "Pagosa Springs, Colorado",
+  "country": "US",
+  "state": "Colorado",
+  "category": "city",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=91yxb8b6ro&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=91yxb8b6ro&autoplay=1"
+ },
+ {
+  "name": "Lake Leelanau, Michigan",
+  "country": "US",
+  "state": "Michigan",
+  "category": "other",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=16rb6xd3y4&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=16rb6xd3y4&autoplay=1"
+ },
+ {
+  "name": "Painesville Township Park, Ohio",
+  "country": "US",
+  "state": "Ohio",
+  "category": "beach",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=17ldm386le&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=17ldm386le&autoplay=1"
+ },
+ {
+  "name": "Skagen Harbour",
+  "country": "DK",
+  "category": "harbour",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=ger2kj6brm&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=ger2kj6brm&autoplay=1"
+ },
+ {
+  "name": "Fort Myers Beach, Florida",
+  "country": "US",
+  "state": "Florida",
+  "category": "beach",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=v8ypjkxzy6&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=v8ypjkxzy6&autoplay=1"
+ },
+ {
+  "name": "Custer, South Dakota",
+  "country": "US",
+  "state": "South Dakota",
+  "category": "city",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=2dy6dve1lk&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=2dy6dve1lk&autoplay=1"
+ },
+ {
+  "name": "Beaver Island, Michigan",
+  "country": "US",
+  "state": "Michigan",
+  "category": "harbour",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=g8dl5je5yx&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=g8dl5je5yx&autoplay=1"
+ },
+ {
+  "name": "Porth Beach, Newquay",
+  "country": "GB",
+  "category": "beach",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=4oxln7nxy8&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=4oxln7nxy8&autoplay=1"
+ },
+ {
+  "name": "The Big Texan Steak Ranch, Amarillo",
+  "country": "US",
+  "state": "Texas",
+  "category": "other",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=9klzdgn2y4&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=9klzdgn2y4&autoplay=1"
+ },
+ {
+  "name": "Frederikshavn",
+  "country": "DK",
+  "category": "harbour",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=oxln346er8&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=oxln346er8&autoplay=1"
+ },
+ {
+  "name": "Denizkızı Beach",
+  "country": "TR",
+  "category": "beach",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=51eyooz3y8&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=51eyooz3y8&autoplay=1"
+ },
+ {
+  "name": "Bethany Beach, Delaware",
+  "country": "US",
+  "state": "Delaware",
+  "category": "beach",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=v8yp6jmpr6&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=v8yp6jmpr6&autoplay=1"
+ },
+ {
+  "name": "Sturgeon Bay, Wisconsin",
+  "country": "US",
+  "state": "Wisconsin",
+  "category": "harbour",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=24r4vn43r0&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=24r4vn43r0&autoplay=1"
+ },
+ {
+  "name": "Aberdare National Park, Kenya",
+  "country": "KE",
+  "category": "wildlife",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=m1erv5ppy7&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=m1erv5ppy7&autoplay=1"
+ },
+ {
+  "name": "Red River, New Mexico",
+  "country": "US",
+  "state": "New Mexico",
+  "category": "mountain",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=1ny8kd81y0&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=1ny8kd81y0&autoplay=1"
+ },
+ {
+  "name": "Red Lodge, Montana",
+  "country": "US",
+  "state": "Montana",
+  "category": "city",
+  "network": "Angelcam",
+  "embedUrl": "https://v.angelcam.com/iframe?v=2dl6d9bvrk&autoplay=1",
+  "sourcePage": "https://v.angelcam.com/iframe?v=2dl6d9bvrk&autoplay=1"
+ },
+ {
+  "name": "Mount Laguna, California",
+  "country": "US",
+  "state": "California",
+  "category": "mountain",
+  "network": "Vision-Environnement",
+  "embedUrl": "https://www.vision-environnement.com/live/player/laguna0.php",
+  "sourcePage": "https://www.vision-environnement.com/live/player/laguna0.php"
+ },
+ {
+  "name": "Las Condes, Santiago",
+  "country": "CL",
+  "category": "city",
+  "network": "Vision-Environnement",
+  "embedUrl": "https://www.vision-environnement.com/live/player/portillo0.php",
+  "sourcePage": "https://www.vision-environnement.com/live/player/portillo0.php"
+ },
+ {
+  "name": "Juneau, Alaska",
+  "country": "US",
+  "state": "Alaska",
+  "category": "harbour",
+  "network": "Vision-Environnement",
+  "embedUrl": "https://www.vision-environnement.com/live/player/juneau0.php",
+  "sourcePage": "https://www.vision-environnement.com/live/player/juneau0.php"
+ },
+ {
+  "name": "Charleston, South Carolina",
+  "country": "US",
+  "state": "South Carolina",
+  "category": "city",
+  "network": "Vision-Environnement",
+  "embedUrl": "https://www.vision-environnement.com/live/player/charleston0.php",
+  "sourcePage": "https://www.vision-environnement.com/live/player/charleston0.php"
+ },
+ {
+  "name": "Ölüdeniz",
+  "country": "TR",
+  "category": "beach",
+  "network": "Vision-Environnement",
+  "embedUrl": "https://www.vision-environnement.com/live/player/oludiniz0.php",
+  "sourcePage": "https://www.vision-environnement.com/live/player/oludiniz0.php"
+ },
+ {
+  "name": "Praia do Peneco, Albufeira",
+  "country": "PT",
+  "category": "beach",
+  "network": "Vision-Environnement",
+  "embedUrl": "https://www.vision-environnement.com/live/player/albufeira0.php",
+  "sourcePage": "https://www.vision-environnement.com/live/player/albufeira0.php"
+ },
+ {
+  "name": "Kuressaare",
+  "country": "EE",
+  "category": "harbour",
+  "network": "Vision-Environnement",
+  "embedUrl": "https://www.vision-environnement.com/live/player/kuressaare0.php",
+  "sourcePage": "https://www.vision-environnement.com/live/player/kuressaare0.php"
+ },
+ {
+  "name": "Kopaonik",
+  "country": "RS",
+  "category": "ski",
+  "network": "Vision-Environnement",
+  "embedUrl": "https://www.vision-environnement.com/live/player/kopaonik0.php",
+  "sourcePage": "https://www.vision-environnement.com/live/player/kopaonik0.php"
+ },
+ {
+  "name": "Yakutsk",
+  "country": "RU",
+  "category": "city",
+  "network": "Ivideon",
+  "embedUrl": "https://open.ivideon.com/embed/v2/?server=100-jI3y6yyWAjbkvlfIPlIlat&camera=655360&width=&height=&lang=en",
+  "sourcePage": "https://open.ivideon.com/embed/v2/?server=100-jI3y6yyWAjbkvlfIPlIlat&camera=655360&width=&height=&lang=en"
+ },
+ {
+  "name": "Grunnfarnes, Senja",
+  "country": "NO",
+  "category": "nature",
+  "network": "Ivideon",
+  "embedUrl": "https://open.ivideon.com/embed/v2/?server=100-Nrh4R5YoIrb8R3CR3st5hR&camera=131072&width=&height=&lang=en",
+  "sourcePage": "https://open.ivideon.com/embed/v2/?server=100-Nrh4R5YoIrb8R3CR3st5hR&camera=131072&width=&height=&lang=en"
+ },
+ {
+  "name": "Batumi",
+  "country": "GE",
+  "category": "city",
+  "network": "Ivideon",
+  "embedUrl": "https://open.ivideon.com/embed/v2/?server=100-ZpHotDeXax1XGrI2bLKYmk&camera=0&width=&height=&lang=en",
+  "sourcePage": "https://open.ivideon.com/embed/v2/?server=100-ZpHotDeXax1XGrI2bLKYmk&camera=0&width=&height=&lang=en"
+ },
+ {
+  "name": "Murmansk",
+  "country": "RU",
+  "category": "city",
+  "network": "Ivideon",
+  "embedUrl": "https://open.ivideon.com/embed/v2/?server=100-ljemuh7q0L6GVJzzfidONZ&camera=0&width=&height=&lang=en",
+  "sourcePage": "https://open.ivideon.com/embed/v2/?server=100-ljemuh7q0L6GVJzzfidONZ&camera=0&width=&height=&lang=en"
+ },
+ {
+  "name": "Phuket",
+  "country": "TH",
+  "category": "beach",
+  "network": "Ivideon",
+  "embedUrl": "https://open.ivideon.com/embed/v2/?server=200-540bc5e23ed26ac860c5936fd8ed922d&camera=0&width=&height=&lang=en",
+  "sourcePage": "https://open.ivideon.com/embed/v2/?server=200-540bc5e23ed26ac860c5936fd8ed922d&camera=0&width=&height=&lang=en"
+ },
+ {
+  "name": "Kislovodsk",
+  "country": "RU",
+  "category": "city",
+  "network": "Ivideon",
+  "embedUrl": "https://open.ivideon.com/embed/v2/?server=100-980e7d235ef4f0b9f0173793db07ae11&camera=655360&width=&height=&lang=en",
+  "sourcePage": "https://open.ivideon.com/embed/v2/?server=100-980e7d235ef4f0b9f0173793db07ae11&camera=655360&width=&height=&lang=en"
+ },
+ {
+  "name": "Rif Harbour, Iceland",
+  "country": "IS",
+  "category": "harbour",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/yiKsKeHs/",
+  "sourcePage": "https://rtsp.me/embed/yiKsKeHs/"
+ },
+ {
+  "name": "Arnarstapi, Iceland",
+  "country": "IS",
+  "category": "nature",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/S8it53es/",
+  "sourcePage": "https://rtsp.me/embed/S8it53es/"
+ },
+ {
+  "name": "Borgie Lodge, Scotland",
+  "country": "GB",
+  "category": "nature",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/QtHThdtE/",
+  "sourcePage": "https://rtsp.me/embed/QtHThdtE/"
+ },
+ {
+  "name": "St. Andrews Airport, Manitoba",
+  "country": "CA",
+  "category": "transport",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/DRftb3B5/",
+  "sourcePage": "https://rtsp.me/embed/DRftb3B5/"
+ },
+ {
+  "name": "Steinbach South Airport, Manitoba",
+  "country": "CA",
+  "category": "transport",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/k6eY428B/",
+  "sourcePage": "https://rtsp.me/embed/k6eY428B/"
+ },
+ {
+  "name": "Asenovgrad",
+  "country": "BG",
+  "category": "city",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/FD4SZSlDHpF8fEkU/",
+  "sourcePage": "https://rtsp.me/embed/FD4SZSlDHpF8fEkU/"
+ },
+ {
+  "name": "Belfast Lough",
+  "country": "GB",
+  "category": "harbour",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/A64yerKQ/",
+  "sourcePage": "https://rtsp.me/embed/A64yerKQ/"
+ },
+ {
+  "name": "Caseville, Lake Huron, Michigan",
+  "country": "US",
+  "state": "Michigan",
+  "category": "beach",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/4fd4yDKS/",
+  "sourcePage": "https://rtsp.me/embed/4fd4yDKS/"
+ },
+ {
+  "name": "Nissi Beach, Ayia Napa",
+  "country": "CY",
+  "category": "beach",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/ZDSG55eZ/",
+  "sourcePage": "https://rtsp.me/embed/ZDSG55eZ/"
+ },
+ {
+  "name": "Lymm, Cheshire",
+  "country": "GB",
+  "category": "other",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/iBs8e2Gi/",
+  "sourcePage": "https://rtsp.me/embed/iBs8e2Gi/"
+ },
+ {
+  "name": "Innerleithen, Scotland",
+  "country": "GB",
+  "category": "other",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/aEET9HyS/",
+  "sourcePage": "https://rtsp.me/embed/aEET9HyS/"
+ },
+ {
+  "name": "Stummerberg, Tyrol",
+  "country": "AT",
+  "category": "mountain",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/23inSeGy/",
+  "sourcePage": "https://rtsp.me/embed/23inSeGy/"
+ },
+ {
+  "name": "Whitby",
+  "country": "GB",
+  "category": "harbour",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/7dFadBs4/",
+  "sourcePage": "https://rtsp.me/embed/7dFadBs4/"
+ },
+ {
+  "name": "Tufandag mountain resort",
+  "country": "AZ",
+  "category": "ski",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/RRYyQH8B/",
+  "sourcePage": "https://rtsp.me/embed/RRYyQH8B/"
+ },
+ {
+  "name": "Paarl Golf Club",
+  "country": "ZA",
+  "category": "other",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/HiBy96KQ/",
+  "sourcePage": "https://rtsp.me/embed/HiBy96KQ/"
+ },
+ {
+  "name": "Limone sul Garda, Lake Garda",
+  "country": "IT",
+  "category": "nature",
+  "network": "rtsp.me",
+  "embedUrl": "https://rtsp.me/embed/HhfdNK89/",
+  "sourcePage": "https://rtsp.me/embed/HhfdNK89/"
+ },
+ {
+  "name": "Bad Brückenau",
+  "country": "DE",
+  "category": "city",
+  "network": "livespotting",
+  "embedUrl": "https://player.livespotting.com/?alias=PS_231c3&ch=LS_2eb4c",
+  "sourcePage": "https://player.livespotting.com/?alias=PS_231c3&ch=LS_2eb4c"
+ },
+ {
+  "name": "White stork nest, Pfreimd",
+  "country": "DE",
+  "category": "wildlife",
+  "network": "livespotting",
+  "embedUrl": "https://player.livespotting.com/?alias=5to1eko6&ch=zs7cfrsy",
+  "sourcePage": "https://player.livespotting.com/?alias=5to1eko6&ch=zs7cfrsy"
+ },
+ {
+  "name": "Hamburg Harbour",
+  "country": "DE",
+  "category": "harbour",
+  "network": "livespotting",
+  "embedUrl": "https://player.livespotting.com/?alias=PS_5ca0f&ch=LS_b5586",
+  "sourcePage": "https://player.livespotting.com/?alias=PS_5ca0f&ch=LS_b5586"
+ },
+ {
+  "name": "Stade",
+  "country": "DE",
+  "category": "city",
+  "network": "livespotting",
+  "embedUrl": "https://player.livespotting.com/?alias=efu1ar6h&ch=null",
+  "sourcePage": "https://player.livespotting.com/?alias=efu1ar6h&ch=null"
+ },
+ {
+  "name": "Westerland, Sylt",
+  "country": "DE",
+  "category": "beach",
+  "network": "livespotting",
+  "embedUrl": "https://player.livespotting.com/?alias=85mkf4qw&ch=null",
+  "sourcePage": "https://player.livespotting.com/?alias=85mkf4qw&ch=null"
+ },
+ {
+  "name": "Garmisch-Partenkirchen",
+  "country": "DE",
+  "category": "mountain",
+  "network": "Panomax",
+  "embedUrl": "https://gapa.panomax.com/schanze",
+  "sourcePage": "https://gapa.panomax.com/schanze"
+ },
+ {
+  "name": "Tiefenbach Glacier, Sölden",
+  "country": "AT",
+  "category": "ski",
+  "network": "Panomax",
+  "embedUrl": "https://soelden.panomax.com/tiefenbach",
+  "sourcePage": "https://soelden.panomax.com/tiefenbach"
+ },
+ {
+  "name": "Lodalen, Loen",
+  "country": "NO",
+  "category": "nature",
+  "network": "Panomax",
+  "embedUrl": "https://loenskylift.panomax.com/mt-hoven",
+  "sourcePage": "https://loenskylift.panomax.com/mt-hoven"
+ },
+ {
+  "name": "Shahdag Mountain Resort",
+  "country": "AZ",
+  "category": "ski",
+  "network": "Panomax",
+  "embedUrl": "https://shahdag.panomax.com/central-viewpoint",
+  "sourcePage": "https://shahdag.panomax.com/central-viewpoint"
+ },
+ {
+  "name": "Crystal Serenity cruise ship",
+  "country": "XX",
+  "category": "harbour",
+  "network": "Panomax",
+  "embedUrl": "https://crystal-cruises.panomax.com/serenity",
+  "sourcePage": "https://crystal-cruises.panomax.com/serenity"
+ },
+ {
+  "name": "MS Europa cruise ship",
+  "country": "XX",
+  "category": "harbour",
+  "network": "Panomax",
+  "embedUrl": "https://hlkf.panomax.com/ms-europa",
+  "sourcePage": "https://hlkf.panomax.com/ms-europa"
+ },
+ {
+  "name": "MS Europa 2 cruise ship",
+  "country": "XX",
+  "category": "harbour",
+  "network": "Panomax",
+  "embedUrl": "https://hlkf.panomax.com/ms-europa2",
+  "sourcePage": "https://hlkf.panomax.com/ms-europa2"
+ },
+ {
+  "name": "Hanseatic nature expedition ship",
+  "country": "XX",
+  "category": "harbour",
+  "network": "Panomax",
+  "embedUrl": "https://hlkf.panomax.com/hanseatic-nature",
+  "sourcePage": "https://hlkf.panomax.com/hanseatic-nature"
+ },
+ {
+  "name": "Hanseatic inspiration expedition ship",
+  "country": "XX",
+  "category": "harbour",
+  "network": "Panomax",
+  "embedUrl": "https://hlkf.panomax.com/hanseatic-inspiration",
+  "sourcePage": "https://hlkf.panomax.com/hanseatic-inspiration"
+ },
+ {
+  "name": "Hanseatic spirit expedition ship",
+  "country": "XX",
+  "category": "harbour",
+  "network": "Panomax",
+  "embedUrl": "https://hlkf.panomax.com/hanseatic-spirit",
+  "sourcePage": "https://hlkf.panomax.com/hanseatic-spirit"
+ },
+ {
+  "name": "Viking Sea cruise ship",
+  "country": "XX",
+  "category": "harbour",
+  "network": "Panomax",
+  "embedUrl": "https://viking.panomax.com/sea",
+  "sourcePage": "https://viking.panomax.com/sea"
+ },
+ {
+  "name": "Viking Jupiter cruise ship",
+  "country": "XX",
+  "category": "harbour",
+  "network": "Panomax",
+  "embedUrl": "https://viking.panomax.com/jupiter",
+  "sourcePage": "https://viking.panomax.com/jupiter"
+ },
+ {
+  "name": "Viking Mars cruise ship",
+  "country": "XX",
+  "category": "harbour",
+  "network": "Panomax",
+  "embedUrl": "https://viking.panomax.com/mars",
+  "sourcePage": "https://viking.panomax.com/mars"
+ },
+ {
+  "name": "Viking Octantis expedition ship",
+  "country": "XX",
+  "category": "harbour",
+  "network": "Panomax",
+  "embedUrl": "https://viking.panomax.com/octantis",
+  "sourcePage": "https://viking.panomax.com/octantis"
+ }
+]
