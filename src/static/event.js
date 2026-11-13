@@ -5,6 +5,8 @@ var EVT=window.EVT||{};
 function $(i){return document.getElementById(i);}
 function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function when(iso){try{return new Date(iso).toLocaleString([], {weekday:'short',hour:'numeric',minute:'2-digit'});}catch(e){return '';}}
+// A page built while the event was live stops saying "Happening now" once its end date has gone by.
+var st8=$('evstate');if(st8&&st8.dataset.until&&new Date().toISOString().slice(0,10)>st8.dataset.until)st8.textContent='This event has passed · ';
 
 // ---- Warnings in force ----
 var box=$('alerts');

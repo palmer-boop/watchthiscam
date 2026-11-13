@@ -1529,7 +1529,7 @@ for (const ev of EVENTS) {
 ${ev.map !== false ? '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">' : ''}
 <main class="wrap article">
 <nav class="crumbs"><a href="/">Home</a> › <a href="/news/">Happening now</a> › ${esc(ev.short || ev.title)}</nav>
-<div class="hubhead"><p class="dateline">${isLive ? '<span class="livedot"></span>Happening now · ' : 'This event has passed · '}Published ${longDate(ev.published)}${ev.updated && ev.updated !== ev.published ? ' · updated ' + longDate(ev.updated) : ''}</p>
+<div class="hubhead"><p class="dateline"><span id="evstate" data-until="${isLive ? ev.until || '' : ''}">${isLive ? '<span class="livedot"></span>Happening now · ' : 'This event has passed · '}</span>Published ${longDate(ev.published)}${ev.updated && ev.updated !== ev.published ? ' · updated ' + longDate(ev.updated) : ''}</p>
 <h1>${esc(ev.title)}</h1><p class="lede">${esc(ev.lede)}</p></div>
 ${ev.facts && ev.facts.length ? `<h2 class="subhead">What the forecasters say</h2>
 <ul class="factlist">${ev.facts.map(f => `<li>${esc(f.t)} <span class="src">Source: ${esc(f.src)}.</span></li>`).join('')}</ul>
