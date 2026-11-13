@@ -276,7 +276,7 @@ const header = `<header class="top"><div class="wrap">
 </nav></div></header>`;
 const footer = `<footer><div class="wrap">
 <span>Watch This Cam — a window onto the world. Cameras belong to their operators and link back to the source; some provided via windy.com and YouTube.</span>
-<span><a href="/about.html">About</a> &nbsp; <a href="/live/">Right now</a> &nbsp; <a href="/new.html">Newest cams</a> &nbsp; <a href="/widget.html">Embed a cam</a> &nbsp; <a href="/random.html">Random cam</a></span>
+<span><a href="/about.html">About</a> &nbsp; <a href="/live/">Right now</a> &nbsp; <a href="/news/">Happening now</a> &nbsp; <a href="/new.html">Newest cams</a> &nbsp; <a href="/widget.html">Embed a cam</a> &nbsp; <a href="/random.html">Random cam</a></span>
 </div></footer>
 <script>
 if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}
@@ -436,6 +436,7 @@ fs.writeFileSync(path.join(DIST, 'index.html'), head('Watch This Cam — live ca
 <span class="hero-cap" id="heroCap">${flag(featured.country) ? flag(featured.country) + ' ' : ''}${esc(featured.name)}</span>
 </a>
 </section>
+<!--HAPPENING-->
 <a class="cotd" id="cotd" hidden href="#"></a>
 <div class="section-head" id="goldenhead" hidden><h2>🌅 Golden hour <span class="muted-h">sunrise &amp; sunset, live right now</span></h2></div>
 <div class="grid" id="goldengrid"></div>
@@ -1147,6 +1148,7 @@ fs.writeFileSync(path.join(DIST, 'live', 'index.html'), head('Right now — live
 <div class="hubhead"><h1>Right now</h1><p>What is happening this minute where the cameras are.</p></div>
 <div class="guidegrid">
 ${LIVE_PAGES.map(l => `<a class="guidecard" href="/live/${l.slug}.html"><b>${esc(l.nav)}</b><span>${esc(l.sub)}</span></a>`).join('\n')}
+<a class="guidecard" href="/news/"><b>Happening now</b><span>Big events, through the cams that can see them</span></a>
 <a class="guidecard" href="/live/northern-lights.html"><b>Northern lights tonight</b><span>NOAA forecast + cams in the dark</span></a>
 <a class="guidecard" href="/live/earthquakes.html"><b>Earthquakes this week</b><span>Live map + the nearest cams</span></a>
 <a class="guidecard" href="/new.html"><b>Newest cams</b><span>${newest.length ? newest.length + ' added since launch' : 'Just added'}</span></a>
@@ -1500,6 +1502,72 @@ fs.writeFileSync(path.join(DIST, 'guide', 'index.html'), head('Guides to the wor
 <div class="guidegrid">${guideCards}</div>
 </main>` + footer);
 
+// ---- "Happening now" pages: a news event told through the cams that can see it (research/events.json) ----
+// Each page carries the official facts with their source, the cams grouped by area, live warnings and live
+// conditions at each camera. An event stops being advertised on the homepage after its "until" date.
+const EVENTS = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'research', 'events.json'))); } catch (e) { return []; } })();
+const camById = {}; cams.forEach(c => camById[c.id] = c);
+const TODAY = new Date().toISOString().slice(0, 10);
+const longDate = d => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const eventCard = (c, at) => { let h = card(c).replace('</span></div></a>', '</span><span class="cond"></span></div></a>'); const p = c.loc === 'exact' ? [c.mla, c.mln] : at || (c.loc === 'city' ? [c.mla, c.mln] : null); if (p) h = h.replace('<a class="card"', `<a class="card" data-la="${p[0]}" data-ln="${p[1]}"`); return h; };
+fs.mkdirSync(path.join(DIST, 'news'), { recursive: true });
+const newsUrls = [], liveEvents = [];
+for (const ev of EVENTS) {
+  const p = `/news/${ev.slug}.html`, isLive = ev.status === 'live' && (!ev.until || ev.until >= TODAY);
+  const secs = ev.sections.map(s => ({ ...s, cams: (s.ids || []).map(id => camById[id] || (console.log('  event', ev.slug, ': no cam with id', id), null)).filter(Boolean) })).filter(s => s.cams.length);
+  const allCams = secs.flatMap(s => s.cams);
+  if (allCams.length < 3) { console.log('  event', ev.slug, 'skipped: fewer than 3 of its cams exist'); continue; }
+  newsUrls.push(p); if (isLive) liveEvents.push({ ...ev, p, n: allCams.length });
+  const img = absUrl(bigThumb(allCams.find(isYT) || allCams[0]));
+  const ld = [
+    { '@context': 'https://schema.org', '@type': 'Article', headline: ev.title, description: ev.desc, url: SITE_URL + cleanPath(p), image: [img],
+      datePublished: ev.published + 'T00:00:00+00:00', dateModified: (ev.updated || ev.published) + 'T00:00:00+00:00',
+      author: { '@type': 'Organization', name: 'Watch This Cam' }, publisher: { '@type': 'Organization', name: 'Watch This Cam', logo: { '@type': 'ImageObject', url: SITE_URL + '/icon-512.png' } } },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' }, { '@type': 'ListItem', position: 2, name: 'Happening now', item: SITE_URL + '/news/' }, { '@type': 'ListItem', position: 3, name: ev.short || ev.title }] }];
+  fs.writeFileSync(path.join(DIST, 'news', ev.slug + '.html'), head(ev.metaTitle || ev.title, ev.desc, img, p, ld) + header + `
+${ev.map !== false ? '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">' : ''}
+<main class="wrap article">
+<nav class="crumbs"><a href="/">Home</a> › <a href="/news/">Happening now</a> › ${esc(ev.short || ev.title)}</nav>
+<div class="hubhead"><p class="dateline">${isLive ? '<span class="livedot"></span>Happening now · ' : 'This event has passed · '}Published ${longDate(ev.published)}${ev.updated && ev.updated !== ev.published ? ' · updated ' + longDate(ev.updated) : ''}</p>
+<h1>${esc(ev.title)}</h1><p class="lede">${esc(ev.lede)}</p></div>
+${ev.facts && ev.facts.length ? `<h2 class="subhead">What the forecasters say</h2>
+<ul class="factlist">${ev.facts.map(f => `<li>${esc(f.t)} <span class="src">Source: ${esc(f.src)}.</span></li>`).join('')}</ul>
+<p class="note">Figures as issued by the US National Weather Service on ${esc(ev.asOf)}. Forecasts change, so the live box below is the one to trust.</p>` : ''}
+${ev.alerts ? `<h2 class="subhead">Warnings in force right now</h2>
+<div class="rank" id="alerts"><p class="note">Asking the National Weather Service…</p></div>
+<p class="note"><span id="alertstamp"></span> Live from the <a href="https://www.weather.gov/" target="_blank" rel="noopener">US National Weather Service</a>.</p>` : ''}
+${secs.map(s => `<div class="section-head"><h2>${esc(s.h)}</h2><span class="muted-h">${s.cams.length} cams, ${s.cams.filter(c => !isPhoto(c)).length} live video</span></div>
+${s.p ? `<p class="secnote">${esc(s.p)}</p>` : ''}
+<div class="grid">${s.cams.map(c => eventCard(c, (ev.coords || {})[c.id])).join('')}</div>`).join('\n')}
+<p class="note" style="margin-top:14px">Temperature, snow and wind under each camera are for its location right now, from <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a>.</p>
+${ev.map !== false ? '<h2 class="subhead">Where the cameras are</h2><div id="bigmap"></div>' : ''}
+${ev.links && ev.links.length ? `<h2 class="subhead">Official information</h2><ul class="factlist">${ev.links.map(l => `<li><a href="${esc(l[1])}" target="_blank" rel="noopener">${esc(l[0])}</a></li>`).join('')}</ul>` : ''}
+${ev.safety ? `<p class="note">${esc(ev.safety)}</p>` : ''}
+<div style="margin:18px 0 40px"><a class="btn" href="/random.html"><span class="dice">🎲</span> Surprise me</a> <a class="btn ghost" href="/news/">More happening now</a></div>
+</main>
+${ev.map !== false ? '<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>' : ''}
+<script>window.EVT=${inlineJson({ alerts: ev.alerts || null })};</script>
+<script src="/event.js"></script>` + footer);
+}
+// Index of event pages (live first, then past)
+{
+  const row = ev => `<a class="guidecard" href="/news/${ev.slug}.html"><b>${esc(ev.short || ev.title)}</b><span>${ev.status === 'live' && (!ev.until || ev.until >= TODAY) ? 'Happening now' : longDate(ev.published)}</span></a>`;
+  const shown = EVENTS.filter(ev => newsUrls.includes(`/news/${ev.slug}.html`)).sort((a, b) => b.published.localeCompare(a.published));
+  fs.writeFileSync(path.join(DIST, 'news', 'index.html'), head('Happening now: news you can watch live | Watch This Cam', 'Storms, eruptions and other big events, told through the live cameras that can see them, with official warnings and live conditions.', null, '/news/', liveLd('Happening now', 'News events through live cams.', '/news/')) + header + `
+<main class="wrap">
+<nav class="crumbs"><a href="/">Home</a> › Happening now</nav>
+<div class="hubhead"><h1>Happening now</h1><p>When something big is going on and our cameras can see it, we gather them on one page with the official warnings. For the everyday version, see <a href="/live/">Right now</a>.</p></div>
+${shown.length ? `<div class="guidegrid">${shown.map(row).join('\n')}</div>` : '<p class="note">Nothing big near our cameras at the moment.</p>'}
+${hubFooter}
+</main>` + footer);
+}
+// Homepage strip for live events (the homepage is written earlier; it carries a marker). It hides itself after "until".
+{ const f = path.join(DIST, 'index.html'), ev = liveEvents[0];
+  const strip = ev ? `<a class="nowstripe" href="${ev.p}" data-until="${ev.until || ''}"><span class="livedot"></span><b>Happening now</b><span>${esc(ev.short || ev.title)}: ${ev.n} cams and the official warnings</span><em>Watch →</em></a>
+<script>(function(){var e=document.querySelector('.nowstripe');if(e&&e.dataset.until&&new Date().toISOString().slice(0,10)>e.dataset.until)e.style.display='none';})();</script>` : '';
+  fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace('<!--HAPPENING-->', strip)); }
+
 // Homepage guide cards (see the marker in the homepage template).
 const GUIDE_TAGS = {"ireland-live-cams":"☘️ For the Irish abroad","wildest-live-cams":"The wild &amp; weird","best-live-cams":"Our pick of the lot","live-volcano-cams":"Active &amp; erupting","northern-lights-live-cams":"Aurora webcams","best-beach-cams":"Borrow some sun","live-ski-resort-cams":"Check the snow"};
 { const f = path.join(DIST, 'index.html');
@@ -1508,7 +1576,7 @@ const GUIDE_TAGS = {"ireland-live-cams":"☘️ For the Irish abroad","wildest-l
 // ---- robots.txt + sitemap.xml (for launch / SEO) ----
 fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 const sitemapUrls = ['/', '/browse.html', '/thrills.html', '/map.html', '/wall.html', '/favourites.html', '/about.html',
-  '/guide/', ...articleUrls.map(a => a.p), '/live/', ...liveUrls, '/new.html', '/widget.html',
+  '/guide/', ...articleUrls.map(a => a.p), '/live/', ...liveUrls, '/news/', ...newsUrls, '/new.html', '/widget.html',
   ...hubUrls,
   ...cams.map(c => `/cam/${c.id}.html`)];
 fs.writeFileSync(path.join(DIST, 'sitemap.xml'),

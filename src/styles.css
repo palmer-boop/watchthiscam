@@ -313,3 +313,18 @@ body.ambient .wtile { aspect-ratio: auto; border: 0; border-radius: 0; }
 .note { color: var(--muted); font-size: 13px; }
 .auroraimg { width: 100%; max-width: 520px; border-radius: var(--radius); border: 1px solid var(--line); }
 .subhead { font-size: 19px; margin: 26px 0 10px; }
+
+/* Happening-now pages (news events told through the cams) */
+.dateline { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 8px; }
+.livedot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--live); margin-right: 8px; vertical-align: 1px; animation: pulse 1.8s infinite; }
+.factlist { list-style: none; margin: 0 0 10px; padding: 0; border-top: 1px solid var(--line); max-width: 52em; }
+.factlist li { padding: 11px 0; border-bottom: 1px solid var(--line); color: #c5cede; }
+.factlist .src { color: var(--muted); font-size: 13px; white-space: nowrap; }
+.secnote { color: var(--muted); margin: -6px 0 14px; max-width: 52em; }
+.card .meta .cond { display: block; color: #c5cede; font-size: 13px; margin-top: 3px; }
+.nowstripe { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 12px 0; margin: 0 0 8px; color: var(--ink); }
+.nowstripe:hover { text-decoration: none; background: var(--panel); }
+.nowstripe .livedot { margin-right: 0; }
+.nowstripe b { text-transform: uppercase; letter-spacing: .06em; font-size: 13px; color: var(--live); }
+.nowstripe span { color: #c5cede; }
+.nowstripe em { font-style: normal; color: var(--blue-2); margin-left: auto; white-space: nowrap; }

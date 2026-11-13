@@ -1,0 +1,187 @@
+[
+ {
+  "slug": "california-storm-november-2026",
+  "status": "live",
+  "published": "2026-11-13",
+  "updated": "2026-11-13",
+  "until": "2026-11-17",
+  "short": "California storm: Sierra snow and giant surf",
+  "title": "California storm, live: Sierra snow and giant surf, cam by cam",
+  "metaTitle": "California storm live cams: Lake Tahoe and I-80 snow, giant surf (November 2026) | Watch This Cam",
+  "desc": "Watch the California storm live: webcams on Interstate 80 at Donner Summit, Highway 50, Lake Tahoe, Mammoth and Highway 395, plus the coast where 25 to 35 ft surf is forecast. With the official warnings, updated live.",
+  "lede": "A Pacific storm is crossing California and Nevada. The US National Weather Service has Winter Storm Warnings out for the Sierra Nevada and High Surf Warnings along much of the coast. These are the live cameras inside it, with the warnings in force right now and the temperature, snow and wind at each camera.",
+  "asOf": "the morning of Friday 13 November 2026, Pacific time",
+  "facts": [
+   {
+    "t": "Lake Tahoe area: heavy wet snow, about 12 inches (30 cm) above 7,000 ft and up to 20 inches (50 cm) on the crest west of the lake. Gusts of 70 to 90 mph (113 to 145 km/h) over the ridges. The warning runs from 10 am Friday to 10 am Saturday.",
+    "src": "NWS Reno"
+   },
+   {
+    "t": "Northern Sierra above 6,000 ft, including Interstate 80 and Highway 50: 6 to 12 inches (15 to 30 cm) of snow, up to 18 inches (45 cm) on the highest peaks. Until 10 am Saturday.",
+    "src": "NWS Sacramento"
+   },
+   {
+    "t": "Mono County and Highway 395: 1 to 2 feet (30 to 60 cm) of snow above 7,000 ft, with gusts of 55 to 70 mph (89 to 113 km/h) along the highway.",
+    "src": "NWS Reno"
+   },
+   {
+    "t": "Southern Sierra above 6,000 ft, including Yosemite outside the valley, Kings Canyon and Sequoia: up to 20 inches (50 cm) of snow. This warning runs until 4 am Tuesday.",
+    "src": "NWS Hanford"
+   },
+   {
+    "t": "San Francisco and the Big Sur coast: breaking waves of 25 to 35 ft (8 to 11 m), with occasional sets of 40 to 50 ft (12 to 15 m) at favoured breaks. High Surf Warning from 6 pm Friday to 4 am Sunday.",
+    "src": "NWS San Francisco Bay Area"
+   },
+   {
+    "t": "Far north coast (Del Norte County): breaking waves of 30 to 40 ft (9 to 12 m), from 1 pm Friday to 4 am Sunday. On the Oregon coast, breakers of 30 to 35 ft (9 to 11 m).",
+    "src": "NWS Eureka, NWS Medford, NWS Portland"
+   }
+  ],
+  "alerts": {
+   "areas": [
+    "CA",
+    "NV",
+    "OR"
+   ],
+   "match": "Winter Storm|Blizzard|High Surf Warning|High Wind Warning|Coastal Flood Warning|Avalanche|Winter Weather Advisory"
+  },
+  "sections": [
+   {
+    "h": "Lake Tahoe, Interstate 80 and Highway 50",
+    "p": "The main roads over the Sierra, and the lake between them. The road pictures come from Caltrans and refresh every few seconds. Kingvale and Soda Springs are on the climb to Donner Summit on I-80, and Echo Summit is the top of Highway 50.",
+    "ids": [
+     "lake-tahoe-nevada",
+     "south-lake-tahoe-california",
+     "palisades-tahoe-ski-resort-palisades-bas",
+     "sierra-at-tahoe-grandview",
+     "truckee-california-truckee-railroad-muse",
+     "bear-valley-mountain-resort-summit",
+     "reno-arch-camera",
+     "rno-airport-reno",
+     "hwy-80-at-kingvale-wb",
+     "hwy-80-at-soda-springs-eb",
+     "hwy-80-at-whitmore-grade",
+     "hwy-80-at-hwy-89",
+     "hwy-80-at-floriston",
+     "hwy-50-at-echo-summit",
+     "hwy-50-at-twin-bridges",
+     "hwy-50-at-meyers",
+     "hwy-89-at-hwy-28",
+     "hwy-28-at-hwy-267-kings-beach"
+    ]
+   },
+   {
+    "h": "Eastern Sierra: Highway 395 and Mammoth",
+    "p": "The east side of the range, where the wind comes down hardest. Conway Summit is the highest point on Highway 395.",
+    "ids": [
+     "june-j3",
+     "sr-203-mammoth-mountain",
+     "us-395-conway-summit",
+     "us-395-crestview",
+     "us-395-tom-s-place",
+     "us-395-mcgee-creek-road",
+     "us-395-bridgeport"
+    ]
+   },
+   {
+    "h": "The coast: giant surf",
+    "p": "Pacifica sits on the open ocean just south of San Francisco, inside the High Surf Warning. Monterey Bay is more sheltered. Further south, Los Angeles and Orange County beaches are under a lower-level High Surf Advisory.",
+    "ids": [
+     "pacifica-pier-closeup-pacifica-ca",
+     "mori-point-pacifica-ca",
+     "monterey-bay",
+     "san-francisco-oakland-bay-bridge-camera",
+     "mersea-restaurant-bay-view-san-francisco",
+     "santa-monica-beach-pier-california",
+     "venice-beach-surf",
+     "huntington-beach-pier"
+    ]
+   }
+  ],
+  "links": [
+   [
+    "Caltrans QuickMap: road closures and chain controls",
+    "https://quickmap.dot.ca.gov/"
+   ],
+   [
+    "National Weather Service Reno (Lake Tahoe, Mono County)",
+    "https://www.weather.gov/rev/"
+   ],
+   [
+    "National Weather Service Sacramento (Interstate 80, Highway 50)",
+    "https://www.weather.gov/sto/"
+   ],
+   [
+    "National Weather Service San Francisco Bay Area (surf)",
+    "https://www.weather.gov/mtr/"
+   ]
+  ],
+  "safety": "This page is not a forecast. If you are in the area, follow the National Weather Service and Caltrans, and stay well back from the water: forecasters warn that waves this size can sweep people off rocks, jetties and beaches. Cameras can drop offline in a storm.",
+  "coords": {
+   "south-lake-tahoe-california": [
+    38.94,
+    -119.977
+   ],
+   "palisades-tahoe-ski-resort-palisades-bas": [
+    39.197,
+    -120.236
+   ],
+   "sierra-at-tahoe-grandview": [
+    38.8,
+    -120.081
+   ],
+   "truckee-california-truckee-railroad-muse": [
+    39.328,
+    -120.183
+   ],
+   "bear-valley-mountain-resort-summit": [
+    38.492,
+    -120.044
+   ],
+   "reno-arch-camera": [
+    39.528,
+    -119.814
+   ],
+   "rno-airport-reno": [
+    39.499,
+    -119.768
+   ],
+   "june-j3": [
+    37.768,
+    -119.091
+   ],
+   "pacifica-pier-closeup-pacifica-ca": [
+    37.634,
+    -122.496
+   ],
+   "mori-point-pacifica-ca": [
+    37.618,
+    -122.498
+   ],
+   "monterey-bay": [
+    36.618,
+    -121.902
+   ],
+   "san-francisco-oakland-bay-bridge-camera": [
+    37.798,
+    -122.378
+   ],
+   "mersea-restaurant-bay-view-san-francisco": [
+    37.824,
+    -122.371
+   ],
+   "santa-monica-beach-pier-california": [
+    34.009,
+    -118.499
+   ],
+   "venice-beach-surf": [
+    33.985,
+    -118.473
+   ],
+   "huntington-beach-pier": [
+    33.655,
+    -118.003
+   ]
+  }
+ }
+]
