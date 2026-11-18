@@ -254,7 +254,6 @@ const head = (title, desc, image, pagePath, jsonld) => `<!doctype html><html lan
 <meta name="twitter:image" content="${esc(absUrl(image || DEFAULT_OG))}">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0b0f17">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
