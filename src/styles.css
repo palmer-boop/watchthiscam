@@ -330,3 +330,6 @@ body.ambient .wtile { aspect-ratio: auto; border: 0; border-radius: 0; }
 .nowstripe em { font-style: normal; color: var(--blue-2); margin-left: auto; white-space: nowrap; }
 
 .pick .pwhen { color: var(--blue-2); font-size: 13px; margin: 0 0 6px; }
+
+.vsyn { max-width: 52em; color: #c5cede; margin: -8px 0 18px; }
+.vsyn:empty { display: none; }

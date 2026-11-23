@@ -1,5 +1,51 @@
 [
  {
+  "slug": "kilauea-live-cams",
+  "status": "standing",
+  "published": "2026-11-23",
+  "updated": "2026-11-23",
+  "short": "Kīlauea: Hawaii’s volcano, live",
+  "title": "Kīlauea, live: watch Hawaii’s volcano, with today’s official update",
+  "metaTitle": "Kilauea live cams: watch the Hawaii volcano now, with the USGS alert level | Watch This Cam",
+  "desc": "Live Kilauea webcams from the US Geological Survey, pointed into Halemaʻumaʻu crater, with the official alert level and today’s eruption update pulled live from the Hawaiian Volcano Observatory.",
+  "lede": "Kīlauea, on the island of Hawaiʻi, has been erupting in bursts: lava fountains for hours at a time, then a pause while the volcano recharges. These are the US Geological Survey’s own cameras around the summit crater. The box below is the observatory’s latest word, so you can tell at a glance whether a fountain is on or how long it may be until the next one.",
+  "factsHead": "What we know",
+  "factsNote": "The alert level and the update in the box below come straight from the US Geological Survey each time this page loads.",
+  "facts": [
+   {
+    "t": "The eruption is in Halemaʻumaʻu, the crater at Kīlauea’s summit, inside Hawaiʻi Volcanoes National Park.",
+    "src": "USGS Hawaiian Volcano Observatory"
+   },
+   {
+    "t": "On 23 November 2026 the observatory reported the eruption paused after the fountaining of episode 57 that morning, with the summit inflating again and another episode likely in the coming weeks.",
+    "src": "USGS Hawaiian Volcano Observatory daily update, 23 November 2026"
+   },
+   {
+    "t": "USGS alert levels run Normal, Advisory, Watch and Warning. The aviation colour codes run green, yellow, orange and red.",
+    "src": "USGS Volcano Hazards Program"
+   }
+  ],
+  "volcano": "Kilauea",
+  "sections": [
+   {
+    "h": "Kīlauea summit cameras",
+    "p": "Most of these are still pictures from US Geological Survey cameras around the crater, updated through the day. After dark, lava shows as an orange glow.",
+    "match": "kilauea|kīlauea|halema|uekahuna"
+   }
+  ],
+  "links": [
+   [
+    "USGS: Kīlauea volcano updates",
+    "https://www.usgs.gov/volcanoes/kilauea/volcano-updates"
+   ],
+   [
+    "National Park Service: Hawaiʻi Volcanoes National Park",
+    "https://www.nps.gov/havo/"
+   ]
+  ],
+  "safety": "This page is not an official warning. For safety information follow the US Geological Survey and the National Park Service."
+ },
+ {
   "slug": "california-storm-november-2026",
   "status": "ended",
   "published": "2026-11-13",

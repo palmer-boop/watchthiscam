@@ -30,6 +30,22 @@ if(box&&EVT.alerts&&window.fetch){(function(){
   }).catch(function(){failed++;done();});});
 })();}
 
+// ---- A US volcano's alert level and the observatory's latest words (USGS) ----
+var vb=$('volcano');
+if(vb&&EVT.volcano&&window.fetch){(function(){
+ var re=new RegExp(EVT.volcano,'i');
+ fetch('https://volcanoes.usgs.gov/hans-public/api/volcano/getElevatedVolcanoes').then(function(r){return r.ok?r.json():Promise.reject();}).then(function(list){
+  var v=(list||[]).filter(function(x){return re.test(x.volcano_name||'');})[0];
+  if(!v){vb.innerHTML='<p class="note">The US Geological Survey has this volcano at its normal background level right now.</p>';return;}
+  var sent=new Date(String(v.sent_utc).replace(' ','T')+'Z');
+  vb.innerHTML='<div class="bignum"><b>'+esc(v.alert_level)+'</b><span>Alert level from the USGS '+esc(v.obs_fullname||'observatory')+'. Aviation colour code '+esc(String(v.color_code||'').toLowerCase())+'. Updated '+esc(sent.toLocaleString([], {weekday:'long',day:'numeric',month:'long',hour:'numeric',minute:'2-digit'}))+' your time. <a href="'+esc(v.notice_url)+'" target="_blank" rel="noopener">Read the full update</a>.</span></div><p class="vsyn" id="vsyn"></p>';
+  if(v.notice_data)fetch(v.notice_data).then(function(r){return r.ok?r.json():null;}).then(function(n){
+   var s=((n&&n.notice_sections)||[]).filter(function(x){return re.test(x.vName||'');})[0];
+   if(s&&s.synopsis){var t=String(s.synopsis).replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();$('vsyn').textContent='The observatory says: '+t;}
+  }).catch(function(){});
+ }).catch(function(){vb.innerHTML='<p class="note">The US Geological Survey did not answer just now. Reload to try again.</p>';});
+})();}
+
 // ---- Conditions at each camera (temperature, snow or rain, gusts) ----
 var cards=[].slice.call(document.querySelectorAll('.card[data-la]'));
 if(cards.length&&window.fetch){(function(){

@@ -1571,8 +1571,9 @@ const eventCard = (c, at) => { let h = card(c).replace('</span></div></a>', '</s
 fs.mkdirSync(path.join(DIST, 'news'), { recursive: true });
 const newsUrls = [], liveEvents = [];
 for (const ev of EVENTS) {
-  const p = `/news/${ev.slug}.html`, isLive = ev.status === 'live' && (!ev.until || ev.until >= TODAY);
-  const secs = ev.sections.map(s => ({ ...s, cams: (s.ids || []).map(id => camById[id] || (console.log('  event', ev.slug, ': no cam with id', id), null)).filter(Boolean) })).filter(s => s.cams.length);
+  const p = `/news/${ev.slug}.html`, isLive = ev.status === 'live' && (!ev.until || ev.until >= TODAY), standing = ev.status === 'standing';
+  const secs = ev.sections.map(s => ({ ...s, cams: (s.ids || []).map(id => camById[id] || (console.log('  event', ev.slug, ': no cam with id', id), null)).filter(Boolean)
+    .concat(s.match ? cams.filter(c => new RegExp(s.match, 'i').test(c.name) && !(s.ids || []).includes(c.id)).sort((x, y) => (isPhoto(x) ? 1 : 0) - (isPhoto(y) ? 1 : 0)) : []) })).filter(s => s.cams.length);
   const allCams = secs.flatMap(s => s.cams);
   if (allCams.length < 3) { console.log('  event', ev.slug, 'skipped: fewer than 3 of its cams exist'); continue; }
   newsUrls.push(p); if (isLive) liveEvents.push({ ...ev, p, n: allCams.length });
@@ -1587,11 +1588,13 @@ for (const ev of EVENTS) {
 ${ev.map !== false ? '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">' : ''}
 <main class="wrap article">
 <nav class="crumbs"><a href="/">Home</a> › <a href="/news/">Happening now</a> › ${esc(ev.short || ev.title)}</nav>
-<div class="hubhead"><p class="dateline"><span id="evstate" data-until="${isLive ? ev.until || '' : ''}">${isLive ? '<span class="livedot"></span>Happening now · ' : 'This event has passed · '}</span>Published ${longDate(ev.published)}${ev.updated && ev.updated !== ev.published ? ' · updated ' + longDate(ev.updated) : ''}</p>
+<div class="hubhead"><p class="dateline"><span id="evstate" data-until="${isLive ? ev.until || '' : ''}">${standing ? 'Always on · ' : isLive ? '<span class="livedot"></span>Happening now · ' : 'This event has passed · '}</span>Published ${longDate(ev.published)}${ev.updated && ev.updated !== ev.published ? ' · updated ' + longDate(ev.updated) : ''}</p>
 <h1>${esc(ev.title)}</h1><p class="lede">${esc(ev.lede)}</p></div>
-${ev.facts && ev.facts.length ? `<h2 class="subhead">What the forecasters say</h2>
+${ev.facts && ev.facts.length ? `<h2 class="subhead">${esc(ev.factsHead || 'What the forecasters say')}</h2>
 <ul class="factlist">${ev.facts.map(f => `<li>${esc(f.t)} <span class="src">Source: ${esc(f.src)}.</span></li>`).join('')}</ul>
-<p class="note">Figures as issued by the US National Weather Service on ${esc(ev.asOf)}. Forecasts change, so the live box below is the one to trust.</p>` : ''}
+${ev.factsNote ? `<p class="note">${esc(ev.factsNote)}</p>` : ev.asOf ? `<p class="note">Figures as issued by the US National Weather Service on ${esc(ev.asOf)}. Forecasts change, so the live box below is the one to trust.</p>` : ''}` : ''}
+${ev.volcano ? `<h2 class="subhead">Alert level right now</h2>
+<div id="volcano"><p class="note">Asking the US Geological Survey…</p></div>` : ''}
 ${ev.alerts ? `<h2 class="subhead">Warnings in force right now</h2>
 <div class="rank" id="alerts"><p class="note">Asking the National Weather Service…</p></div>
 <p class="note"><span id="alertstamp"></span> Live from the <a href="https://www.weather.gov/" target="_blank" rel="noopener">US National Weather Service</a>.</p>` : ''}
@@ -1605,12 +1608,12 @@ ${ev.safety ? `<p class="note">${esc(ev.safety)}</p>` : ''}
 <div style="margin:18px 0 40px"><a class="btn" href="/random.html"><span class="dice">🎲</span> Surprise me</a> <a class="btn ghost" href="/news/">More happening now</a></div>
 </main>
 ${ev.map !== false ? '<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>' : ''}
-<script>window.EVT=${inlineJson({ alerts: ev.alerts || null })};</script>
+<script>window.EVT=${inlineJson({ alerts: ev.alerts || null, volcano: ev.volcano || null })};</script>
 <script src="/event.js"></script>` + footer);
 }
 // Index of event pages (live first, then past)
 {
-  const row = ev => `<a class="guidecard" href="/news/${ev.slug}.html"><b>${esc(ev.short || ev.title)}</b><span>${ev.status === 'live' && (!ev.until || ev.until >= TODAY) ? 'Happening now' : longDate(ev.published)}</span></a>`;
+  const row = ev => `<a class="guidecard" href="/news/${ev.slug}.html"><b>${esc(ev.short || ev.title)}</b><span>${ev.status === 'standing' ? 'Always on' : ev.status === 'live' && (!ev.until || ev.until >= TODAY) ? 'Happening now' : longDate(ev.published)}</span></a>`;
   const shown = EVENTS.filter(ev => newsUrls.includes(`/news/${ev.slug}.html`)).sort((a, b) => b.published.localeCompare(a.published));
   fs.writeFileSync(path.join(DIST, 'news', 'index.html'), head('Happening now: news you can watch live | Watch This Cam', 'Storms, eruptions and other big events, told through the live cameras that can see them, with official warnings and live conditions.', null, '/news/', liveLd('Happening now', 'News events through live cams.', '/news/')) + header + `
 <main class="wrap">
