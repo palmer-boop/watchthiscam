@@ -25,7 +25,9 @@ const out = [];
   for (const e of (eo && eo.events) || []) { const g = e.geometry[e.geometry.length - 1]; if (!g || g.type !== 'Point') continue; const cat = (e.categories[0] || {}).id;
     out.push({ kind: cat, when: String(g.date).slice(0, 10), ...show(e.title, g.coordinates[1], g.coordinates[0], cat === 'severeStorms' ? 600 : cat === 'volcanoes' ? 150 : 120) }); }
   // US weather warnings, grouped by kind and state, against our cams per state
-  const stateCams = {}; for (const c of all) if (c.state) stateCams[c.state] = (stateCams[c.state] || 0) + 1;
+  // cams per US state: the state written on the cam, or (road and park cams) the one worked out from its position in geo.json
+  let geo = {}; try { geo = JSON.parse(fs.readFileSync(path.join(__dirname, 'geo.json'))); } catch (e) {}
+  const stateCams = {}; for (const c of all) { const st = c.state || (c.imageUrl && geo[c.imageUrl] && geo[c.imageUrl].st); if (st) stateCams[st] = (stateCams[st] || 0) + 1; }
   const ABBR = { AL: 'Alabama', AK: 'Alaska', AZ: 'Arizona', AR: 'Arkansas', CA: 'California', CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', FL: 'Florida', GA: 'Georgia', HI: 'Hawaii', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa', KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', ME: 'Maine', MD: 'Maryland', MA: 'Massachusetts', MI: 'Michigan', MN: 'Minnesota', MS: 'Mississippi', MO: 'Missouri', MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire', NJ: 'New Jersey', NM: 'New Mexico', NY: 'New York', NC: 'North Carolina', ND: 'North Dakota', OH: 'Ohio', OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina', SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginia', WA: 'Washington', WV: 'West Virginia', WI: 'Wisconsin', WY: 'Wyoming' };
   const BIG = /blizzard|winter storm warning|ice storm|hurricane|tropical storm|tornado warning|storm surge|extreme (cold|heat)|red flag|tsunami|volcano|avalanche warning|flash flood emergency|high surf warning|lake effect snow warning/i;
   const nws = await get('https://api.weather.gov/alerts/active?status=actual&message_type=alert,update'), groups = {};
