@@ -9,3 +9,7 @@ research/curated.before-import.json
 research/verified.pre-curate.json
 research/verify-ids-done.json
 .wrangler/
+research/*.pre-heal.json
+research/dead.json
+research/sweep-flags.json
+research/sweep-log.txt
