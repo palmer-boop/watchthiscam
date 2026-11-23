@@ -503,16 +503,6 @@
   "thumbUrl": "/thumbs/south-lake-tahoe-california.jpg"
  },
  {
-  "name": "Stevens Pass, Washington",
-  "country": "US",
-  "state": "Washington",
-  "category": "ski",
-  "network": "Brownrice",
-  "embedUrl": "https://player.brownrice.com/embed/stevenspassskyline",
-  "sourcePage": "https://player.brownrice.com/embed/stevenspassskyline",
-  "thumbUrl": "/thumbs/stevens-pass-washington.jpg"
- },
- {
   "name": "Kollen Park, Holland, Michigan",
   "country": "US",
   "state": "Michigan",
@@ -622,16 +612,6 @@
   "thumbUrl": "/thumbs/flagstaff-arizona.jpg"
  },
  {
-  "name": "Pagosa Springs, Colorado",
-  "country": "US",
-  "state": "Colorado",
-  "category": "city",
-  "network": "Angelcam",
-  "embedUrl": "https://v.angelcam.com/iframe?v=91yxb8b6ro&autoplay=1",
-  "sourcePage": "https://v.angelcam.com/iframe?v=91yxb8b6ro&autoplay=1",
-  "thumbUrl": "/thumbs/pagosa-springs-colorado.jpg"
- },
- {
   "name": "Lake Leelanau, Michigan",
   "country": "US",
   "state": "Michigan",
@@ -738,6 +718,16 @@
   "embedUrl": "https://v.angelcam.com/iframe?v=2dl6d9bvrk&autoplay=1",
   "sourcePage": "https://v.angelcam.com/iframe?v=2dl6d9bvrk&autoplay=1",
   "thumbUrl": "/thumbs/red-lodge-montana.jpg"
+ },
+ {
+  "name": "Charleston, South Carolina",
+  "country": "US",
+  "state": "South Carolina",
+  "category": "city",
+  "network": "Vision-Environnement",
+  "embedUrl": "https://www.vision-environnement.com/live/player/charleston0.php",
+  "sourcePage": "https://www.vision-environnement.com/live/player/charleston0.php",
+  "thumbUrl": "/thumbs/charleston-south-carolina.jpg"
  },
  {
   "name": "Praia do Peneco, Albufeira",

@@ -328,3 +328,5 @@ body.ambient .wtile { aspect-ratio: auto; border: 0; border-radius: 0; }
 .nowstripe b { text-transform: uppercase; letter-spacing: .06em; font-size: 13px; color: var(--live); }
 .nowstripe span { color: #c5cede; }
 .nowstripe em { font-style: normal; color: var(--blue-2); margin-left: auto; white-space: nowrap; }
+
+.pick .pwhen { color: var(--blue-2); font-size: 13px; margin: 0 0 6px; }

@@ -428,25 +428,25 @@
   "pic": "corner-brook-newfoundland.jpg"
  },
  "https://player.brownrice.com/embed/basslakemarina": {
-  "size": 228554,
+  "size": 286395,
   "live": true,
-  "why": "screenshot 228554 bytes",
+  "why": "screenshot 286395 bytes",
   "done": true,
   "thumb": "/thumbs/bass-lake-california.jpg",
   "pic": "bass-lake-california.jpg"
  },
  "https://player.brownrice.com/embed/heavenlytram": {
-  "size": 216946,
+  "size": 430527,
   "live": true,
-  "why": "screenshot 216946 bytes",
+  "why": "screenshot 430527 bytes",
   "done": true,
   "thumb": "/thumbs/south-lake-tahoe-california.jpg",
   "pic": "south-lake-tahoe-california.jpg"
  },
  "https://player.brownrice.com/embed/stevenspassskyline": {
-  "size": 112202,
+  "size": 8936,
   "live": true,
-  "why": "screenshot 112202 bytes",
+  "why": "screenshot 8936 bytes",
   "done": true,
   "thumb": "/thumbs/stevens-pass-washington.jpg",
   "pic": "stevens-pass-washington.jpg"
@@ -532,9 +532,9 @@
   "pic": "blanchard.jpg"
  },
  "https://api.wetmet.net/widgets/stream/frame.php?uid=e1f43d2c0ee1817ba9a478551f226045": {
-  "size": 298952,
+  "size": 416084,
   "live": true,
-  "why": "screenshot 298952 bytes",
+  "why": "screenshot 416084 bytes",
   "done": true,
   "thumb": "/thumbs/flagstaff-arizona.jpg",
   "pic": "flagstaff-arizona.jpg"
@@ -548,9 +548,9 @@
   "pic": "governor-s-harbour-eleuthera-bahamas.jpg"
  },
  "https://v.angelcam.com/iframe?v=91yxb8b6ro&autoplay=1": {
-  "size": 202950,
+  "size": 13005,
   "live": true,
-  "why": "screenshot 202950 bytes",
+  "why": "screenshot 13005 bytes",
   "done": true,
   "thumb": "/thumbs/pagosa-springs-colorado.jpg",
   "pic": "pagosa-springs-colorado.jpg"
@@ -588,9 +588,9 @@
   "pic": "fort-myers-beach-florida.jpg"
  },
  "https://v.angelcam.com/iframe?v=2dy6dve1lk&autoplay=1": {
-  "size": 272761,
+  "size": 362789,
   "live": true,
-  "why": "screenshot 272761 bytes",
+  "why": "screenshot 362789 bytes",
   "done": true,
   "thumb": "/thumbs/custer-south-dakota.jpg",
   "pic": "custer-south-dakota.jpg"
@@ -660,17 +660,17 @@
   "pic": "aberdare-national-park-kenya.jpg"
  },
  "https://v.angelcam.com/iframe?v=1ny8kd81y0&autoplay=1": {
-  "size": 248339,
+  "size": 317981,
   "live": true,
-  "why": "screenshot 248339 bytes",
+  "why": "screenshot 317981 bytes",
   "done": true,
   "thumb": "/thumbs/red-river-new-mexico.jpg",
   "pic": "red-river-new-mexico.jpg"
  },
  "https://v.angelcam.com/iframe?v=2dl6d9bvrk&autoplay=1": {
-  "size": 156655,
+  "size": 216027,
   "live": true,
-  "why": "screenshot 156655 bytes",
+  "why": "screenshot 216027 bytes",
   "done": true,
   "thumb": "/thumbs/red-lodge-montana.jpg",
   "pic": "red-lodge-montana.jpg"
@@ -700,10 +700,12 @@
   "pic": "juneau-alaska.jpg"
  },
  "https://www.vision-environnement.com/live/player/charleston0.php": {
-  "size": 0,
-  "live": false,
-  "why": "screenshot 0 bytes",
-  "done": true
+  "size": 257009,
+  "live": true,
+  "why": "screenshot 257009 bytes",
+  "done": true,
+  "thumb": "/thumbs/charleston-south-carolina.jpg",
+  "pic": "charleston-south-carolina.jpg"
  },
  "https://www.vision-environnement.com/live/player/oludiniz0.php": {
   "size": 1449,

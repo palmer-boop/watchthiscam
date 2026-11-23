@@ -115,7 +115,7 @@ const CITIES = [
   ['Tokyo','JP',['tokyo','shibuya','shinjuku','odaiba'],35.68,139.69,'Asia/Tokyo'],['Kyoto','JP',['kyoto'],35.01,135.77,'Asia/Tokyo'],['Osaka','JP',['osaka'],34.69,135.5,'Asia/Tokyo'],
   ['London','GB',['london'],51.51,-0.13,'Europe/London'],['New York','US',['new york','nyc','times square','brooklyn','manhattan','bryant park','sandy hook'],40.71,-74.01,'America/New_York','New York'],
   ['Las Vegas','US',['las vegas','vegas'],36.17,-115.14,'America/Los_Angeles','Nevada'],['Miami','US',['miami'],25.76,-80.19,'America/New_York','Florida'],['Key West','US',['key west'],24.56,-81.78,'America/New_York','Florida'],['New Orleans','US',['new orleans','bourbon'],29.95,-90.07,'America/Chicago','Louisiana'],
-  ['Chicago','US',['chicago'],41.88,-87.63,'America/Chicago','Illinois'],['San Diego','US',['san diego'],32.72,-117.16,'America/Los_Angeles','California'],['Honolulu','US',['waikiki','honolulu','oahu'],21.31,-157.86,'Pacific/Honolulu','Hawaii'],['Fort Lauderdale','US',['fort lauderdale','dania beach'],26.12,-80.14,'America/New_York','Florida'],
+  ['Chicago','US',['chicago'],41.88,-87.63,'America/Chicago','Illinois'],['Nashville','US',['nashville'],36.16,-86.78,'America/Chicago','Tennessee'],['San Diego','US',['san diego'],32.72,-117.16,'America/Los_Angeles','California'],['Honolulu','US',['waikiki','honolulu','oahu'],21.31,-157.86,'Pacific/Honolulu','Hawaii'],['Fort Lauderdale','US',['fort lauderdale','dania beach'],26.12,-80.14,'America/New_York','Florida'],
   ['Paris','FR',['paris','eiffel','montmartre'],48.86,2.35,'Europe/Paris'],['Venice','IT',['venice','venezia','san marco','rialto'],45.44,12.32,'Europe/Rome'],['Rome','IT',['rome','roma','trevi','colosseum'],41.9,12.5,'Europe/Rome'],
   ['Florence','IT',['florence','firenze'],43.77,11.26,'Europe/Rome'],['Milan','IT',['milan','milano'],45.46,9.19,'Europe/Rome'],['Naples','IT',['naples','napoli'],40.85,14.27,'Europe/Rome'],['Cinque Terre','IT',['cinque terre','manarola','riomaggiore'],44.13,9.71,'Europe/Rome'],
   ['Barcelona','ES',['barcelona'],41.39,2.17,'Europe/Madrid'],['Madrid','ES',['madrid'],40.42,-3.7,'Europe/Madrid'],['Amsterdam','NL',['amsterdam'],52.37,4.9,'Europe/Amsterdam'],['Rotterdam','NL',['rotterdam'],51.92,4.48,'Europe/Amsterdam'],
@@ -1192,8 +1192,65 @@ var h=decodeURIComponent(location.hash.slice(1));if(h){var c=CAMS.filter(functio
 
 // ---- Guides / articles (editorial, every pick grounded in a real cam) ----
 fs.mkdirSync(path.join(DIST, 'guide'), { recursive: true });
+// The instant (ms) at which a wall-clock time such as '2027-01-01T00:00' arrives in a time zone.
+function zonedInstant(local, tz) {
+  const [d, t] = local.split('T'), [Y, M, D] = d.split('-').map(Number), [h, mi] = t.split(':').map(Number), target = Date.UTC(Y, M - 1, D, h, mi);
+  let guess = target;
+  for (let i = 0; i < 3; i++) { const o = {}; new Intl.DateTimeFormat('en-US', { timeZone: tz, hourCycle: 'h23', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }).formatToParts(new Date(guess)).forEach(x => o[x.type] = +x.value); guess -= Date.UTC(o.year, o.month - 1, o.day, o.hour % 24, o.minute) - target; }
+  return guess;
+}
+const utcStamp = ms => { const d = new Date(ms); return `${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')} UTC on ${d.getUTCDate()} ${d.toLocaleDateString('en-GB', { month: 'long', timeZone: 'UTC' })}`; };
 const pickCam = (m, cat, country) => { const ok = c => m.test(c.name || '') && (!cat || c.category === cat) && (!country || c.country === country); return cams.find(c => ok(c) && !isPhoto(c)) || cams.find(ok); };
 const ARTICLES = [
+  {
+    slug: 'christmas-live-cams', keepOrder: true, title: 'Christmas, live: Santa’s village, markets and winter lights',
+    metaTitle: 'Christmas live cams: Santa Claus Village, Christmas markets and lights | Watch This Cam',
+    desc: 'Live Christmas webcams: Santa Claus Village in Lapland, the Christmas market squares of Munich, Bremen and Prague, the ice rink at Bryant Park and the lights of Leavenworth.',
+    lede: 'December looks good on camera. These are places that go all in: Santa’s own village on the Arctic Circle, the old market squares of Germany, a Bavarian-style town in the American mountains and an ice rink in the middle of Manhattan. They are at their best after dark, local time.',
+    picks: [
+      { id: 'santa-claus-village', why: 'Santa Claus Village in Rovaniemi, Finland, right on the Arctic Circle. In December it gets only a couple of hours of daylight.' },
+      { id: 'am-marienplatz', why: 'Marienplatz in Munich, where the city’s main Christmas market, the Christkindlmarkt, is held.' },
+      { id: 'blick-auf-den-marktplatz-rathaus-roland-', why: 'The market square in Bremen, with the town hall and the Roland statue. The Christmas market fills the square in December.' },
+      { m: /Wenceslas Square/i, why: 'Wenceslas Square in Prague, one of the city’s two big Christmas market squares.' },
+      { id: 'leavenworth-washington-from-downtown', why: 'Leavenworth, Washington, a mountain town built to look like a Bavarian village and known for its Christmas lights.' },
+      { id: 'bank-of-america-winter-village-skatecam', why: 'The ice rink at Bryant Park’s Winter Village in New York.' },
+      { id: 'jackson-hole-town-square-see-the-action', why: 'The town square in Jackson, Wyoming, with its arches made of elk antlers.' },
+      { id: 'digital-tallinn-citycam', why: 'Tallinn, the capital of Estonia, whose old town hosts one of Europe’s best-known Christmas markets.' },
+      { id: 'grote-markt-groningen', why: 'The Grote Markt, the main square of Groningen in the north of the Netherlands.' },
+      { id: 'muikku-kuopion-tori', why: 'The market square in Kuopio, Finland.' },
+      { id: 'stary-s-cz-rynek-na-ywo-restauracja-mary', why: 'The market square of Stary Sącz, a small town in southern Poland.' },
+      { id: 'leavenworth-washington-from-bavarian-lod', why: 'Another angle on Leavenworth, from one of its Bavarian-style lodges.' },
+    ],
+  },
+  {
+    slug: 'new-years-eve-live-cams', moment: '2027-01-01T00:00', momentLabel: 'Midnight',
+    title: 'New Year’s Eve, live: follow midnight around the world',
+    metaTitle: 'New Year’s Eve live cams: watch midnight around the world | Watch This Cam',
+    desc: 'Watch New Year’s Eve live as midnight moves round the world: Sydney Harbour, Tokyo, Taipei, Venice, Madeira, London, New York, Key West, Las Vegas and more, with the time each one strikes twelve.',
+    lede: 'The new year does not arrive all at once. It starts in the Pacific and takes about a day to work its way round to Hawaii. The cameras below are in the order midnight reaches them, and each one shows when that is in your own time, so you can follow it from city to city. We cannot promise every camera points at the fireworks. These are the closest we have to each party.',
+    picks: [
+      { id: 'webcamsydney-1-of-harbour', tz: 'Australia/Sydney', why: 'Sydney Harbour, home of one of the most watched fireworks shows on earth, fired from the Harbour Bridge.' },
+      { id: 'shibuya-scramble-crossing-camera', why: 'Shibuya crossing in Tokyo. Japan mostly sees the year in quietly, with temple bells rather than fireworks.' },
+      { id: 'gwanghwamun-boulevard-seoul-korea-i', why: 'Central Seoul, a short walk from the Bosingak bell, which is rung at midnight.' },
+      { id: 'overlooking-taipei-from-xiangshan-taipei', why: 'Taipei from Xiangshan, the hill people climb to watch the fireworks on the Taipei 101 tower.' },
+      { id: 'camera-downtown-singapore', why: 'Downtown Singapore, where the countdown is held around Marina Bay.' },
+      { id: 'port-of-helsinki-west-harbour-south', why: 'Helsinki, from the harbour.' },
+      { id: 'venice-san-marco-basin-in-streaming', why: 'St Mark’s Basin in Venice, where the fireworks go up over the water.' },
+      { id: 'dn-skrapan-stockholm', why: 'Stockholm, from a tower above the city.' },
+      { id: 'london-south-parliament-square-westminst', why: 'Parliament Square in Westminster, beside Big Ben, whose chimes mark midnight. London’s fireworks are fired from the London Eye, just across the river. This one is a photo that refreshes, not video.' },
+      { id: 'scotland-edinburgh-uk-arthur-s-seat-sali', why: 'Edinburgh, home of Hogmanay, with fireworks from the castle at midnight.' },
+      { id: 'rathmines-dublin', why: 'The Dublin rooftops at midnight.' },
+      { id: 'funchal-city-from-s-o-roque-madeira-isla', why: 'Funchal in Madeira, looking down on the bay. The island’s New Year fireworks once held the world record for the largest display.' },
+      { id: 'niagara-falls-3', why: 'Niagara Falls, lit up at night.' },
+      { id: 'nyc-brooklyn-bridge-lower-manhattan-new-', why: 'Lower Manhattan and the Brooklyn Bridge. The ball drops in Times Square, a few miles uptown.' },
+      { id: 'miami-skyline', why: 'The Miami skyline.' },
+      { id: 'duval-street-key-west-florida', why: 'Duval Street in Key West, which sees the year in by lowering things from rooftops: a conch shell, a pirate wench and a drag queen in a giant red shoe.' },
+      { id: 'nashville-lower-broadway', why: 'Lower Broadway in Nashville, where the honky-tonks are.' },
+      { id: 'fremont-street-camera-2-brand-new-view-o', why: 'Fremont Street in downtown Las Vegas, which throws a street party every New Year’s Eve.' },
+      { id: 'san-francisco-oakland-bay-bridge-camera', why: 'The Bay Bridge in San Francisco. The city’s fireworks are fired from barges off the waterfront nearby.' },
+      { m: /Waikiki/i, why: 'Waikiki in Honolulu, one of the last big cities to reach midnight.' },
+    ],
+  },
   {
     slug: 'ireland-live-cams', title: 'Watch Ireland live — a little bit of home',
     metaTitle: 'Live cams of Ireland — watch home right now | Watch This Cam',
@@ -1462,9 +1519,10 @@ const ARTICLES = [
 const articleUrls = [];
 for (const a of ARTICLES) {
   const resolved = [], seen = new Set();
-  for (const pk of a.picks) { const c = pickCam(pk.m, pk.cat, pk.country); if (c && !seen.has(c.id)) { seen.add(c.id); resolved.push({ c, why: pk.why }); } }
+  for (const pk of a.picks) { const c = pk.id ? cams.find(x => x.id === pk.id) : pickCam(pk.m, pk.cat, pk.country); if (c && !seen.has(c.id)) { seen.add(c.id); resolved.push({ c, why: pk.why, tz: pk.tz }); } }
   if (resolved.length < 3) continue;
-  if (!a.keepOrder) resolved.sort((x, y) => (x.c.type === 'image' ? 1 : 0) - (y.c.type === 'image' ? 1 : 0)); // live video first (list order otherwise kept)
+  if (a.moment) { for (const r of resolved) r.at = (r.c.tz || r.tz) ? zonedInstant(a.moment, r.c.tz || r.tz) : null; resolved.sort((x, y) => (x.at || 9e15) - (y.at || 9e15)); }
+  else if (!a.keepOrder) resolved.sort((x, y) => (x.c.type === 'image' ? 1 : 0) - (y.c.type === 'image' ? 1 : 0)); // live video first (list order otherwise kept)
   const p = `/guide/${a.slug}.html`;
   articleUrls.push({ p, slug: a.slug, title: a.title, desc: a.desc, n: resolved.length });
   // Share/OG image: prefer a YouTube thumbnail (stable, daytime) over a live image-cam snapshot (can be dark/flaky).
@@ -1477,10 +1535,10 @@ for (const a of ARTICLES) {
       { '@type': 'ListItem', position: 2, name: 'Guides', item: SITE_URL + '/guide/' },
       { '@type': 'ListItem', position: 3, name: a.title }] },
   ];
-  const picksHtml = resolved.map(({ c, why }) => `<article class="pick">
+  const picksHtml = resolved.map(({ c, why, at }) => `<article class="pick">
 <a class="pthumb" href="/cam/${c.id}.html">${livePill(c)}<img loading="lazy" ${ONERR} src="${thumb(c)}" alt="${esc(c.name)}"></a>
 <div class="pbody"><h3><a href="/cam/${c.id}.html">${esc(c.name)}</a></h3>
-<p class="pwhere">${esc([c.countryLabel, c.catLabel].filter(Boolean).join(' · '))}</p>
+<p class="pwhere">${esc([c.countryLabel, c.catLabel].filter(Boolean).join(' · '))}</p>${at ? `\n<p class="pwhen" data-t="${new Date(at).toISOString()}">${esc(a.momentLabel || 'It happens')} there at ${utcStamp(at)}</p>` : ''}
 <p>${esc(why)}</p><a class="plink" href="/cam/${c.id}.html">Watch live →</a></div></article>`).join('');
   fs.writeFileSync(path.join(DIST, 'guide', a.slug + '.html'), head(a.metaTitle || a.title, a.desc, img, p, ld) + header + `
 <main class="wrap article">
@@ -1488,7 +1546,8 @@ for (const a of ARTICLES) {
 <div class="hubhead"><h1>${esc(a.title)}</h1><p class="lede">${esc(a.lede)}</p></div>
 <div class="picklist">${picksHtml}</div>
 <div style="margin:8px 0 40px"><a class="btn" href="/random.html"><span class="dice">🎲</span> Surprise me</a> <a class="btn ghost" href="/guide/">More guides</a></div>
-</main>` + footer);
+</main>${a.moment ? `
+<script>(function(){[].forEach.call(document.querySelectorAll('.pwhen'),function(e){var d=new Date(e.dataset.t);if(isNaN(d))return;e.textContent=${inlineJson(a.momentLabel || 'It happens')}+' there: '+d.toLocaleString([], {weekday:'long',day:'numeric',month:'long',hour:'numeric',minute:'2-digit'})+' your time';});})();</script>` : ''}` + footer);
 }
 // Guides index
 const guideCards = articleUrls.map(a => `<a class="guidecard" href="${cleanPath(a.p)}"><b>${esc(a.title)}</b><span>${a.n} cams</span></a>`).join('');
@@ -1568,7 +1627,7 @@ ${hubFooter}
   fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace('<!--HAPPENING-->', strip)); }
 
 // Homepage guide cards (see the marker in the homepage template).
-const GUIDE_TAGS = {"ireland-live-cams":"☘️ For the Irish abroad","wildest-live-cams":"The wild &amp; weird","best-live-cams":"Our pick of the lot","live-volcano-cams":"Active &amp; erupting","northern-lights-live-cams":"Aurora webcams","best-beach-cams":"Borrow some sun","live-ski-resort-cams":"Check the snow"};
+const GUIDE_TAGS = {"christmas-live-cams":"Santa, markets and lights","new-years-eve-live-cams":"Follow midnight round the world","ireland-live-cams":"☘️ For the Irish abroad","wildest-live-cams":"The wild &amp; weird","best-live-cams":"Our pick of the lot","live-volcano-cams":"Active &amp; erupting","northern-lights-live-cams":"Aurora webcams","best-beach-cams":"Borrow some sun","live-ski-resort-cams":"Check the snow"};
 { const f = path.join(DIST, 'index.html');
   fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace('<!--HOME_GUIDES-->', articleUrls.slice(0, 12).map(a => `<a class="guidecard" href="${a.p}"><b>${esc(a.title)}</b><span>${GUIDE_TAGS[a.slug] || a.n + ' cams'}</span></a>`).join('\n'))); }
 

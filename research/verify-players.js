@@ -89,4 +89,6 @@ function sheets() {
   }
   console.log('sheets:', pages, 'in', dir, '| pictures:', list.length);
 }
-if (process.argv[2] === 'sheet') sheets(); else if (process.argv[2] === 'write') write(); else main();
+// node verify-players.js reshoot "Name one|Name two"  -> forget those pictures and take them again
+if (process.argv[2] === 'reshoot') { const want = new Set(String(process.argv[3] || '').split('|')); for (const c of raw) if (want.has(c.name) && state[c.embedUrl]) { state[c.embedUrl].done = false; state[c.embedUrl].live = false; try { fs.unlinkSync(path.join(WORK, slug(c.name) + '.png')); } catch (e) {} } main(); }
+else if (process.argv[2] === 'sheet') sheets(); else if (process.argv[2] === 'write') write(); else main();
