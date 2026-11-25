@@ -255,14 +255,14 @@ const head = (title, desc, image, pagePath, jsonld) => `<!doctype html><html lan
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0b0f17">
+<meta name="theme-color" content="#fbfaf6">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">${jsonld ? `
 <script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026')}</script>` : ''}</head><body>`;
 const header = `<header class="top"><div class="wrap">
-<a class="logo" href="/">Watch<span class="bubble">This</span>Cam</a>
+<a class="logo" href="/" aria-label="Watch This Cam home"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#1f74e0"/><path d="M7 33C17 17 47 17 57 33C47 49 17 49 7 33Z" fill="#fff"/><circle cx="32" cy="33" r="12" fill="#18212f"/><circle cx="32" cy="33" r="6" fill="#1f74e0"/><circle cx="36.5" cy="28.5" r="3.2" fill="#fff"/><circle cx="52" cy="12" r="7" fill="#e8344a" stroke="#fff" stroke-width="3"/></svg><span class="wm">Watch<b>This</b>Cam</span></a>
 <nav class="nav">
 <a href="/wall.html">📺 Wall</a>
 <a href="/thrills.html">⚡ Thrills</a>
@@ -289,13 +289,13 @@ fs.copyFileSync(path.join(ROOT, 'src', 'styles.css'), path.join(DIST, 'styles.cs
 // Favicons as real files (Google ignores data: URIs and wants 48px multiples); rendered from the SVGs and committed in src/static.
 fs.cpSync(path.join(ROOT, 'src', 'static'), DIST, { recursive: true });
 // Card picture for a live-video cam we have no thumbnail of.
-fs.writeFileSync(path.join(DIST, 'live.svg'), `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360"><rect width="640" height="360" fill="#121826"/><circle cx="320" cy="165" r="44" fill="none" stroke="#34446a" stroke-width="5"/><path d="M306 142v46l40-23z" fill="#5aa2ff"/><text x="320" y="250" font-family="Arial" font-size="20" fill="#8d9ab3" text-anchor="middle">Live video</text></svg>`);
+fs.writeFileSync(path.join(DIST, 'live.svg'), `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360"><rect width="640" height="360" fill="#e8edf4"/><circle cx="320" cy="165" r="44" fill="none" stroke="#34446a" stroke-width="5"/><path d="M306 142v46l40-23z" fill="#5aa2ff"/><text x="320" y="250" font-family="Arial" font-size="20" fill="#5d6879" text-anchor="middle">Live video</text></svg>`);
 // Shown when an external feed is down (these are 180+ live cams; some drop out).
-fs.writeFileSync(path.join(DIST, 'ph.svg'), `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360"><rect width="640" height="360" fill="#121826"/><circle cx="320" cy="150" r="30" fill="none" stroke="#3a4straight66" stroke-width="5"/><circle cx="320" cy="150" r="10" fill="#34446a"/><text x="320" y="225" font-family="Arial" font-size="20" fill="#8d9ab3" text-anchor="middle">Feed offline right now</text></svg>`.replace('3a4straight66','3a4466'));
+fs.writeFileSync(path.join(DIST, 'ph.svg'), `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360"><rect width="640" height="360" fill="#e8edf4"/><circle cx="320" cy="150" r="30" fill="none" stroke="#3a4straight66" stroke-width="5"/><circle cx="320" cy="150" r="10" fill="#34446a"/><text x="320" y="225" font-family="Arial" font-size="20" fill="#5d6879" text-anchor="middle">Feed offline right now</text></svg>`.replace('3a4straight66','3a4466'));
 const ONERR = `onerror="this.onerror=null;this.src='/ph.svg'"`;
 
 // PWA: installable app (manifest + icon + service worker)
-fs.writeFileSync(path.join(DIST, 'icon.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="110" fill="#0b0f17"/><rect x="56" y="56" width="400" height="400" rx="92" fill="#2f80ed"/><circle cx="256" cy="256" r="118" fill="none" stroke="#fff" stroke-width="34"/><circle cx="256" cy="256" r="40" fill="#fff"/><circle cx="256" cy="256" r="150" fill="none" stroke="#fff" stroke-width="10" stroke-dasharray="6 26" opacity=".6"/></svg>`);
+fs.writeFileSync(path.join(DIST, 'icon.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="17" fill="#1f74e0"/><path d="M7 33C17 17 47 17 57 33C47 49 17 49 7 33Z" fill="#fff"/><circle cx="32" cy="33" r="12" fill="#18212f"/><circle cx="32" cy="33" r="6" fill="#1f74e0"/><circle cx="36.5" cy="28.5" r="3.2" fill="#fff"/><circle cx="52" cy="12" r="7" fill="#e8344a" stroke="#fff" stroke-width="3"/></svg>`);
 fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({
   name: 'Watch This Cam', short_name: 'WatchThisCam',
   description: 'Hit the button and get a random live camera from somewhere in the world.',
