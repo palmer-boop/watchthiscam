@@ -578,9 +578,35 @@ else{try{var ctx=sc.getContext('2d'),w=sc.width=Math.min(innerWidth,520),h=sc.he
 // ---- Cam pages ----
 // The word people in that country type for "webcam" (only where it differs from the English word).
 const LOCAL_WORD = { NO: 'webkamera', SE: 'webbkamera', FI: 'webkamera', PL: 'kamera na żywo', CZ: 'webkamera', SK: 'webkamera', HU: 'webkamera',
-  HR: 'web kamera', SI: 'spletna kamera', BA: 'web kamera', RS: 'web kamera', ME: 'web kamera', TR: 'canlı kamera', EE: 'veebikaamera', IS: 'vefmyndavél' };
+  HR: 'web kamera', SI: 'spletna kamera', BA: 'web kamera', RS: 'web kamera', ME: 'web kamera', TR: 'canlı kamera', EE: 'veebikaamera', IS: 'vefmyndavél',
+  BG: 'камера на живо', RU: 'веб-камера', UA: 'веб-камера', BY: 'веб-камера', KZ: 'веб-камера', JP: 'ライブカメラ',
+  // same word for webcam, so here it is the word for "live"
+  PT: 'ao vivo', BR: 'ao vivo', ES: 'en directo', FR: 'en direct', IT: 'in diretta',
+  MX: 'en vivo', AR: 'en vivo', CL: 'en vivo', CO: 'en vivo', PE: 'en vivo', UY: 'en vivo', EC: 'en vivo', CR: 'en vivo', PA: 'en vivo', DO: 'en vivo', BO: 'en vivo', PY: 'en vivo', GT: 'en vivo', CU: 'en vivo', VE: 'en vivo' };
+const localPhrase = code => { const w = LOCAL_WORD[code]; return !w ? '' : /^(?:ao|en|in) /.test(w) ? 'webcams ' + w : w; };
 // A cleaner name for headings and search results: windy.com names come as "Town · South-east: Place"; the compass part helps nobody.
-const baseSeoName = c => String(c.name).replace(/\s·\s(?:North|South|East|West)(?:-(?:east|west))?\s*:\s*/i, ': ').replace(/\s·\s(?:North|South|East|West)(?:-(?:east|west))?\s*$/i, '').replace(/\s{2,}/g, ' ').trim();
+// Names are stored cut at 60 characters. Finish the obvious chopped words, drop the rest, and tidy what is left dangling.
+const FIX_END = [[/\bHarbou$/, 'Harbour'], [/\bBeac$/, 'Beach'], [/\bAirpor$/, 'Airport'], [/\bResor$/, 'Resort'], [/\bMountai$/, 'Mountain']];
+const TAIL_JUNK = /[\s\-–—|:·,/&+]+$/;
+const untruncate = raw => {
+  let n = String(raw);
+  if (n.length < 60) return n.replace(TAIL_JUNK, '').trim();
+  for (const [re, w] of FIX_END) if (re.test(n)) return n.replace(re, w);
+  const sep = Math.max(n.lastIndexOf(' - '), n.lastIndexOf(' – '), n.lastIndexOf(' — '), n.lastIndexOf(', '), n.lastIndexOf(' | '));
+  if (sep >= 20 && n.length - sep <= 25) n = n.slice(0, sep);          // the cut landed in a short last part: drop that part
+  else if (!/\s$/.test(n)) n = n.replace(/\s+\S*$/, '');              // otherwise drop just the chopped word
+  for (let i = 0; i < 4; i++) n = n.replace(TAIL_JUNK, '').replace(/\s+(?:in|at|of|on|de|del|di|da|do|la|le|el|the|and|und|na|u|y|e|a|am|an|auf|im|bei|von|to|from|with|near|view|live)$/i, '');
+  n = n.replace(TAIL_JUNK, '');
+  if ((n.match(/\(/g) || []).length > (n.match(/\)/g) || []).length) n = n.slice(0, n.lastIndexOf('(')).replace(TAIL_JUNK, '');
+  return n.trim();
+};
+// windy.com leads with the council area ("Kiruna kommun: Nikkaluokta", "Waterford City Metropolitan District: Tramore"): people search for the place.
+const ADMIN_LEAD = /^(?:District of [^:]+|[^:]*\b(?:kommun|distrikt|District|ED|(?:Local )?Municipality|Region))\s*:\s*(?=\S)/i;
+const baseSeoName = c => {
+  let n = untruncate(c.name).replace(/\s·\s(?:North|South|East|West)(?:-(?:east|west))?\s*:\s*/i, ': ').replace(/\s·\s(?:North|South|East|West)(?:-(?:east|west))?\s*$/i, '').replace(/\s{2,}/g, ' ').trim();
+  for (let i = 0; i < 3; i++) { const m = n.replace(ADMIN_LEAD, ''); if (m === n || m.length < 3) break; n = m; }
+  return n;
+};
 const SEO_NAMES = (() => {
   const key = c => baseSeoName(c).toLowerCase() + '|' + (c.country || ''), groups = {}, out = {};
   for (const c of cams) (groups[key(c)] = groups[key(c)] || []).push(c);
@@ -934,7 +960,7 @@ for (const co of hubCountries) {
   const topCats = Object.entries(byCat).sort((a, b) => b[1] - a[1]).slice(0, 4).map(([k]) => CATS[k].toLowerCase());
   const live = livecount(list);
   const title = `${name} Live Webcams — watch ${list.length} cameras now`;
-  const desc = `Watch ${list.length} live webcams in ${name} right now${topCats.length ? ` — ${topCats.slice(0, 3).join(', ')} and more` : ''}. Free, streaming 24/7 on Watch This Cam.`;
+  const desc = `Watch ${list.length} live webcams in ${name} right now${localPhrase(co) ? ` (${localPhrase(co)})` : ''}${topCats.length ? ` — ${topCats.slice(0, 3).join(', ')} and more` : ''}. Free, streaming 24/7 on Watch This Cam.`;
   const intro = `${list.length} live ${list.length === 1 ? 'camera' : 'cameras'} streaming from ${name} right now${topCats.length ? ` — ${topCats.join(', ')}` : ''}.${live ? ` ${live} of them are live video.` : ''} Pick one to watch, or hit Surprise me to shuffle through them.`;
   const shown = list.slice(0, 160);
   const ld = [
