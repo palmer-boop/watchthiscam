@@ -192,7 +192,9 @@ const NOT_FOR_ROADS = new Set(['lakes-and-rivers', 'waterfalls', 'castles', 'squ
 for (const c of cams) c.themes = THEMES.filter(t => (t.re.test(c.name || '') && !(c.category === 'traffic' && NOT_FOR_ROADS.has(t.slug))) || (t.slug === 'national-parks' && /nps\.gov/.test(c.imageUrl || ''))).map(t => t.slug);
 const fmtName = c => c.name;
 
-const SITE_URL = 'https://watchthiscam.com';
+// The official address is the www one: it is the host Google has indexed since the original 2011 site.
+// Canonical tags, the sitemap, share links and embed codes all use it. (The bare domain still serves the same pages.)
+const SITE_URL = 'https://www.watchthiscam.com';
 const absUrl = u => (u && u[0] === '/' ? SITE_URL + u : u);
 const ogYt = cams.find(isYT);
 const DEFAULT_OG = ogYt ? `https://i.ytimg.com/vi/${ogYt.videoId}/hqdefault.jpg` : '/icon-512.png';
@@ -1662,6 +1664,20 @@ fs.writeFileSync(path.join(DIST, 'sitemap.xml'),
   sitemapUrls.map(u => `<url><loc>${SITE_URL}${cleanPath(u)}</loc></url>`).join('\n') + `\n</urlset>\n`);
 
 console.log('built', cams.length, 'cam pages +', hubUrls.length, 'hub pages (', hubStates.length, 'states,', hubThemes.length, 'themes ) +', articleUrls.length, 'guides +', liveUrls.length, 'live pages; sitemap', sitemapUrls.length, 'urls');
+
+// ---- Clean internal links. Cloudflare Pages serves /x for x.html and answers /x.html with a redirect to /x,
+// so every internal link written as ".html" cost visitors and Google's crawler an extra hop. Link straight to /x.
+// (External addresses are left alone: only paths that start with a single "/" are touched.)
+(function cleanLinks(dir) {
+  for (const f of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, f.name);
+    if (f.isDirectory()) { cleanLinks(p); continue; }
+    if (!/\.(html|js)$/.test(f.name)) continue;
+    const s = fs.readFileSync(p, 'utf8');
+    const t = s.replace(/(["'`=])(\/(?!\/)[^"'`\s<>?#]*)\.html(?=["'`\s<>?#\\])/g, '$1$2').replace(/(["'`])\.html(?=["'`>\s#?\\])/g, '$1');
+    if (t !== s) fs.writeFileSync(p, t);
+  }
+})(DIST);
 
 // Diagnostics for a human: WTC_STATS=1 node build.js
 if (process.env.WTC_STATS) {

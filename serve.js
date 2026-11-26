@@ -19,7 +19,7 @@ function candidates(p, query) {
     out.push(file.slice(0, file.length - ext.length) + '@' + clean(query) + (ext || '.html'));
   }
   out.push(file);
-  if (!path.extname(file)) out.push(file + '/index.html');
+  if (!path.extname(file)) { out.push(file + '.html'); out.push(file + '/index.html'); }   // clean addresses, as on the live site
   return out;
 }
 

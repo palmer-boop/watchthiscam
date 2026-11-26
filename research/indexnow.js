@@ -1,8 +1,8 @@
 // Tell Bing / Yandex (IndexNow) about every URL in the live sitemap, or only the ones not in a previous sitemap.
-//   node indexnow.js                 submit everything in https://watchthiscam.com/sitemap.xml
+//   node indexnow.js                 submit everything in https://www.watchthiscam.com/sitemap.xml
 //   node indexnow.js old-sitemap.xml submit only URLs that are not in that older copy
 const fs = require('fs');
-const HOST = 'watchthiscam.com', KEY = 'f8abc081b4c199219daf3bae5f931fac';
+const HOST = 'www.watchthiscam.com', KEY = 'f8abc081b4c199219daf3bae5f931fac';
 (async () => {
   const xml = await (await fetch(`https://${HOST}/sitemap.xml`)).text();
   let urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
