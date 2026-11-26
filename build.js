@@ -1634,6 +1634,23 @@ const GUIDE_TAGS = {"christmas-live-cams":"Santa, markets and lights","new-years
 { const f = path.join(DIST, 'index.html');
   fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace('<!--HOME_GUIDES-->', articleUrls.slice(0, 12).map(a => `<a class="guidecard" href="${a.p}"><b>${esc(a.title)}</b><span>${GUIDE_TAGS[a.slug] || a.n + ' cams'}</span></a>`).join('\n'))); }
 
+// ---- Old addresses from the original site (2011-2018 WordPress): send them somewhere useful instead of "not found".
+// Cloudflare Pages reads dist/_redirects. First match wins, so the specific lines come before the catch-alls.
+{
+  const lines = [
+    '/blog/2011/08/08/the-wall-of-cameras/* /wall 301',
+    '/2011/09/09/hurricane-katia-live-cam-update/* /news/ 301',
+    '/blog/*hurricane* /news/ 301',
+    '/blog/* /guide/ 301',
+    '/tag/* /browse 301', '/category/* /browse 301', '/webcams/* /browse 301', '/uncategorized/* /browse 301',
+    '/page/* / 301', '/feed/* / 301', '/comments/* / 301', '/author/* /about 301',
+    ...[2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018].map(y => '/' + y + '/* /guide/ 301'),
+    // the old numbered camera pages (/10/10.php ...): back to the button
+    ...Array.from({ length: 400 }, (_, i) => '/' + (i + 1) + '/' + (i + 1) + '.php / 301'),
+  ].filter(l => !l.includes('*hurricane*'));   // Pages only allows a wildcard at the end of a path
+  fs.writeFileSync(path.join(DIST, '_redirects'), lines.join('\n') + '\n');
+}
+
 // ---- robots.txt + sitemap.xml (for launch / SEO) ----
 fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 const sitemapUrls = ['/', '/browse.html', '/thrills.html', '/map.html', '/wall.html', '/favourites.html', '/about.html',
