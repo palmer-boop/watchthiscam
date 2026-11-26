@@ -1711,6 +1711,9 @@ const GUIDE_TAGS = {"christmas-live-cams":"Santa, markets and lights","new-years
     // the old numbered camera pages (/10/10.php ...): back to the button
     ...Array.from({ length: 400 }, (_, i) => '/' + (i + 1) + '/' + (i + 1) + '.php / 301'),
   ].filter(l => !l.includes('*hurricane*'));   // Pages only allows a wildcard at the end of a path
+  // cams taken off the site for cause (research/removed.json): Pages can serve a removed page from cache for up to a week, a redirect stops that at once
+  let removed = []; try { removed = JSON.parse(fs.readFileSync(path.join(ROOT, 'research', 'removed.json'))).ids || []; } catch (e) {}
+  for (const id of removed) if (!cams.some(c => c.id === id)) lines.unshift(`/cam/${id} /browse 301`, `/cam/${id}.html /browse 301`, `/embed/${id} /browse 301`, `/embed/${id}.html /browse 301`);
   fs.writeFileSync(path.join(DIST, '_redirects'), lines.join('\n') + '\n');
 }
 

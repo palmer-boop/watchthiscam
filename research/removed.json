@@ -1,0 +1,8 @@
+{
+ "note": "Cam pages taken off the site for cause (not just a dead stream). build.js redirects their old addresses to /browse, because Cloudflare Pages can keep serving a removed page from its cache for up to a week.",
+ "ids": [
+  "camera-inside-jazzle-house-united-kingdo",
+  "st-bridget-s-baillieston",
+  "the-best-aquarium-explore-the-stunning-w"
+ ]
+}
