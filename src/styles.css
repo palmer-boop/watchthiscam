@@ -27,10 +27,9 @@ img { max-width: 100%; display: block; }
 .top .wrap { display: flex; align-items: center; gap: 16px; height: 62px; }
 .logo { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); }
 .logo:hover { text-decoration: none; }
-.logo .mark { width: 36px; height: 36px; flex: none; transition: transform .25s ease; }
+.logo .mark { height: 36px; width: auto; flex: none; transition: transform .25s ease; }
 .logo:hover .mark { transform: rotate(-6deg) scale(1.05); }
-.logo .wm { font-weight: 800; font-size: 22px; letter-spacing: -.035em; line-height: 1; }
-.logo .wm b { color: var(--blue); font-weight: 800; }
+.logo .wm { height: 22px; width: auto; }
 .nav { display: flex; gap: 4px; margin-left: auto; align-items: center; }
 .nav a { color: var(--muted); padding: 8px 10px; border-radius: 8px; font-size: 15px; }
 .nav a:hover { color: var(--ink); background: var(--panel); text-decoration: none; }
@@ -149,7 +148,7 @@ footer a { color: var(--muted); }
 html, body { overflow-x: hidden; max-width: 100%; }
 @media (max-width: 560px) {
   .top .wrap { gap: 8px; height: 56px; }
-  .logo .wm { font-size: 18px; } .logo .mark { width: 30px; height: 30px; }
+  .logo .wm { height: 17px; } .logo .mark { height: 30px; }
   .nav { gap: 2px; }
   .nav a:not(.btn) { display: none; }      /* Browse/About reachable via hero + tiles */
   .nav .btn { padding: 8px 12px; font-size: 14px; }

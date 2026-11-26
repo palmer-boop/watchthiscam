@@ -195,7 +195,7 @@ const fmtName = c => c.name;
 const SITE_URL = 'https://watchthiscam.com';
 const absUrl = u => (u && u[0] === '/' ? SITE_URL + u : u);
 const ogYt = cams.find(isYT);
-const DEFAULT_OG = ogYt ? `https://i.ytimg.com/vi/${ogYt.videoId}/hqdefault.jpg` : '/icon.svg';
+const DEFAULT_OG = ogYt ? `https://i.ytimg.com/vi/${ogYt.videoId}/hqdefault.jpg` : '/icon-512.png';
 // Cloudflare Pages 308-redirects /x.html to /x, so canonicals and the sitemap use the clean form.
 const cleanPath = p => (p || '/').replace(/\.html$/, '');
 // Structured data (JSON-LD). VideoObject only for real embedded video (YouTube);
@@ -262,7 +262,7 @@ const head = (title, desc, image, pagePath, jsonld) => `<!doctype html><html lan
 <link rel="stylesheet" href="/styles.css">${jsonld ? `
 <script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026')}</script>` : ''}</head><body>`;
 const header = `<header class="top"><div class="wrap">
-<a class="logo" href="/" aria-label="Watch This Cam home"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#1f74e0"/><path d="M7 33C17 17 47 17 57 33C47 49 17 49 7 33Z" fill="#fff"/><circle cx="32" cy="33" r="12" fill="#18212f"/><circle cx="32" cy="33" r="6" fill="#1f74e0"/><circle cx="36.5" cy="28.5" r="3.2" fill="#fff"/><circle cx="52" cy="12" r="7" fill="#e8344a" stroke="#fff" stroke-width="3"/></svg><span class="wm">Watch<b>This</b>Cam</span></a>
+<a class="logo" href="/" aria-label="Watch This Cam home"><img class="mark" src="/logo-icon.png" width="33" height="36" alt=""><img class="wm" src="/logo-word.png" width="203" height="22" alt="Watch This Cam"></a>
 <nav class="nav">
 <a href="/wall.html">📺 Wall</a>
 <a href="/thrills.html">⚡ Thrills</a>
@@ -300,8 +300,8 @@ fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({
   name: 'Watch This Cam', short_name: 'WatchThisCam',
   description: 'Hit the button and get a random live camera from somewhere in the world.',
   start_url: '/', scope: '/', display: 'standalone', orientation: 'any',
-  background_color: '#0b0f17', theme_color: '#0b0f17',
-  icons: [{ src: '/icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any maskable' },
+  background_color: '#fbfaf6', theme_color: '#fbfaf6',
+  icons: [
     { src: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
     { src: '/icon-512.png', sizes: '512x512', type: 'image/png' }],
 }, null, 1));
