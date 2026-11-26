@@ -10,7 +10,7 @@ const CATS = {
   mountain: 'Mountains', ski: 'Mountains & snow', volcano: 'Volcanoes', weather: 'Weather & sky',
   landmark: 'Landmarks', bar: 'Bars & nightlife', space: 'Space', other: 'Other',
 };
-const COUNTRIES = { IE: 'Ireland', AU: 'Australia', PT: 'Portugal', US: 'USA', GB: 'UK', JP: 'Japan',
+const COUNTRIES = { IE: 'Ireland', AU: 'Australia', PT: 'Portugal', US: 'USA', GB: 'UK', JP: 'Japan', CD: 'DR Congo', BL: 'St Barts',
   IT: 'Italy', NL: 'Netherlands', ES: 'Spain', CH: 'Switzerland', TH: 'Thailand', CB: 'Caribbean',
   NZ: 'New Zealand', CA: 'Canada', FI: 'Finland', NO: 'Norway', SE: 'Sweden', IS: 'Iceland',
   AT: 'Austria', DE: 'Germany', FR: 'France', AQ: 'Antarctica',

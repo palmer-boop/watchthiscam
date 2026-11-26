@@ -199,9 +199,22 @@
   "source": "https://www.youtube.com/watch?v=Fz6sl9YJZE0"
  },
  {
+  "id": "kitten-rescue-cat-2",
+  "name": "Kitten Rescue Cat",
+  "country": "US",
+  "state": "California",
+  "category": "wildlife",
+  "type": "youtube",
+  "videoId": "OOT6YlOYgaU",
+  "channel": "Explore Live Nature Cams",
+  "watching": "34 watching",
+  "source": "https://www.youtube.com/watch?v=OOT6YlOYgaU"
+ },
+ {
   "id": "tropical-reef-camera",
   "name": "Tropical Reef Camera",
-  "country": "XX",
+  "country": "US",
+  "state": "California",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "DHUnz4dyb54",
@@ -873,7 +886,8 @@
  {
   "id": "silver-springs-above-water-manatee-camer",
   "name": "Silver Springs Above Water Manatee Camera",
-  "country": "XX",
+  "country": "US",
+  "state": "Florida",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "jxnehowX-9Y",
@@ -884,7 +898,8 @@
  {
   "id": "silver-springs-180-degree-underwater-man",
   "name": "Silver Springs 180 Degree Underwater Manatee",
-  "country": "XX",
+  "country": "US",
+  "state": "Florida",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "uWiJ9qCYxoo",
@@ -1355,6 +1370,18 @@
   "source": "https://www.youtube.com/watch?v=Qoe4x5Z7P08"
  },
  {
+  "id": "gloucester-massachusetts-us-annisquam-ya",
+  "name": "Gloucester, Massachusetts US - Annisquam Yacht Club",
+  "country": "US",
+  "state": "Massachusetts",
+  "category": "other",
+  "type": "youtube",
+  "videoId": "_j1qgdMnifk",
+  "channel": "Boston and Maine Live",
+  "watching": "1 watching",
+  "source": "https://www.youtube.com/watch?v=_j1qgdMnifk"
+ },
+ {
   "id": "boston-weather-ma-green-line",
   "name": "Boston Weather , MA - Green Line",
   "country": "US",
@@ -1501,6 +1528,17 @@
   "channel": "The Real Samui Webcam",
   "watching": "1 watching",
   "source": "https://www.youtube.com/watch?v=Ly-1wKKtO9E"
+ },
+ {
+  "id": "the-shack-fisherman-s-village-bophut",
+  "name": "The Shack Fisherman's Village Bophut",
+  "country": "TH",
+  "category": "city",
+  "type": "youtube",
+  "videoId": "bbBGNNPu0rg",
+  "channel": "The Real Samui Webcam",
+  "watching": "12 watching",
+  "source": "https://www.youtube.com/watch?v=bbBGNNPu0rg"
  },
  {
   "id": "morgan-hill-santa-clara-valley-northern-",
@@ -1822,7 +1860,8 @@
  {
   "id": "sutter-s-marina",
   "name": "Sutter's Marina",
-  "country": "XX",
+  "country": "US",
+  "state": "New York",
   "category": "harbour",
   "type": "youtube",
   "videoId": "qr7dGchfX3g",
@@ -1902,7 +1941,8 @@
  {
   "id": "mission-mountain-range",
   "name": "Mission Mountain Range",
-  "country": "XX",
+  "country": "US",
+  "state": "Montana",
   "category": "nature",
   "type": "youtube",
   "videoId": "wDgZkzkOP-s",
@@ -1935,7 +1975,7 @@
  {
   "id": "giraffe",
   "name": "Giraffe",
-  "country": "XX",
+  "country": "AU",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "hNexlUkTTuc",
@@ -2060,7 +2100,7 @@
  {
   "id": "sea-breeze-sponsored-by-cofton-holidays-",
   "name": "Sea Breeze , sponsored by Cofton Holidays - Dawlish",
-  "country": "XX",
+  "country": "GB",
   "category": "other",
   "type": "youtube",
   "videoId": "succ1fhHm7I",
@@ -2241,7 +2281,8 @@
  {
   "id": "puppy-playroom-at-warrior-canine-connect",
   "name": "Puppy Playroom at Warrior Canine Connection",
-  "country": "XX",
+  "country": "US",
+  "state": "Maryland",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "h-Z0wCdD3dI",
@@ -2252,7 +2293,8 @@
  {
   "id": "full-house-puppy-at-warrior-canine-conne",
   "name": "Full House Puppy at Warrior Canine Connection",
-  "country": "XX",
+  "country": "US",
+  "state": "Maryland",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "Qeq2Kax0v64",
@@ -2286,7 +2328,7 @@
  {
   "id": "saint-v-ran-centre-village",
   "name": "Saint-Véran - Centre Village",
-  "country": "XX",
+  "country": "FR",
   "category": "city",
   "type": "youtube",
   "videoId": "hoN9su9T-G4",
@@ -2297,7 +2339,7 @@
  {
   "id": "binic",
   "name": "Binic",
-  "country": "XX",
+  "country": "FR",
   "category": "other",
   "type": "youtube",
   "videoId": "gJoTOmi4i4o",
@@ -2308,7 +2350,7 @@
  {
   "id": "gourette-panoramique",
   "name": "Gourette - Panoramique",
-  "country": "XX",
+  "country": "FR",
   "category": "other",
   "type": "youtube",
   "videoId": "0zyvh41bsxo",
@@ -2352,7 +2394,7 @@
  {
   "id": "wildlife-in-the-forest-by-morten-hilmer",
   "name": "Wildlife In The Forest - by Morten Hilmer",
-  "country": "XX",
+  "country": "DK",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "F0GOOP82094",
@@ -2553,6 +2595,18 @@
   "source": "https://www.youtube.com/watch?v=w6OiGEdUuY0"
  },
  {
+  "id": "ritzville-railroad-depot-museum-ritzvill",
+  "name": "Ritzville Railroad Depot Museum - Ritzville, WA",
+  "country": "US",
+  "state": "Washington",
+  "category": "transport",
+  "type": "youtube",
+  "videoId": "PKziYjWf00Q",
+  "channel": "Steel Highway Railcams",
+  "watching": "2 watching",
+  "source": "https://www.youtube.com/watch?v=PKziYjWf00Q"
+ },
+ {
   "id": "kongsberg-skimore",
   "name": "Kongsberg Skimore",
   "country": "NO",
@@ -2634,7 +2688,7 @@
  {
   "id": "orvieto",
   "name": "Orvieto",
-  "country": "XX",
+  "country": "IT",
   "category": "city",
   "type": "youtube",
   "videoId": "y7QcpQwxHrA",
@@ -2801,17 +2855,6 @@
   "source": "https://www.youtube.com/watch?v=A7oGJdUmVkg"
  },
  {
-  "id": "the-best-aquarium-explore-the-stunning-w",
-  "name": "The Best Aquarium - Explore The Stunning World Of Sea Jellyf",
-  "country": "XX",
-  "category": "wildlife",
-  "type": "youtube",
-  "videoId": "oKWwPvGhYbY",
-  "channel": "4K Ocean World",
-  "watching": "40 watching",
-  "source": "https://www.youtube.com/watch?v=oKWwPvGhYbY"
- },
- {
   "id": "south-shore-surf",
   "name": "South Shore Surf",
   "country": "US",
@@ -2826,7 +2869,7 @@
  {
   "id": "tokat-erbaa-canl-yay-n-seyrantepe-aile-a",
   "name": "Tokat / Erbaa Canlı Yayın - Seyrantepe Aile Çay Bahçesi Kame",
-  "country": "XX",
+  "country": "TR",
   "category": "other",
   "type": "youtube",
   "videoId": "qUsHfBiVFdE",
@@ -3061,7 +3104,7 @@
  {
   "id": "vleeshuis-oudenaarde-markt",
   "name": "VLeeshuis Oudenaarde Markt",
-  "country": "XX",
+  "country": "BE",
   "category": "other",
   "type": "youtube",
   "videoId": "TTrzSdVej30",
@@ -3129,7 +3172,8 @@
  {
   "id": "lax-airport-action-runways-25l-25r",
   "name": "LAX Airport Action Runways 25L & 25R",
-  "country": "XX",
+  "country": "US",
+  "state": "California",
   "category": "transport",
   "type": "youtube",
   "videoId": "KzsNnyN8D_Q",
@@ -3241,7 +3285,7 @@
  {
   "id": "medjugorje-apparition-hill-main-entrance",
   "name": "Medjugorje - Apparition hill Main entrance",
-  "country": "XX",
+  "country": "BA",
   "category": "other",
   "type": "youtube",
   "videoId": "T2ZbQy5QYDg",
@@ -3352,7 +3396,7 @@
  {
   "id": "strukton-pacs-c11-camera-1",
   "name": "Strukton PACS C11 Camera 1",
-  "country": "XX",
+  "country": "NL",
   "category": "other",
   "type": "youtube",
   "videoId": "tmMXU7B79Tg",
@@ -3565,7 +3609,8 @@
  {
   "id": "snow-summit-slopeside",
   "name": "Snow Summit Slopeside",
-  "country": "XX",
+  "country": "US",
+  "state": "California",
   "category": "ski",
   "type": "youtube",
   "videoId": "SOo3NBmvJQI",
@@ -3636,7 +3681,7 @@
  {
   "id": "sheep-pasture-at-farm-sanctuary",
   "name": "Sheep Pasture at Farm Sanctuary",
-  "country": "XX",
+  "country": "US",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "K8TbCP3yeS4",
@@ -3681,7 +3726,7 @@
  {
   "id": "bergamo-skyline",
   "name": "Bergamo Skyline",
-  "country": "XX",
+  "country": "IT",
   "category": "city",
   "type": "youtube",
   "videoId": "fXiekt4_Ulo",
@@ -3816,7 +3861,7 @@
  {
   "id": "highley-station-on-the-severn-valley-rai",
   "name": "Highley Station on the Severn Valley Railway",
-  "country": "XX",
+  "country": "GB",
   "category": "transport",
   "type": "youtube",
   "videoId": "L60Zg6dY0fU",
@@ -3827,7 +3872,7 @@
  {
   "id": "bridgnorth-station-on-the-severn-valley-",
   "name": "Bridgnorth Station on the Severn Valley Railway",
-  "country": "XX",
+  "country": "GB",
   "category": "transport",
   "type": "youtube",
   "videoId": "Hk7KWsPI_XI",
@@ -4032,7 +4077,7 @@
  {
   "id": "saima-telecom",
   "name": "Saima Telecom",
-  "country": "XX",
+  "country": "KG",
   "category": "other",
   "type": "youtube",
   "videoId": "GQRnp3GLx1U",
@@ -4122,7 +4167,8 @@
  {
   "id": "duke-farms-eagle",
   "name": "Duke Farms Eagle",
-  "country": "XX",
+  "country": "US",
+  "state": "New Jersey",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "TA6vV8bkhc8",
@@ -4268,7 +4314,8 @@
  {
   "id": "ac-boardwalk",
   "name": "AC Boardwalk",
-  "country": "XX",
+  "country": "US",
+  "state": "New Jersey",
   "category": "other",
   "type": "youtube",
   "videoId": "OqCtXAg6-cQ",
@@ -4405,7 +4452,8 @@
  {
   "id": "ferrycam",
   "name": "FerryCam",
-  "country": "XX",
+  "country": "US",
+  "state": "Michigan",
   "category": "harbour",
   "type": "youtube",
   "videoId": "D90I8AeLyp4",
@@ -4668,7 +4716,7 @@
  {
   "id": "sbh-avions-au-d-collage",
   "name": "SBH Avions au décollage",
-  "country": "XX",
+  "country": "BL",
   "category": "other",
   "type": "youtube",
   "videoId": "3PQNnVqrJEw",
@@ -4679,7 +4727,7 @@
  {
   "id": "sbh-baie-de-st-jean",
   "name": "SBH Baie de St-Jean",
-  "country": "XX",
+  "country": "BL",
   "category": "other",
   "type": "youtube",
   "videoId": "hb_nPVSnNqw",
@@ -4690,7 +4738,7 @@
  {
   "id": "sbh-port-de-gustavia",
   "name": "SBH Port de Gustavia",
-  "country": "XX",
+  "country": "BL",
   "category": "harbour",
   "type": "youtube",
   "videoId": "zaXzE6ZJAE8",
@@ -4723,7 +4771,8 @@
  {
   "id": "samford-hall-at-auburn-university",
   "name": "Samford Hall at Auburn University",
-  "country": "XX",
+  "country": "US",
+  "state": "Alabama",
   "category": "other",
   "type": "youtube",
   "videoId": "IsCs_GYfMPk",
@@ -5078,7 +5127,7 @@
  {
   "id": "takapuna-boating-club",
   "name": "Takapuna Boating Club",
-  "country": "XX",
+  "country": "NZ",
   "category": "other",
   "type": "youtube",
   "videoId": "h7pOS4vfYvg",
@@ -5089,7 +5138,7 @@
  {
   "id": "lrwt-manton-bay-ospreys",
   "name": "LRWT - Manton Bay Ospreys",
-  "country": "XX",
+  "country": "GB",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "CKvLj6ZFNcA",
@@ -5465,7 +5514,7 @@
  {
   "id": "hagerhof-thiersee",
   "name": "Hagerhof Thiersee",
-  "country": "XX",
+  "country": "AT",
   "category": "other",
   "type": "youtube",
   "videoId": "MvdjX5cqmo8",
@@ -5476,7 +5525,7 @@
  {
   "id": "sittard-limburg-camera-2-axis-q6318-le",
   "name": "Sittard Limburg Camera 2 AXIS Q6318-LE",
-  "country": "XX",
+  "country": "NL",
   "category": "other",
   "type": "youtube",
   "videoId": "GvPyyntKyCY",
@@ -5487,7 +5536,7 @@
  {
   "id": "playa-del-albir",
   "name": "Playa del Albir",
-  "country": "XX",
+  "country": "ES",
   "category": "beach",
   "type": "youtube",
   "videoId": "mdOqWWUxIJw",
@@ -5498,7 +5547,7 @@
  {
   "id": "playa-de-altea",
   "name": "Playa de Altea",
-  "country": "XX",
+  "country": "ES",
   "category": "beach",
   "type": "youtube",
   "videoId": "hvsK8Fvz4rE",
@@ -5589,7 +5638,7 @@
  {
   "id": "brunnsparken-varberg",
   "name": "Brunnsparken, Varberg",
-  "country": "XX",
+  "country": "SE",
   "category": "nature",
   "type": "youtube",
   "videoId": "IEDF51akADs",
@@ -5611,7 +5660,7 @@
  {
   "id": "liseberg-g-teborg",
   "name": "Liseberg, Göteborg",
-  "country": "XX",
+  "country": "SE",
   "category": "other",
   "type": "youtube",
   "videoId": "AqkYfZl4vkA",
@@ -5622,7 +5671,7 @@
  {
   "id": "falkenberg-strandbad",
   "name": "Falkenberg Strandbad",
-  "country": "XX",
+  "country": "SE",
   "category": "beach",
   "type": "youtube",
   "videoId": "BGYTM6E5ls8",
@@ -5679,7 +5728,7 @@
  {
   "id": "residenzhochalm-com",
   "name": "Residenzhochalm.com",
-  "country": "XX",
+  "country": "AT",
   "category": "city",
   "type": "youtube",
   "videoId": "7gikDXbCmVo",
@@ -5816,7 +5865,7 @@
  {
   "id": "beograd-com",
   "name": "Beograd Com",
-  "country": "XX",
+  "country": "RS",
   "category": "other",
   "type": "youtube",
   "videoId": "NfQ0aDgnqIE",
@@ -5904,7 +5953,7 @@
  {
   "id": "pretare",
   "name": "Pretare",
-  "country": "XX",
+  "country": "IT",
   "category": "other",
   "type": "youtube",
   "videoId": "QdA71XaNrBk",
@@ -5915,7 +5964,7 @@
  {
   "id": "passo-lanciano",
   "name": "Passo Lanciano",
-  "country": "XX",
+  "country": "IT",
   "category": "other",
   "type": "youtube",
   "videoId": "NmdC0XJeWfA",
@@ -5937,7 +5986,7 @@
  {
   "id": "seaton-beach-spot-on-kiosk",
   "name": "Seaton Beach @ Spot On Kiosk",
-  "country": "XX",
+  "country": "GB",
   "category": "beach",
   "type": "youtube",
   "videoId": "OQVtLmweYCk",
@@ -6124,8 +6173,9 @@
  {
   "id": "base-winter-park-resort",
   "name": "Base @ Winter Park Resort",
-  "country": "XX",
-  "category": "nature",
+  "country": "US",
+  "state": "Colorado",
+  "category": "ski",
   "type": "youtube",
   "videoId": "vyWAzJAWv4w",
   "channel": "Winter Park Resort",
@@ -6135,8 +6185,8 @@
  {
   "id": "les-arcs-arc-2000",
   "name": "Les Arcs - Arc 2000",
-  "country": "XX",
-  "category": "other",
+  "country": "FR",
+  "category": "ski",
   "type": "youtube",
   "videoId": "B0vZX9GnpxI",
   "channel": "Les Arcs",
@@ -6146,8 +6196,8 @@
  {
   "id": "les-arcs-vag-re",
   "name": "Les Arcs - Vagère",
-  "country": "XX",
-  "category": "other",
+  "country": "FR",
+  "category": "ski",
   "type": "youtube",
   "videoId": "SXXHa5SoAHo",
   "channel": "Les Arcs",
@@ -6168,7 +6218,7 @@
  {
   "id": "middelkerke-zeedijk-hotel-excelsior",
   "name": "Middelkerke Zeedijk - Hotel Excelsior",
-  "country": "XX",
+  "country": "BE",
   "category": "other",
   "type": "youtube",
   "videoId": "a6v5zNvcIzQ",
@@ -6323,7 +6373,8 @@
  {
   "id": "warren-peak",
   "name": "Warren Peak",
-  "country": "XX",
+  "country": "US",
+  "state": "Wyoming",
   "category": "other",
   "type": "youtube",
   "videoId": "vnf-p_37PzE",
@@ -6334,7 +6385,8 @@
  {
   "id": "newscenter1-tower",
   "name": "NewsCenter1 Tower",
-  "country": "XX",
+  "country": "US",
+  "state": "South Dakota",
   "category": "city",
   "type": "youtube",
   "videoId": "VCstDVViEJc",
@@ -6497,7 +6549,7 @@
  {
   "id": "southeast-event-centre",
   "name": "Southeast Event Centre",
-  "country": "XX",
+  "country": "CA",
   "category": "city",
   "type": "youtube",
   "videoId": "8XnUn6vP8-g",
@@ -6589,7 +6641,7 @@
  {
   "id": "port-lincoln-osprey-wide",
   "name": "Port Lincoln Osprey WIDE",
-  "country": "XX",
+  "country": "AU",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "_gIf6CYeDG8",
@@ -6635,8 +6687,9 @@
  {
   "id": "silver-fir-base-area",
   "name": "Silver Fir - Base Area",
-  "country": "XX",
-  "category": "other",
+  "country": "US",
+  "state": "Washington",
+  "category": "ski",
   "type": "youtube",
   "videoId": "H7HwsNLqVC8",
   "channel": "The Summit at Snoqualmie",
@@ -6736,7 +6789,7 @@
  {
   "id": "monterra-1-blue-mountain-resort",
   "name": "Monterra 1 @ Blue Mountain Resort",
-  "country": "XX",
+  "country": "CA",
   "category": "nature",
   "type": "youtube",
   "videoId": "vEo7zDF5BFc",
@@ -6804,7 +6857,7 @@
  {
   "id": "kristiansund-n",
   "name": "Kristiansund N",
-  "country": "XX",
+  "country": "NO",
   "category": "other",
   "type": "youtube",
   "videoId": "JJuaHGhd8g8",
@@ -6851,7 +6904,7 @@
  {
   "id": "llandudno-north-parade-from-min-y-don-ll",
   "name": "Llandudno North Parade from Min y Don Llandudno",
-  "country": "XX",
+  "country": "GB",
   "category": "other",
   "type": "youtube",
   "videoId": "FYbq4BLr0yA",
@@ -6884,7 +6937,7 @@
  {
   "id": "park-hotel-brasilia-jesolo",
   "name": "Park Hotel Brasilia Jesolo",
-  "country": "XX",
+  "country": "IT",
   "category": "nature",
   "type": "youtube",
   "videoId": "vK6AtkTojz0",
@@ -7009,7 +7062,8 @@
  {
   "id": "castro-street-1",
   "name": "Castro Street 1",
-  "country": "XX",
+  "country": "US",
+  "state": "California",
   "category": "city",
   "type": "youtube",
   "videoId": "A4wafwRprew",
@@ -7020,7 +7074,7 @@
  {
   "id": "vanaf-de-nederlandse-kust-egmond-aan-zee",
   "name": "Vanaf de Nederlandse kust – Egmond aan Zee",
-  "country": "XX",
+  "country": "NL",
   "category": "other",
   "type": "youtube",
   "videoId": "UVgQgjdHQzQ",
@@ -7031,7 +7085,7 @@
  {
   "id": "town-of-collingwood",
   "name": "Town of Collingwood",
-  "country": "XX",
+  "country": "CA",
   "category": "city",
   "type": "youtube",
   "videoId": "EPKWu223XEg",
@@ -7077,7 +7131,8 @@
  {
   "id": "saginaw-river",
   "name": "Saginaw River",
-  "country": "XX",
+  "country": "US",
+  "state": "Michigan",
   "category": "nature",
   "type": "youtube",
   "videoId": "zWohYnhiBpg",
@@ -7088,7 +7143,7 @@
  {
   "id": "gedeonseck-boppard-filsen-und-rheinschle",
   "name": "Gedeonseck / Boppard, Filsen und Rheinschleife Bopparder Ham",
-  "country": "XX",
+  "country": "DE",
   "category": "other",
   "type": "youtube",
   "videoId": "rTR0fkzM-tI",
@@ -7121,7 +7176,7 @@
  {
   "id": "cannes-boulevard-du-midi",
   "name": "CANNES - Boulevard du Midi",
-  "country": "XX",
+  "country": "FR",
   "category": "city",
   "type": "youtube",
   "videoId": "z6BNMoj9Pyo",
@@ -7154,7 +7209,7 @@
  {
   "id": "the-royal-haciendas-phase-1",
   "name": "The Royal Haciendas Phase 1",
-  "country": "XX",
+  "country": "MX",
   "category": "other",
   "type": "youtube",
   "videoId": "r_mablBOcz0",
@@ -7187,7 +7242,7 @@
  {
   "id": "castillo-de-villapadierna",
   "name": "Castillo de Villapadierna",
-  "country": "XX",
+  "country": "ES",
   "category": "other",
   "type": "youtube",
   "videoId": "e4G6pYKeXgo",
@@ -7242,7 +7297,7 @@
  {
   "id": "polzeath-beach-community",
   "name": "Polzeath beach community",
-  "country": "XX",
+  "country": "GB",
   "category": "beach",
   "type": "youtube",
   "videoId": "diIR3SN_c6k",
@@ -7367,7 +7422,7 @@
  {
   "id": "midway-atoll-nwr-wildlife-camera",
   "name": "Midway Atoll NWR Wildlife Camera",
-  "country": "XX",
+  "country": "US",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "L3iKvwoXZ38",
@@ -7401,7 +7456,7 @@
  {
   "id": "bahnhof-freilassing",
   "name": "Bahnhof Freilassing",
-  "country": "XX",
+  "country": "DE",
   "category": "transport",
   "type": "youtube",
   "videoId": "0MlyBggb_Vo",
@@ -7423,7 +7478,7 @@
  {
   "id": "s-r-varanger-kirkenes-himmelstigen",
   "name": "Sør-Varanger Kirkenes - Himmelstigen",
-  "country": "XX",
+  "country": "NO",
   "category": "other",
   "type": "youtube",
   "videoId": "acJRSLCe6G0",
@@ -7467,7 +7522,7 @@
  {
   "id": "vervet-utsikt-s-r",
   "name": "Vervet - Utsikt Sør",
-  "country": "XX",
+  "country": "NO",
   "category": "other",
   "type": "youtube",
   "videoId": "3y7_fkAzzps",
@@ -7478,7 +7533,7 @@
  {
   "id": "cabana-balea-lac-p1428",
   "name": "CABANA BALEA LAC - P1428",
-  "country": "XX",
+  "country": "RO",
   "category": "other",
   "type": "youtube",
   "videoId": "87D-GzRNOq4",
@@ -7501,8 +7556,9 @@
  {
   "id": "sugarloaf-the-beach",
   "name": "Sugarloaf - The Beach",
-  "country": "XX",
-  "category": "beach",
+  "country": "US",
+  "state": "Maine",
+  "category": "ski",
   "type": "youtube",
   "videoId": "j8VVBhJdyqY",
   "channel": "Sugarloaf",
@@ -7523,7 +7579,8 @@
  {
   "id": "aransas-pass-harbor-park",
   "name": "Aransas Pass Harbor Park",
-  "country": "XX",
+  "country": "US",
+  "state": "Texas",
   "category": "harbour",
   "type": "youtube",
   "videoId": "Mn3vY8bordE",
@@ -7669,7 +7726,7 @@
  {
   "id": "hotel-east-west-basel",
   "name": "Hotel East West Basel",
-  "country": "XX",
+  "country": "CH",
   "category": "other",
   "type": "youtube",
   "videoId": "jtLh8BdmHUU",
@@ -7884,8 +7941,8 @@
  {
   "id": "lions-chair",
   "name": "Lions Chair",
-  "country": "XX",
-  "category": "other",
+  "country": "CA",
+  "category": "ski",
   "type": "youtube",
   "videoId": "HPnmUO0Y6TA",
   "channel": "Cypress Mountain",
@@ -7906,7 +7963,8 @@
  {
   "id": "mbl-eel-pond",
   "name": "MBL Eel Pond",
-  "country": "XX",
+  "country": "US",
+  "state": "Massachusetts",
   "category": "other",
   "type": "youtube",
   "videoId": "moLxu7LGuKk",
@@ -8045,7 +8103,7 @@
  {
   "id": "2-yayla-hareketli-kabahor-g-lyayla-k-y-c",
   "name": "2 Yayla Hareketli - Kabahor Gölyayla Köyü Canlı Yayın",
-  "country": "XX",
+  "country": "TR",
   "category": "other",
   "type": "youtube",
   "videoId": "Pje_kodX-bk",
@@ -8056,7 +8114,7 @@
  {
   "id": "10-k-y-a-a-kabahor-g-lyayla-k-y-canl-yay",
   "name": "10 Köy Aşağı - Kabahor Gölyayla Köyü Canlı Yayın",
-  "country": "XX",
+  "country": "TR",
   "category": "other",
   "type": "youtube",
   "videoId": "OxzbZvIZjtI",
@@ -8067,7 +8125,7 @@
  {
   "id": "baden-baden",
   "name": "Baden-Baden",
-  "country": "XX",
+  "country": "DE",
   "category": "other",
   "type": "youtube",
   "videoId": "JBKs0WYlbHQ",
@@ -8159,7 +8217,7 @@
  {
   "id": "dob-t-ri-webkamera",
   "name": "Dobó téri webkamera",
-  "country": "XX",
+  "country": "HU",
   "category": "other",
   "type": "youtube",
   "videoId": "HKVZx5EdnIs",
@@ -8170,7 +8228,7 @@
  {
   "id": "bison-calving-plains-grasslands-national",
   "name": "Bison : Calving Plains – Grasslands National Park",
-  "country": "XX",
+  "country": "CA",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "WjxG5mHc3kg",
@@ -8260,8 +8318,8 @@
  {
   "id": "kieler-hafen",
   "name": "Kieler Hafen",
-  "country": "XX",
-  "category": "other",
+  "country": "DE",
+  "category": "harbour",
   "type": "youtube",
   "videoId": "Z0vgzGyldcQ",
   "channel": "kielmonitor.de",
@@ -8293,7 +8351,8 @@
  {
   "id": "mount-st-helens",
   "name": "Mount St. Helens",
-  "country": "XX",
+  "country": "US",
+  "state": "Washington",
   "category": "nature",
   "type": "youtube",
   "videoId": "-DnLE9xIezk",
@@ -8371,7 +8430,7 @@
  {
   "id": "stornoway-harbour-hebridean",
   "name": "Stornoway Harbour - Hebridean",
-  "country": "XX",
+  "country": "GB",
   "category": "harbour",
   "type": "youtube",
   "videoId": "Xajlompi7JA",
@@ -8441,7 +8500,7 @@
  {
   "id": "confederation-bridge",
   "name": "Confederation Bridge",
-  "country": "XX",
+  "country": "CA",
   "category": "other",
   "type": "youtube",
   "videoId": "baWRGSBBWhw",
@@ -8553,7 +8612,7 @@
  {
   "id": "amaru-penguins",
   "name": "Ōamaru Penguins",
-  "country": "XX",
+  "country": "NZ",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "7V_7mzwjZaE",
@@ -8664,7 +8723,7 @@
  {
   "id": "n-m-3-kv-tna",
   "name": "Nám. 3. května",
-  "country": "XX",
+  "country": "CZ",
   "category": "other",
   "type": "youtube",
   "videoId": "Zi-MbTVexvk",
@@ -8675,7 +8734,7 @@
  {
   "id": "n-mest-m-ru",
   "name": "Námestí Míru",
-  "country": "XX",
+  "country": "CZ",
   "category": "other",
   "type": "youtube",
   "videoId": "CSAcxQA2shE",
@@ -8765,7 +8824,7 @@
  {
   "id": "renesse-aan-zee",
   "name": "Renesse aan Zee",
-  "country": "XX",
+  "country": "NL",
   "category": "other",
   "type": "youtube",
   "videoId": "EH6GNSEvmQE",
@@ -8921,7 +8980,7 @@
  {
   "id": "stadhuis-sint-niklaas",
   "name": "Stadhuis Sint-Niklaas",
-  "country": "XX",
+  "country": "BE",
   "category": "other",
   "type": "youtube",
   "videoId": "7gOLLJGudNo",
@@ -9129,7 +9188,8 @@
  {
   "id": "lewis-nissan-robert-c-byrd-drive",
   "name": "Lewis Nissan – Robert C. Byrd Drive",
-  "country": "XX",
+  "country": "US",
+  "state": "West Virginia",
   "category": "other",
   "type": "youtube",
   "videoId": "vTN63smATlU",
@@ -9365,7 +9425,7 @@
  {
   "id": "webkamera-kristiansund-kongens-plass",
   "name": "Webkamera Kristiansund - Kongens Plass",
-  "country": "XX",
+  "country": "NO",
   "category": "other",
   "type": "youtube",
   "videoId": "feY7GCnY8KU",
@@ -9399,7 +9459,8 @@
  {
   "id": "tony-silvagni-surf-school-hamlet-ave-sur",
   "name": "Tony Silvagni Surf School Hamlet Ave. Surf",
-  "country": "XX",
+  "country": "US",
+  "state": "North Carolina",
   "category": "surf",
   "type": "youtube",
   "videoId": "cVRG4zYdUP0",
@@ -9510,7 +9571,7 @@
  {
   "id": "hvide-sande-sportsfisker-center",
   "name": "Hvide Sande Sportsfisker Center",
-  "country": "XX",
+  "country": "DK",
   "category": "city",
   "type": "youtube",
   "videoId": "0DT9KOvdsTc",
@@ -9521,7 +9582,7 @@
  {
   "id": "fredericton-nb-officers-square-place-des",
   "name": "Fredericton, NB - Officers' Square // Place des Officiers",
-  "country": "XX",
+  "country": "CA",
   "category": "city",
   "type": "youtube",
   "videoId": "nfgjdKhacxU",
@@ -9554,8 +9615,8 @@
  {
   "id": "fernie-lizard-bowl-1-680m",
   "name": "Fernie - Lizard Bowl - 1,680m",
-  "country": "XX",
-  "category": "other",
+  "country": "CA",
+  "category": "ski",
   "type": "youtube",
   "videoId": "KAMmoKIweUM",
   "channel": "Fernie Alpine Resort",
@@ -9576,7 +9637,7 @@
  {
   "id": "c-mara-meteorol-gica-del-portal-5900-vil",
   "name": "Cámara Meteorológica del Portal 5900 Villa Maria",
-  "country": "XX",
+  "country": "AR",
   "category": "other",
   "type": "youtube",
   "videoId": "pdyoQD3dmkg",
@@ -9587,7 +9648,7 @@
  {
   "id": "hotel-kohlerhof",
   "name": "Hotel Kohlerhof",
-  "country": "XX",
+  "country": "AT",
   "category": "other",
   "type": "youtube",
   "videoId": "G_PCMh479tE",
@@ -9620,7 +9681,7 @@
  {
   "id": "marveld-recreatie",
   "name": "Marveld Recreatie",
-  "country": "XX",
+  "country": "NL",
   "category": "other",
   "type": "youtube",
   "videoId": "pRL5narPONw",
@@ -9631,8 +9692,8 @@
  {
   "id": "bass-rock-360",
   "name": "Bass Rock 360",
-  "country": "XX",
-  "category": "other",
+  "country": "GB",
+  "category": "wildlife",
   "type": "youtube",
   "videoId": "iVwrauRe_r8",
   "channel": "Scottish Seabird Centre",
@@ -9642,7 +9703,7 @@
  {
   "id": "river-view",
   "name": "River View",
-  "country": "XX",
+  "country": "CA",
   "category": "nature",
   "type": "youtube",
   "videoId": "k36fwVlkzBM",
@@ -9709,7 +9770,8 @@
  {
   "id": "winni-marine",
   "name": "Winni Marine",
-  "country": "XX",
+  "country": "US",
+  "state": "New Hampshire",
   "category": "other",
   "type": "youtube",
   "videoId": "ohJeIx8vqZo",
@@ -9720,7 +9782,8 @@
  {
   "id": "winnisquam-marine-gas-dock",
   "name": "Winnisquam Marine Gas Dock",
-  "country": "XX",
+  "country": "US",
+  "state": "New Hampshire",
   "category": "harbour",
   "type": "youtube",
   "videoId": "SAv-i7SNu9E",
@@ -9776,7 +9839,7 @@
  {
   "id": "m-nchen-berg-am-laim-michaelianger",
   "name": "München • Berg am Laim • Michaelianger",
-  "country": "XX",
+  "country": "DE",
   "category": "other",
   "type": "youtube",
   "videoId": "KxWuwC7R5kY",
@@ -9799,7 +9862,8 @@
  {
   "id": "eye-on-downtown-fort-morgan",
   "name": "Eye on Downtown Fort Morgan",
-  "country": "XX",
+  "country": "US",
+  "state": "Colorado",
   "category": "city",
   "type": "youtube",
   "videoId": "R3nGpwWDAHg",
@@ -9832,7 +9896,8 @@
  {
   "id": "port-everglades-traffic-03",
   "name": "Port Everglades Traffic .03",
-  "country": "XX",
+  "country": "US",
+  "state": "Florida",
   "category": "harbour",
   "type": "youtube",
   "videoId": "Lpm-C_Gz6yM",
@@ -9843,7 +9908,8 @@
  {
   "id": "hertrich-weather-tred-avon-river",
   "name": "Hertrich Weather Tred Avon River",
-  "country": "XX",
+  "country": "US",
+  "state": "Maryland",
   "category": "nature",
   "type": "youtube",
   "videoId": "4dK4wJ6imq4",
@@ -9877,8 +9943,8 @@
  {
   "id": "high-wycombe-peregrines-camera-1",
   "name": "High Wycombe - Peregrines Camera 1",
-  "country": "XX",
-  "category": "other",
+  "country": "GB",
+  "category": "wildlife",
   "type": "youtube",
   "videoId": "E5BcWBfPSWY",
   "channel": "Stuart Jeffery",
@@ -9910,7 +9976,8 @@
  {
   "id": "colorful-coral-and-fish-at-the-aquarium-",
   "name": "Colorful Coral and Fish at the Aquarium of the Pacific",
-  "country": "XX",
+  "country": "US",
+  "state": "California",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "h0F818upkgI",
@@ -9921,7 +9988,8 @@
  {
   "id": "shark-at-the-aquarium-of-the-pacific",
   "name": "Shark at the Aquarium of the Pacific",
-  "country": "XX",
+  "country": "US",
+  "state": "California",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "YT7lH6U68S4",
@@ -9932,7 +10000,8 @@
  {
   "id": "jellyfish-at-the-aquarium-of-the-pacific",
   "name": "Jellyfish at the Aquarium of the Pacific",
-  "country": "XX",
+  "country": "US",
+  "state": "California",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "IYG9fnz40-E",
@@ -9955,8 +10024,8 @@
  {
   "id": "drag-havn",
   "name": "Drag Havn",
-  "country": "XX",
-  "category": "other",
+  "country": "NO",
+  "category": "harbour",
   "type": "youtube",
   "videoId": "zwwBmLaNzOU",
   "channel": "Tysfjord ASVO",
@@ -9966,7 +10035,7 @@
  {
   "id": "kirchberg-am-wechsel",
   "name": "Kirchberg am Wechsel",
-  "country": "XX",
+  "country": "AT",
   "category": "other",
   "type": "youtube",
   "videoId": "T-NTOEpqx9I",
@@ -9988,7 +10057,7 @@
  {
   "id": "semmering-passh-he",
   "name": "Semmering - Passhöhe",
-  "country": "XX",
+  "country": "AT",
   "category": "other",
   "type": "youtube",
   "videoId": "Npz21TdGN7w",
@@ -10021,8 +10090,8 @@
  {
   "id": "hafen-in-dornumersiel",
   "name": "Hafen in Dornumersiel",
-  "country": "XX",
-  "category": "other",
+  "country": "DE",
+  "category": "harbour",
   "type": "youtube",
   "videoId": "QfOEaDVbLaU",
   "channel": "1top IT Dienstleistungen GbR",
@@ -10044,7 +10113,7 @@
  {
   "id": "salla-in-the-middle-of-nowhere",
   "name": "Salla - In the middle of nowhere",
-  "country": "XX",
+  "country": "FI",
   "category": "other",
   "type": "youtube",
   "videoId": "nNFrRsALj6M",
@@ -10101,7 +10170,7 @@
  {
   "id": "ross-bay-victoria-bc",
   "name": "Ross Bay, Victoria BC",
-  "country": "XX",
+  "country": "CA",
   "category": "beach",
   "type": "youtube",
   "videoId": "sLixr8cThJo",
@@ -10192,8 +10261,8 @@
  {
   "id": "bonobo-lola-ya-bonobo-sanctuary-dr-congo",
   "name": "Bonobo : Lola ya Bonobo Sanctuary – DR Congo",
-  "country": "XX",
-  "category": "other",
+  "country": "CD",
+  "category": "wildlife",
   "type": "youtube",
   "videoId": "gqP5nBCRbHA",
   "channel": "Explore Gorilla & Bonobo Cams: Great Apes",
@@ -10203,7 +10272,7 @@
  {
   "id": "grauer-s-gorilla-grace-forest-corridor-d",
   "name": "Grauer’s Gorilla : GRACE Forest Corridor – DR Congo",
-  "country": "XX",
+  "country": "CD",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "YaDkA5CkFXk",
@@ -10236,8 +10305,9 @@
  {
   "id": "bayhealth-kent-campus",
   "name": "Bayhealth Kent Campus",
-  "country": "XX",
-  "category": "beach",
+  "country": "US",
+  "state": "Delaware",
+  "category": "other",
   "type": "youtube",
   "videoId": "ZqejkPC4mm0",
   "channel": "Bayhealth Kent Campus Cam",
@@ -10360,24 +10430,13 @@
  {
   "id": "ropeway-tsaghkadzor-1",
   "name": "Ropeway Tsaghkadzor - -1",
-  "country": "XX",
+  "country": "AM",
   "category": "other",
   "type": "youtube",
   "videoId": "1m4YG719KoM",
   "channel": "Ropeway  Armenia",
   "watching": "1 watching",
   "source": "https://www.youtube.com/watch?v=1m4YG719KoM"
- },
- {
-  "id": "st-bridget-s-baillieston",
-  "name": "St Bridget's Baillieston",
-  "country": "XX",
-  "category": "other",
-  "type": "youtube",
-  "videoId": "ut9Y9RQ1SYI",
-  "channel": "Video Streaming Services",
-  "watching": "1 watching",
-  "source": "https://www.youtube.com/watch?v=ut9Y9RQ1SYI"
  },
  {
   "id": "canoe-cove-sidney-bc",
@@ -10451,7 +10510,8 @@
  {
   "id": "fraser-town-hall",
   "name": "Fraser Town Hall",
-  "country": "XX",
+  "country": "US",
+  "state": "Colorado",
   "category": "city",
   "type": "youtube",
   "videoId": "hQeFtIAmlqQ",
@@ -10462,7 +10522,7 @@
  {
   "id": "tofino-sea-kayaking-harbour",
   "name": "Tofino Sea Kayaking Harbour",
-  "country": "XX",
+  "country": "CA",
   "category": "harbour",
   "type": "youtube",
   "videoId": "_qN4aao5kWc",
@@ -10519,7 +10579,7 @@
  {
   "id": "barban",
   "name": "Barban",
-  "country": "XX",
+  "country": "HR",
   "category": "other",
   "type": "youtube",
   "videoId": "1CYRZ1IBGkM",
@@ -10643,7 +10703,8 @@
  {
   "id": "dunrovin-ranch",
   "name": "Dunrovin Ranch",
-  "country": "XX",
+  "country": "US",
+  "state": "Montana",
   "category": "other",
   "type": "youtube",
   "videoId": "nm7Ryt8-3SU",
@@ -10689,7 +10750,8 @@
  {
   "id": "paradise-pond-spillway-view",
   "name": "Paradise Pond Spillway View",
-  "country": "XX",
+  "country": "US",
+  "state": "Massachusetts",
   "category": "other",
   "type": "youtube",
   "videoId": "cK6y-SdxHew",
@@ -10767,7 +10829,8 @@
  {
   "id": "cnu-great-lawn",
   "name": "CNU Great Lawn",
-  "country": "XX",
+  "country": "US",
+  "state": "Virginia",
   "category": "other",
   "type": "youtube",
   "videoId": "1j-V9OAVQN0",
@@ -10801,7 +10864,7 @@
  {
   "id": "inner-port-nuuk",
   "name": "Inner port Nuuk",
-  "country": "XX",
+  "country": "GL",
   "category": "harbour",
   "type": "youtube",
   "videoId": "Tf4z_xtroi4",
@@ -10824,7 +10887,8 @@
  {
   "id": "golden-nugget-casino-pano-from-farley-ma",
   "name": "Golden Nugget Casino Pano from Farley Marina",
-  "country": "XX",
+  "country": "US",
+  "state": "New Jersey",
   "category": "harbour",
   "type": "youtube",
   "videoId": "BNqiCD4Omz0",
@@ -10957,7 +11021,7 @@
  {
   "id": "port-alberni-harbour-quay-bc",
   "name": "Port Alberni Harbour Quay, BC",
-  "country": "XX",
+  "country": "CA",
   "category": "harbour",
   "type": "youtube",
   "videoId": "eegU1ZXK16o",
@@ -10990,8 +11054,9 @@
  {
   "id": "sh-6-legend-lake-parkway-waco",
   "name": "SH-6 @ Legend Lake Parkway - Waco",
-  "country": "XX",
-  "category": "nature",
+  "country": "US",
+  "state": "Texas",
+  "category": "traffic",
   "type": "youtube",
   "videoId": "Kf0kFEC_Baw",
   "channel": "I-35 Waco South - Construction Cameras",
@@ -11001,7 +11066,7 @@
  {
   "id": "17nudos-escola-garb-castelldefels",
   "name": "17nudos - Escola Garbí Castelldefels",
-  "country": "XX",
+  "country": "ES",
   "category": "other",
   "type": "youtube",
   "videoId": "oe5GPi_C7Go",
@@ -11035,7 +11100,8 @@
  {
   "id": "lake-bemidji",
   "name": "Lake Bemidji",
-  "country": "XX",
+  "country": "US",
+  "state": "Minnesota",
   "category": "nature",
   "type": "youtube",
   "videoId": "Au4Z29o0lR8",
@@ -11046,7 +11112,8 @@
  {
   "id": "cville-sugar-creek-camera",
   "name": "Cville Sugar Creek Camera",
-  "country": "XX",
+  "country": "US",
+  "state": "Indiana",
   "category": "other",
   "type": "youtube",
   "videoId": "qCSJyFr58Gs",
@@ -11115,7 +11182,7 @@
  {
   "id": "munster-pr-lat",
   "name": "Munster - Prélat",
-  "country": "XX",
+  "country": "FR",
   "category": "other",
   "type": "youtube",
   "videoId": "xnQmBYAiaqs",
@@ -11182,8 +11249,8 @@
  {
   "id": "farkas-kamera",
   "name": "Farkas kamera",
-  "country": "XX",
-  "category": "other",
+  "country": "HU",
+  "category": "wildlife",
   "type": "youtube",
   "videoId": "g48zpnH_dLg",
   "channel": "Zoo Szeged Camera Live",
@@ -11205,7 +11272,7 @@
  {
   "id": "fra-salten-golfklubb-bod-golfpark",
   "name": "Fra Salten Golfklubb - Bodø Golfpark",
-  "country": "XX",
+  "country": "NO",
   "category": "nature",
   "type": "youtube",
   "videoId": "oRrwwg3Je5E",
@@ -11227,7 +11294,7 @@
  {
   "id": "bod-havn-r-nvik-havn-marina",
   "name": "Bodø Havn - Rønvik Havn & Marina",
-  "country": "XX",
+  "country": "NO",
   "category": "harbour",
   "type": "youtube",
   "videoId": "zWuon7LMi5o",
@@ -11271,8 +11338,8 @@
  {
   "id": "aus-neustadt-in-holstein-hafenwestseite",
   "name": "Aus Neustadt in Holstein - Hafenwestseite",
-  "country": "XX",
-  "category": "other",
+  "country": "DE",
+  "category": "harbour",
   "type": "youtube",
   "videoId": "I2Z2AJrR1xo",
   "channel": "Webcam Hafenwestseite #3",
@@ -11316,7 +11383,7 @@
  {
   "id": "camera-at-queen-mary-sailing-club",
   "name": "Camera at Queen Mary Sailing Club",
-  "country": "XX",
+  "country": "GB",
   "category": "other",
   "type": "youtube",
   "videoId": "TeOD99qdRHw",
@@ -11416,7 +11483,8 @@
  {
   "id": "spring-bayou-manatee",
   "name": "Spring Bayou Manatee",
-  "country": "XX",
+  "country": "US",
+  "state": "Florida",
   "category": "wildlife",
   "type": "youtube",
   "videoId": "MIu3ZGw75pg",
@@ -11427,7 +11495,7 @@
  {
   "id": "martigny",
   "name": "Martigny",
-  "country": "XX",
+  "country": "CH",
   "category": "other",
   "type": "youtube",
   "videoId": "TWMH4zoIHnE",
@@ -11573,7 +11641,7 @@
  {
   "id": "camp-idlewood",
   "name": "Camp Idlewood",
-  "country": "XX",
+  "country": "US",
   "category": "other",
   "type": "youtube",
   "videoId": "RjVZXgl_PdE",
@@ -11584,7 +11652,8 @@
  {
   "id": "west-branch-susquehanna-river-at-lock-ha",
   "name": "West Branch Susquehanna River at Lock Haven",
-  "country": "XX",
+  "country": "US",
+  "state": "Pennsylvania",
   "category": "nature",
   "type": "youtube",
   "videoId": "zZ8EyTrd670",
@@ -11639,7 +11708,8 @@
  {
   "id": "observatory-towercam",
   "name": "Observatory Towercam",
-  "country": "XX",
+  "country": "US",
+  "state": "Michigan",
   "category": "other",
   "type": "youtube",
   "videoId": "dycRb0uysBs",
@@ -11650,7 +11720,8 @@
  {
   "id": "rr-new-river",
   "name": "RR New River",
-  "country": "XX",
+  "country": "US",
+  "state": "Florida",
   "category": "nature",
   "type": "youtube",
   "videoId": "3LtOF19QGQY",
@@ -11684,7 +11755,8 @@
  {
   "id": "west-baden-springs-hotel",
   "name": "West Baden Springs Hotel",
-  "country": "XX",
+  "country": "US",
+  "state": "Indiana",
   "category": "other",
   "type": "youtube",
   "videoId": "4iKDK9XNLp8",
@@ -11783,7 +11855,8 @@
  {
   "id": "afton-wy-airport-kafo-north-view-rwy-16",
   "name": "Afton WY Airport KAFO North View RWY 16",
-  "country": "XX",
+  "country": "US",
+  "state": "Wyoming",
   "category": "transport",
   "type": "youtube",
   "videoId": "VyzULEX4WHU",
@@ -11794,7 +11867,7 @@
  {
   "id": "blick-ins-zillertal-rund-um-die-uhr-natu",
   "name": "Blick ins Zillertal – Rund um die Uhr Natur pur erleben",
-  "country": "XX",
+  "country": "AT",
   "category": "other",
   "type": "youtube",
   "videoId": "yULIVDUb2gg",
@@ -11871,7 +11944,8 @@
  {
   "id": "acqualina-beach",
   "name": "Acqualina Beach",
-  "country": "XX",
+  "country": "US",
+  "state": "Florida",
   "category": "beach",
   "type": "youtube",
   "videoId": "sI7oCUe1dmo",
@@ -11894,7 +11968,8 @@
  {
   "id": "madeline-island-yacht-club",
   "name": "Madeline Island Yacht Club",
-  "country": "XX",
+  "country": "US",
+  "state": "Wisconsin",
   "category": "other",
   "type": "youtube",
   "videoId": "CzoaZyGqUsE",
@@ -11962,8 +12037,9 @@
  {
   "id": "gate-house-plaza-view",
   "name": "Gate House Plaza View",
-  "country": "XX",
-  "category": "city",
+  "country": "US",
+  "state": "Vermont",
+  "category": "ski",
   "type": "youtube",
   "videoId": "jhCh3dsEv-M",
   "channel": "Sugarbush Resort",
@@ -11996,7 +12072,8 @@
  {
   "id": "alxcam-king-street",
   "name": "ALXcam - King Street",
-  "country": "XX",
+  "country": "US",
+  "state": "Virginia",
   "category": "city",
   "type": "youtube",
   "videoId": "OfbyR5LJpMw",
@@ -12019,7 +12096,7 @@
  {
   "id": "bad-kleinkirchheim",
   "name": "Bad Kleinkirchheim",
-  "country": "XX",
+  "country": "AT",
   "category": "nature",
   "type": "youtube",
   "videoId": "ySyPgIJ74GE",
@@ -12064,8 +12141,9 @@
  {
   "id": "carson-city",
   "name": "Carson City",
-  "country": "XX",
-  "category": "ski",
+  "country": "US",
+  "state": "Nevada",
+  "category": "city",
   "type": "youtube",
   "videoId": "dA0R00HYNlY",
   "channel": "Carson City Live Webcam",
@@ -12097,7 +12175,7 @@
  {
   "id": "monument-valley",
   "name": "Monument Valley",
-  "country": "XX",
+  "country": "US",
   "category": "other",
   "type": "youtube",
   "videoId": "QiSW5YHmdx4",
@@ -12141,7 +12219,7 @@
  {
   "id": "jacob-westerhof-mcmaster-university",
   "name": "Jacob Westerhof - McMaster University",
-  "country": "XX",
+  "country": "CA",
   "category": "other",
   "type": "youtube",
   "videoId": "Q2VLYsYEjfU",
@@ -12185,7 +12263,8 @@
  {
   "id": "pole-creek",
   "name": "Pole Creek",
-  "country": "XX",
+  "country": "US",
+  "state": "Colorado",
   "category": "other",
   "type": "youtube",
   "videoId": "IgURak9Qw9I",
@@ -12196,7 +12275,8 @@
  {
   "id": "hill-lighthouse",
   "name": "Hill Lighthouse",
-  "country": "XX",
+  "country": "US",
+  "state": "Rhode Island",
   "category": "other",
   "type": "youtube",
   "videoId": "dd0VV9aMcp4",
@@ -12490,52 +12570,5 @@
   "channel": "TCS Live",
   "watching": "1 watching",
   "source": "https://www.youtube.com/watch?v=ljRIiZitl3s"
- },
- {
-  "id": "kitten-rescue-cat-2",
-  "name": "Kitten Rescue Cat",
-  "country": "US",
-  "state": "California",
-  "category": "wildlife",
-  "type": "youtube",
-  "videoId": "OOT6YlOYgaU",
-  "channel": "Explore Live Nature Cams",
-  "watching": "34 watching",
-  "source": "https://www.youtube.com/watch?v=OOT6YlOYgaU"
- },
- {
-  "id": "gloucester-massachusetts-us-annisquam-ya",
-  "name": "Gloucester, Massachusetts US - Annisquam Yacht Club",
-  "country": "US",
-  "state": "Massachusetts",
-  "category": "other",
-  "type": "youtube",
-  "videoId": "_j1qgdMnifk",
-  "channel": "Boston and Maine Live",
-  "watching": "1 watching",
-  "source": "https://www.youtube.com/watch?v=_j1qgdMnifk"
- },
- {
-  "id": "the-shack-fisherman-s-village-bophut",
-  "name": "The Shack Fisherman's Village Bophut",
-  "country": "TH",
-  "category": "city",
-  "type": "youtube",
-  "videoId": "bbBGNNPu0rg",
-  "channel": "The Real Samui Webcam",
-  "watching": "12 watching",
-  "source": "https://www.youtube.com/watch?v=bbBGNNPu0rg"
- },
- {
-  "id": "ritzville-railroad-depot-museum-ritzvill",
-  "name": "Ritzville Railroad Depot Museum - Ritzville, WA",
-  "country": "US",
-  "state": "Washington",
-  "category": "transport",
-  "type": "youtube",
-  "videoId": "PKziYjWf00Q",
-  "channel": "Steel Highway Railcams",
-  "watching": "2 watching",
-  "source": "https://www.youtube.com/watch?v=PKziYjWf00Q"
  }
 ]
