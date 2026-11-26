@@ -548,7 +548,7 @@ applyHash();render();
 </script>` + footer);
 
 // ---- Random ----
-fs.writeFileSync(path.join(DIST, 'random.html'), head('Random cam — Watch This Cam', 'A random live camera.') + `
+fs.writeFileSync(path.join(DIST, 'random.html'), head('Random cam — Watch This Cam', 'A random live camera.').replace('content="index,follow"', 'content="noindex,follow"') + `
 <canvas id="s" style="position:fixed;inset:0;width:100%;height:100%;background:#000;image-rendering:pixelated"></canvas>
 <div style="position:fixed;right:22px;top:18px;font:800 22px/1 'Courier New',monospace;color:#9bff9b;text-shadow:0 0 8px rgba(100,255,120,.7);letter-spacing:3px" id="ch"></div>
 <script src="/meta.js"></script>
@@ -763,7 +763,7 @@ fs.writeFileSync(path.join(DIST, 'about.html'), head('About — Watch This Cam',
 </div></main>` + footer);
 
 // ---- 404 (its presence also stops Cloudflare Pages serving the homepage as a 200 for unknown URLs) ----
-fs.writeFileSync(path.join(DIST, '404.html'), head('Page not found — Watch This Cam', 'That page does not exist.') + header + `
+fs.writeFileSync(path.join(DIST, '404.html'), head('Page not found — Watch This Cam', 'That page does not exist.').replace('content="index,follow"', 'content="noindex,follow"') + header + `
 <main class="wrap"><div class="page">
 <h1>That cam has gone dark</h1>
 <p>We couldn't find that page. It may have moved, or the camera was taken offline.</p>
