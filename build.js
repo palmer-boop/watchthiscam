@@ -576,11 +576,46 @@ else{try{var ctx=sc.getContext('2d'),w=sc.width=Math.min(innerWidth,520),h=sc.he
 <noscript><meta http-equiv="refresh" content="0;url=/cam/${cams[0].id}.html"></noscript></body></html>`);
 
 // ---- Cam pages ----
-const camTitle = c => /web ?cam|\bcams?\b|\blive\b|camera/i.test(c.name) ? `${c.name} | Watch This Cam` : `${c.name} live webcam | Watch This Cam`;
+// The word people in that country type for "webcam" (only where it differs from the English word).
+const LOCAL_WORD = { NO: 'webkamera', SE: 'webbkamera', FI: 'webkamera', PL: 'kamera na żywo', CZ: 'webkamera', SK: 'webkamera', HU: 'webkamera',
+  HR: 'web kamera', SI: 'spletna kamera', BA: 'web kamera', RS: 'web kamera', ME: 'web kamera', TR: 'canlı kamera', EE: 'veebikaamera', IS: 'vefmyndavél' };
+// A cleaner name for headings and search results: windy.com names come as "Town · South-east: Place"; the compass part helps nobody.
+const baseSeoName = c => String(c.name).replace(/\s·\s(?:North|South|East|West)(?:-(?:east|west))?\s*:\s*/i, ': ').replace(/\s·\s(?:North|South|East|West)(?:-(?:east|west))?\s*$/i, '').replace(/\s{2,}/g, ' ').trim();
+const SEO_NAMES = (() => {
+  const key = c => baseSeoName(c).toLowerCase() + '|' + (c.country || ''), groups = {}, out = {};
+  for (const c of cams) (groups[key(c)] = groups[key(c)] || []).push(c);
+  for (const g of Object.values(groups)) {
+    if (g.length < 2) continue;
+    const seen = {};
+    for (const c of g) {
+      const m = String(c.name).match(/\s·\s((?:North|South|East|West)(?:-(?:east|west))?)\s*(?::|$)/i);
+      let n = m ? `${baseSeoName(c)} (${m[1].toLowerCase()} view)` : baseSeoName(c);
+      seen[n] = (seen[n] || 0) + 1;
+      if (seen[n] > 1) n += ` (camera ${seen[n]})`;
+      out[c.id] = n;
+    }
+  }
+  return out;
+})();
+const seoName = c => SEO_NAMES[c.id] || baseSeoName(c);
+const every = sec => { sec = +sec || 10; return sec < 60 ? `every ${sec} seconds` : sec < 90 ? 'every minute' : sec < 3600 ? `every ${Math.round(sec / 60)} minutes` : sec < 5400 ? 'every hour' : `every ${Math.round(sec / 3600)} hours`; };
+const NOTES = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'research', 'notes.json'))); } catch (e) { return {}; } })();
+const camTitle = c => {
+  const n = seoName(c), where = c.countryLabel && !n.toLowerCase().includes(c.countryLabel.toLowerCase()) ? ', ' + c.countryLabel : '';
+  const hasCam = /web ?cam|\bcams?\b|camera|kamera/i.test(n), hasLive = /\blive\b/i.test(n), local = LOCAL_WORD[c.country];
+  let t = hasCam ? n + where : `${n} webcam${local ? ' (' + local + ')' : ''}${where}`;
+  if (t.length > 70 && local && !hasCam) t = `${n} webcam${where}`;   // already long: the local word is the first thing to go
+  const live = hasCam ? (hasLive ? '' : ': live webcam') : ': live';
+  if ((t + live).length <= 58) t += live;                         // room for it? say it is live
+  if ((t + ' | Watch This Cam').length <= 68) t += ' | Watch This Cam';   // the brand goes first when space is short
+  return t;
+};
 const feedKind = c => isYT(c) || isPlayer(c) || c.isMjpeg ? 'video' : windyId(c) ? 'windy' : 'photo';
 const camDesc = c => {
-  const k = feedKind(c), kind = k === 'video' ? 'live video' : k === 'windy' ? 'a near-live view with a timelapse of the day' : `a live photo that refreshes every ${c.refreshSeconds || 10} seconds`;
-  return `${c.name}${c.place ? ', ' + c.place : ''}: ${kind}, free to watch.${c.loc === 'exact' || c.loc === 'city' ? ' See the local time, the weather there right now, and sunrise and sunset.' : ''}`;
+  const k = feedKind(c), n = seoName(c), local = LOCAL_WORD[c.country];
+  const what = k === 'video' ? 'live video from the camera' : k === 'windy' ? 'the latest picture from the camera and a timelapse of the day' : `a live photo from the camera, updated ${every(c.refreshSeconds)}`;
+  const extras = c.loc === 'exact' || c.loc === 'city' ? ' Plus the weather there now, sunrise and sunset, and the local time.' : c.tz ? ' Plus the local time there.' : '';
+  return `See ${n}${c.place && !n.toLowerCase().includes(c.place.toLowerCase()) ? ', ' + c.place : ''} right now${local ? ' (' + local + ')' : ''}: ${what}.${extras} Free, no sign-up.`;
 };
 const fmtCoord = (la, lo) => `${Math.abs(la).toFixed(2)}°${la >= 0 ? 'N' : 'S'}, ${Math.abs(lo).toFixed(2)}°${lo >= 0 ? 'E' : 'W'}`;
 // Short answers built only from what we actually know about the cam. Shown on the page and mirrored in FAQPage markup.
@@ -591,7 +626,7 @@ function camFaq(c) {
     : isPlayer(c) ? `Yes. It is a live video stream. The camera's operator publishes it through ${c.network || op}, and it plays here in that network's own player. If the player stays blank, the stream is offline for now.`
     : k === 'windy' ? `It is a near-live view. The picture comes from the windy.com webcam player, which shows the camera's latest image and a timelapse of the day.`
     : c.isMjpeg ? `Yes. It is a live motion stream straight from the camera, published by ${op}.`
-    : `It is a live photo cam, not moving video. ${op} publishes a fresh still from the camera and this page reloads it every ${c.refreshSeconds || 10} seconds.` });
+    : `It is a live photo cam, not moving video. ${op} publishes a fresh still from the camera, updated ${every(c.refreshSeconds)}, and this page reloads it for you.` });
   if (c.place) qa.push({ q: 'Where is this camera?', a: `It is in ${NEEDS_THE.has(c.place) ? 'the ' : ''}${c.place.replace(/, (USA|UK|Netherlands|Philippines|UAE|Maldives|Bahamas|Faroe Islands|Dominican Republic)$/, ', the $1')}.${c.loc === 'exact' ? ` The camera sits at about ${fmtCoord(c.lat, c.lon)}, and the map on this page shows the spot.` : ''}` });
   if (c.tz) qa.push({ q: 'What time is it there?', a: `The camera is in the ${c.tz.replace(/_/g, ' ')} time zone. The local time is shown under the player${c.loc === 'exact' || c.loc === 'city' ? ', along with the weather, sunrise and sunset' : ''}.` });
   qa.push({ q: 'Who runs this camera?', a: isPlayer(c)
@@ -704,9 +739,9 @@ ${angles.length ? `<p class="angles"><span>${c.loc === 'exact' ? 'Other cameras 
 <textarea id="embedcode" readonly rows="4" spellcheck="false">${esc(embedCode(c))}</textarea>
 <button class="iconbtn" id="copyembed">Copy code</button>
 </div>
-<h1>${esc(c.name)}</h1>
+<h1>${esc(seoName(c))}</h1>
 <p class="where">${[cityLink, stateLink, countryLink, c.catLabel ? `<a href="/kind/${c.category}.html">${esc(c.catLabel)}</a>` : ''].filter(Boolean).join(' · ')}${hasNow ? '' : '<span id="localtime" class="localtime"></span>'}</p>
-<p class="about">${esc(c.blurb)}</p>
+<p class="about">${esc(c.blurb)}</p>${NOTES[c.id] ? `\n<p class="about placenote">${esc(NOTES[c.id])}</p>` : ''}
 ${hasNow ? `<div class="nowstrip" id="now">
 <div><span>Local time</span><b id="nowtime">&nbsp;</b></div>
 <div><span>Weather ${c.loc === 'exact' ? 'at the camera' : 'in ' + esc(c.city.name)}</span><b id="nowwx">&nbsp;</b><i id="nowwx2"></i></div>
